@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="YarnFormation.master.cs" Inherits="Garments_Pro.Yarn_Formation.YarnFormation" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Style.css" rel="stylesheet" />
+    <link href="../../Assets/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../Assets/Bootstrap/bootstrap.bundle.min5.js"></script>
+    <link href="../Assets/Bootstrap/bootstrap.min5.css" rel="stylesheet" />
+    <link href="../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
+    <script src="../Assets/SweetAlert/sweetalert.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+   <%-- <header class="Header">
+        <a href="" class="Logo"><i class="fa fa-lastfm-square" ></i> BoAt-X </a>
+
+        <nav class="navbar">
+           <a href="#Home">Home</a>
+           <a href="#Features">Features</a>
+           <a href="#Categories">Categories</a>
+           <a href="#Products">Products</a>
+           <a href="#Reviews">Reviews</a>
+           <a href="#Blogs">Blogs</a>
+        </nav>
+        
+    </header>--%>
+
+
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../../logo.png" alt="Avatar Logo" style="width: 40px;" class="rounded-pill">  Garments Pro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href ="Dashboard.aspx">DashBoard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Order.aspx">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="UsersList.aspx">Employees</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link  " href="UsersList.aspx">Reports</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+
+    <form id="form" runat="server">
+        <div>
+
+            <asp:ContentPlaceHolder ID="Body" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+
+
+
+</body>
+</html>

@@ -67,6 +67,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Departments\Fabric_Formation\Fabric_Formation.Master" />
+    <Content Include="Departments\Fabrication\Fabrication.Master" />
+    <Content Include="Departments\Finished_Goods\Finished_Goods.Master" />
+    <Content Include="Departments\Wet_Processing\Wet_Processing.Master" />
+    <Content Include="Departments\Yarn_Formation\YarnFormation.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,16 +80,132 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Departments\Fabrication\Dashboard.aspx" />
+    <Content Include="Departments\Fabrication\Orders.aspx" />
+    <Content Include="Departments\Fabric_Formation\Dashboard.aspx" />
+    <Content Include="Departments\Fabric_Formation\Orders.aspx" />
+    <Content Include="Departments\Finished_Goods\Dashboard.aspx" />
+    <Content Include="Departments\Finished_Goods\Orders.aspx" />
+    <Content Include="Departments\Wet_Processing\Dashboard.aspx" />
+    <Content Include="Departments\Wet_Processing\Orders.aspx" />
+    <Content Include="Departments\Yarn_Formation\Dashboard.aspx" />
+    <Content Include="Departments\Yarn_Formation\Order.aspx" />
+    <Content Include="Departments\Yarn_Formation\Style.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Departments\Fabrication\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Fabrication\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Fabrication\Fabrication.Master.cs">
+      <DependentUpon>Fabrication.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Fabrication\Fabrication.Master.designer.cs">
+      <DependentUpon>Fabrication.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Fabrication\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Fabrication\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Fabric_Formation\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Fabric_Formation\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Fabric_Formation\Fabric_Formation.Master.cs">
+      <DependentUpon>Fabric_Formation.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Fabric_Formation\Fabric_Formation.Master.designer.cs">
+      <DependentUpon>Fabric_Formation.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Fabric_Formation\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Fabric_Formation\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Finished_Goods\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Finished_Goods\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Finished_Goods\Finished_Goods.Master.cs">
+      <DependentUpon>Finished_Goods.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Finished_Goods\Finished_Goods.Master.designer.cs">
+      <DependentUpon>Finished_Goods.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Finished_Goods\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Finished_Goods\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Wet_Processing\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Wet_Processing\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Wet_Processing\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Wet_Processing\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Wet_Processing\Wet_Processing.Master.cs">
+      <DependentUpon>Wet_Processing.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Wet_Processing\Wet_Processing.Master.designer.cs">
+      <DependentUpon>Wet_Processing.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Yarn_Formation\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Yarn_Formation\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Yarn_Formation\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Yarn_Formation\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Yarn_Formation\YarnFormation.Master.cs">
+      <DependentUpon>YarnFormation.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Yarn_Formation\YarnFormation.Master.designer.cs">
+      <DependentUpon>YarnFormation.Master</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
