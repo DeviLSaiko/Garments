@@ -82,21 +82,23 @@ namespace Garments_Pro.Yarn_Formation
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             /* Label lblstatus = Label*/   /*FindControl("ChkRow") as CheckBox);*/
-            foreach (GridViewRow row in GridView1.Rows)
-            {
-                string btnstart = (row.FindControl("lblStatus") as Label).Text;
+
+            int index = Convert.ToInt32(e.CommandArgument);
+            GridViewRow gvRow = GridView1.Rows[index];
+           
+                Button btnstart = (gvRow.Cells[5].FindControl("btnstart") as Button);
                 switch (e.CommandName)
                 {
 
                     case "Start":
 
-                        int index;
-                        bool bIsConverted = int.TryParse(e.CommandArgument.ToString(), out index);
-                        string btns  = (row.FindControl("lblStatus") as Label).Text;
+                        //int index;
+                        //bool bIsConverted = int.TryParse(e.CommandArgument.ToString(), out index);
+                        //string btns  = (row.FindControl("lblStatus") as Label).Text;
                         //int rowIndex = Convert.ToInt32(e.CommandArgument);
                       
 
-                        btns = (row.Cells[5].FindControl("lblStatus") as Label).Text = "In progress";
+                        //btns = (row.Cells[5].FindControl("lblStatus") as Label).Text = "In progress";
                         //btns = (row.Cells[5].FindControl("lblStatus") as Label).CssClass = ("Color" "Danger");
 
 
@@ -116,28 +118,6 @@ namespace Garments_Pro.Yarn_Formation
                         break;
 
                 }
-
-            }
-
-
-            if (e.CommandName == "Start")
-            {
-                //Determine the RowIndex of the Row whose Button was clicked.
-                
-
-                //Reference the GridView Row.
-               
-
-                //Fetch value of Name.
-                
-
-                //Fetch value of Country
-                
-            }
-
-
-
-
 
 
         }
