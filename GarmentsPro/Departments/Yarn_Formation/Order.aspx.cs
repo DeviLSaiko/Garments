@@ -9,12 +9,12 @@ using System.Web.UI.WebControls;
 
 namespace Garments_Pro.Yarn_Formation
 {
-    public partial class Order : BasePage
+    public partial class Order : Page
     {
         string Con = @"Data Source=.;Initial Catalog=GarmentsPro;Integrated Security=SSPI";
-        protected override void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            base.Page_Load(sender, e);
+             
 
             if (!IsPostBack)
             {
@@ -81,54 +81,58 @@ namespace Garments_Pro.Yarn_Formation
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            //Label lblstatus = 
-            switch (e.CommandName)
+            /* Label lblstatus = Label*/   /*FindControl("ChkRow") as CheckBox);*/
+            foreach (GridViewRow row in GridView1.Rows)
             {
+                string btnstart = (row.FindControl("lblStatus") as Label).Text;
+                switch (e.CommandName)
+                {
 
-                case "Start":
+                    case "Start":
 
-                   
+                        int index;
+                        bool bIsConverted = int.TryParse(e.CommandArgument.ToString(), out index);
+                        string btns  = (row.FindControl("lblStatus") as Label).Text;
+                        //int rowIndex = Convert.ToInt32(e.CommandArgument);
+                      
+
+                        btns = (row.Cells[5].FindControl("lblStatus") as Label).Text = "In progress";
+                        //btns = (row.Cells[5].FindControl("lblStatus") as Label).CssClass = ("Color" "Danger");
 
 
 
-                    break;
 
-                case "Hold":
 
-                    break;
 
-                case "Finish":
 
-                    break;
+                        break;
+
+                    case "Hold":
+
+                        break;
+
+                    case "Finish":
+
+                        break;
+
+                }
 
             }
-
-
-
-
-
-
-
-
-
-
 
 
             if (e.CommandName == "Start")
             {
                 //Determine the RowIndex of the Row whose Button was clicked.
-                int rowIndex = Convert.ToInt32(e.CommandArgument);
+                
 
                 //Reference the GridView Row.
-                GridViewRow row = GridView1.Rows[rowIndex];
+               
 
                 //Fetch value of Name.
-                string name = (row.FindControl("txtName") as TextBox).Text;
+                
 
                 //Fetch value of Country
-                string country = row.Cells[1].Text;
-
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Name: " + name + "\\nCountry: " + country + "');", true);
+                
             }
 
 
