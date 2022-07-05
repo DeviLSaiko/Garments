@@ -80,12 +80,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Bootstrap\bootstrap.bundle.min5.js" />
+    <Content Include="Assets\Bootstrap\bootstrap.min5.css" />
+    <Content Include="Assets\font-awesome.min.css" />
+    <Content Include="Assets\SweetAlert\sweetalert.css" />
+    <Content Include="Assets\SweetAlert\sweetalert.min.js" />
     <Content Include="Departments\Fabrication\Dashboard.aspx" />
     <Content Include="Departments\Fabrication\Orders.aspx" />
     <Content Include="Departments\Fabric_Formation\Dashboard.aspx" />
     <Content Include="Departments\Fabric_Formation\Orders.aspx" />
     <Content Include="Departments\Finished_Goods\Dashboard.aspx" />
     <Content Include="Departments\Finished_Goods\Orders.aspx" />
+    <Content Include="Departments\Login.aspx" />
     <Content Include="Departments\Wet_Processing\Dashboard.aspx" />
     <Content Include="Departments\Wet_Processing\Orders.aspx" />
     <Content Include="Departments\Yarn_Formation\Dashboard.aspx" />
@@ -158,6 +164,13 @@
     <Compile Include="Departments\Finished_Goods\Orders.aspx.designer.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Departments\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Departments\Wet_Processing\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -207,6 +220,7 @@
   <ItemGroup>
     <Folder Include="Admin\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Assets\Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
