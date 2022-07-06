@@ -54,24 +54,16 @@ namespace GarmentsPro.Admin.Orders
 
         protected void BtnCreate_Click1(object sender, EventArgs e)
         {
-
+           //trim date  select replace(convert(varchar, getdate(), 101), '/', '') +replace(convert(varchar, getdate(), 108), ':', '')
 
             bool CheakExist1 = CheckExist();
 
             if (CheakExist1 == false)
             {
                 SqlConnection MyCon = new SqlConnection(MyConnection());
-                SqlCommand MyCmd = new SqlCommand("Insert into Orders (OrderID,ClientName,OrderType,Qty,ETA_Time,Status) values (@OID, @CN,@OType,@Qty,@ETA,@Stat)", MyCon);
-
-
+                SqlCommand MyCmd = new SqlCommand("Insert into  OrderID,ClientName,OrderType,Qty,ETA_Time,Status) values (@OID, @CN,@OType,@Qty,@ETA,@Stat)", MyCon);
                 MyCon.Open();
-
-
-                string stdate = DateTime.Parse(txtOrderID.Text).ToString();
-
-
-
-                MyCmd.Parameters.AddWithValue("@OID", stdate);
+                MyCmd.Parameters.AddWithValue("@OID", "(convert(varchar, txtOrderID.Text , 101), '/', '') + replace(convert(varchar, txtOrderID.Text, 108), ':', '') ");
                 MyCmd.Parameters.AddWithValue("@CN", txtClinet.Text);
                 MyCmd.Parameters.AddWithValue("@OType", ddType.SelectedValue);
                 MyCmd.Parameters.AddWithValue("@Qty", txtQty.Text);
@@ -83,7 +75,7 @@ namespace GarmentsPro.Admin.Orders
                 string mYq = "Insert into Status (OID ,Yarn_Formation , Fabric_Formation , Wet_Processing ,  Fabrication  , Finished_Goods  ) values (@OID , @YF ,@FF ,@WP,@F,@FG)" ;
                 SqlCommand MyCmd1 = new SqlCommand(mYq, MyCon);
 
-                MyCmd1.Parameters.AddWithValue("@OID", stdate);
+                MyCmd1.Parameters.AddWithValue("@OID", txtOrderID.Text);
                 MyCmd1.Parameters.AddWithValue("@YF", "Yet To Start");
                 MyCmd1.Parameters.AddWithValue("@FF", "Yet To Start");
                 MyCmd1.Parameters.AddWithValue("@WP", "Yet To Start");

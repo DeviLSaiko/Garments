@@ -15,7 +15,7 @@
 
                 <div class="col-md-4">
                     <label>OrderID</label>
-                    <asp:TextBox ID="txtOrderID" CssClass="form-control"  runat="server" TextMode="Date" Height="35px" Width="288px"></asp:TextBox>
+                    <asp:TextBox ID="txtOrderID" CssClass="form-control"  runat="server" TextMode="DateTimeLocal" Height="35px" Width="288px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
                         ControlToValidate="txtOrderID"
                         Text=" This Field Cannot be Empty"

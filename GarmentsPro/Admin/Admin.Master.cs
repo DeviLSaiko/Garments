@@ -13,7 +13,17 @@ namespace GarmentsPro.Admin
         {
             string Txt = "Hello! ";
              
-             lblWelcome.Text = Txt + ( Session["UserName"].ToString());
+            if (Session["UserName"]!=null)
+            {
+                lblWelcome.Text = Txt + (Session["UserName"].ToString());
+            }
+            else
+            {
+                Response.Redirect("~Admin/AdminLogin.aspx");
+            }
+
+
+             
         }
     }
 }
