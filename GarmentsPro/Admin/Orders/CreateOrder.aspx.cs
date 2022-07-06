@@ -80,10 +80,16 @@ namespace GarmentsPro.Admin.Orders
 
                 MyCmd.ExecuteNonQuery();
 
+                string mYq = "Insert into Status (OID ,Yarn_Formation , Fabric_Formation , Wet_Processing ,  Fabrication  , Finished_Goods  ) values (@OID , @YF ,@FF ,@WP,@F,@FG)" ;
+                SqlCommand MyCmd1 = new SqlCommand(mYq, MyCon);
 
-                SqlCommand MyCmdd = new SqlCommand("Insert into Status (OID)values(@OID)", MyCon);
-
-                MyCmdd.Parameters.AddWithValue("@OID", txtOrderID.Text);
+                MyCmd1.Parameters.AddWithValue("@OID", stdate);
+                MyCmd1.Parameters.AddWithValue("@YF", "Yet To Start");
+                MyCmd1.Parameters.AddWithValue("@FF", "Yet To Start");
+                MyCmd1.Parameters.AddWithValue("@WP", "Yet To Start");
+                MyCmd1.Parameters.AddWithValue("@F", "Yet To Start");
+                MyCmd1.Parameters.AddWithValue("@FG", "Yet To Start");
+                MyCmd1.ExecuteNonQuery();
 
                 MyCon.Close();
 
