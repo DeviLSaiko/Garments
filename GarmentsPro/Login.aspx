@@ -1,4 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Garments_Pro.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="GarmentsPro.Login" %>
+
+<!DOCTYPE html>
 
 <!DOCTYPE html>
 
@@ -45,11 +47,11 @@
                         runat="server"></asp:RequiredFieldValidator>
                     <br />
                     <div class="d-grid">
-
-                        <asp:Label CssClass="text-danger" ID="lblError" runat="server" Text=""></asp:Label>
-
                         <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-dark" Width="207px" Height="39px" />
                     </div>
+                    <asp:Label ID="lblerror" runat="server" Text=""></asp:Label>
+
+                     <a style="color:aliceblue" href="/Admin/AdminLogin.aspx">L</a>
                 </div>
             </div>
         </div>

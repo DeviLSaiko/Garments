@@ -1,16 +1,51 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="CreateOrder.aspx.cs" Inherits="GarmentsPro.Admin.Orders.CreateOrder" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateOrder.aspx.cs" Inherits="Garments_Pro.Orders.CreateOrder" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Create New Order</title>
+ 
+    <script src="../../Assets/Bootstrap/bootstrap.bundle.min5.js"></script>
+    <link href="../../Assets/Bootstrap/bootstrap.min5.css" rel="stylesheet" />
+    <link href="../../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
+    <script src="../../Assets/SweetAlert/sweetalert.min.js"></script>
 
 
-     <asp:ScriptManager ID="scriptmanager1" runat="server">  
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="../Admin.aspx">GarmentPro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+               <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="../Admin/Admin.aspx">DashBoard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Admin/CreateAccount.aspx">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../Orders/CreateOrder.aspx"> Create Order</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <form id="form1" runat="server">
+         <asp:ScriptManager ID="scriptmanager1" runat="server">  
 </asp:ScriptManager> 
        <asp:UpdatePanel ID="updatepnl" runat="server">  
 <ContentTemplate>  
-   
         <div class="container mt-5">
-             <h2>Create New Account</h2>
             <div class="row ">
 
                 <div class="col-md-4">
@@ -99,7 +134,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click1" Text="Create New Order" CssClass="btn btn-success " Width="207px" Height="39px" />
+                    <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Create New Order" CssClass="btn btn-success " Width="207px" Height="39px" />
                 </div>
             </div>
             <center>
@@ -121,7 +156,7 @@
                                      <asp:BoundField DataField="Status" HeaderText="Status" />
              <asp:TemplateField HeaderText="Modify" ControlStyle-CssClass="btn btn-dark" >
      <ItemTemplate>
-                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Orders/EditOrder.aspx?ID={0}",
+                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Orders/Modify_Order.aspx?ID={0}",
                     HttpUtility.HtmlEncode (Eval("OID").ToString()))%>'>Modify</asp:HyperLink>
      </ItemTemplate>
       </asp:TemplateField>  
@@ -134,7 +169,6 @@
         </div>
     </ContentTemplate>  
 </asp:UpdatePanel> 
-
-
-
-</asp:Content>
+    </form>
+</body>
+</html>

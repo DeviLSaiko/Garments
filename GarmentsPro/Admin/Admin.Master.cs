@@ -11,7 +11,9 @@ namespace GarmentsPro.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string Txt = "Hello! ";
+             
+             lblWelcome.Text = Txt + ( Session["UserName"].ToString());
         }
     }
 }

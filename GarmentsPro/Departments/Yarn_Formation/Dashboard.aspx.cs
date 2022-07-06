@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Garments_Pro.Yarn_Formation
+namespace GarmentsPro.Departments.Yarn_Formation
 {
     public partial class Dashboard : System.Web.UI.Page
     {

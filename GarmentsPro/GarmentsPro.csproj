@@ -68,12 +68,16 @@
   <ItemGroup>
     <Content Include="Admin\AdminLogin.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\NewFolder1\CreateOrder.aspx" />
+    <Content Include="Admin\NewFolder1\OrderList.aspx" />
     <Content Include="Admin\Orders\CreateOrder.aspx" />
     <Content Include="Admin\Orders\EditOrder.aspx" />
     <Content Include="Admin\Orders\Orders.aspx" />
     <Content Include="Admin\Users\Accounts.aspx" />
     <Content Include="Admin\Users\CreateAccount.aspx" />
     <Content Include="Admin\Users\EditAccount.aspx" />
+    <Content Include="Departments\Yarn_Formation\Dashboard.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="Departments\Fabric_Formation\Fabric_Formation.Master" />
     <Content Include="Departments\Fabrication\Fabrication.Master" />
@@ -103,7 +107,6 @@
     <Content Include="Departments\Login.aspx" />
     <Content Include="Departments\Wet_Processing\Dashboard.aspx" />
     <Content Include="Departments\Wet_Processing\Orders.aspx" />
-    <Content Include="Departments\Yarn_Formation\Dashboard.aspx" />
     <Content Include="Departments\Yarn_Formation\Order.aspx" />
     <Content Include="Departments\Yarn_Formation\Style.css" />
     <Content Include="Global.asax" />
@@ -130,6 +133,20 @@
     </Compile>
     <Compile Include="Admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewFolder1\CreateOrder.aspx.cs">
+      <DependentUpon>CreateOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NewFolder1\CreateOrder.aspx.designer.cs">
+      <DependentUpon>CreateOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewFolder1\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NewFolder1\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Orders\CreateOrder.aspx.cs">
       <DependentUpon>CreateOrder.aspx</DependentUpon>
@@ -287,6 +304,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

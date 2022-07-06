@@ -8,7 +8,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Garments_Pro
+namespace GarmentsPro
 {
     public partial class Login : System.Web.UI.Page
     {
@@ -87,10 +87,10 @@ namespace Garments_Pro
 
 
 
- //if (HttpContext.Current.User?.Identity?.Name != null && HttpContext.Current.User?.Identity is FormsIdentity identity)
- //           return JsonConvert.DeserializeObject<LoggedInUser>(identity.Ticket.UserData);
+        //if (HttpContext.Current.User?.Identity?.Name != null && HttpContext.Current.User?.Identity is FormsIdentity identity)
+        //           return JsonConvert.DeserializeObject<LoggedInUser>(identity.Ticket.UserData);
 
-            
+
 
 
         protected void BtnCreate_Click(object sender, EventArgs e)
@@ -108,37 +108,25 @@ namespace Garments_Pro
             {
                 while (dr.Read())
                 {
-                    Session["Department"] = dr["Department"].ToString();
-                    Session["Password"] = dr["Password"].ToString();
-                    Session["UserName"] = dr["UserName"].ToString();
+                    Session["Department"] = dr.GetValue(0).ToString();
 
-                    string Dep = dr["Department"].ToString();
-                   string Pass = dr["Password"].ToString();
-                    string User = dr["UserName"].ToString();
-
-
-
-
-
-
-
-                    if (Dep == "Yarn Formation" && User == "@UserName" && Pass== "@Password" )
+                    if (ddDepartments.Text == "Fabric Formation")
                     {
-                        Response.Redirect("~/Departments/Yarn_Formation/Dashboard.aspx");
+                        Response.Redirect("/Departments/Yarn_Formation/Dashboard.aspx ");
                     }
-                    else if (Dep == "Fabric Formation" && User == "@UserName" && Pass == "@Password")
+                    else if (dr.GetValue(2).ToString() == "Fabric Formation")
                     {
                         Response.Redirect("~/Departments/Fabric_Formation/Dashboard.aspx");
                     }
-                    else if (Dep == "Wet Processing" && User == "@UserName" && Pass == "@Password")
+                    else if (dr.GetValue(2).ToString() == "Wet Processing")
                     {
                         Response.Redirect("~/Departments/Wet_Processing/Dashboard.aspx");
                     }
-                    else if (Dep == "Fabrication" && User == "@UserName" && Pass == "@Password")
+                    else if (dr.GetValue(2).ToString() == "Fabrication")
                     {
                         Response.Redirect("~/Departments/Fabrication/Dashboard.aspx");
                     }
-                    else if (Dep == "Finished Goods" && User == "@UserName" && Pass == "@Password")
+                    else if (dr.GetValue(2).ToString() == "Finished Goods")
                     {
                         Response.Redirect("~/Departments/Finished_Goods/Dashboard.aspx");
                     }
@@ -146,11 +134,9 @@ namespace Garments_Pro
             }
             else
             {
+                Response.Redirect("~/Login.aspx");
 
-                lblError.Text = "Login Error !! ";
-
-                txtUserName.Text = string.Empty;
-                txtPassword.Text = string.Empty;
+                 
                 txtUserName.Focus();
             }
         }

@@ -81,25 +81,20 @@ namespace Garments_Pro.Yarn_Formation
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            /* Label lblstatus = Label*/   /*FindControl("ChkRow") as CheckBox);*/
-
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow gvRow = GridView1.Rows[index];
            
                 Button btnstart = (gvRow.Cells[5].FindControl("btnstart") as Button);
-                switch (e.CommandName)
+            Button btnhold = (gvRow.Cells[6].FindControl("btnhold") as Button);
+            Button btnFinish = (gvRow.Cells[7].FindControl("btnfinish") as Button);
+            switch (e.CommandName)
                 {
 
                     case "Start":
 
-                        //int index;
-                        //bool bIsConverted = int.TryParse(e.CommandArgument.ToString(), out index);
-                        //string btns  = (row.FindControl("lblStatus") as Label).Text;
-                        //int rowIndex = Convert.ToInt32(e.CommandArgument);
-                      
-
-                        //btns = (row.Cells[5].FindControl("lblStatus") as Label).Text = "In progress";
-                        //btns = (row.Cells[5].FindControl("lblStatus") as Label).CssClass = ("Color" "Danger");
+                   
+                    btnstart.Text = "In progress";
+                    btnhold.Text= "Hold" ;
 
 
 
@@ -107,13 +102,26 @@ namespace Garments_Pro.Yarn_Formation
 
 
 
-                        break;
+                    //btns = (row.Cells[5].FindControl("lblStatus") as Label).Text = "In progress";
+                    //btns = (row.Cells[5].FindControl("lblStatus") as Label).CssClass = ("Color" "Danger");
+
+
+
+
+
+
+
+                    break;
 
                     case "Hold":
 
-                        break;
+                    btnhold.Text = "on Hold";
+                    btnstart.Text = "Start";
+
+                    break;
 
                     case "Finish":
+                    GridView1.Visible = false;
 
                         break;
 
