@@ -38,12 +38,23 @@ namespace GarmentsPro.Admin.Orders
             GridView1.DataSource = MyTable;
             GridView1.DataBind();
 
-            txtOrderID.Text = MyTable.Rows[0]["OrderID"].ToString();
-            txtClinet.Text = MyTable.Rows[0]["ClientName"].ToString();
-            ddType.Text = MyTable.Rows[0]["OrderType"].ToString();
-            txtQty.Text = MyTable.Rows[0]["Qty"].ToString();
-            txtETA.Text = MyTable.Rows[0]["ETA_Time"].ToString();
-            DdStatus.Text = MyTable.Rows[0]["Status"].ToString();
+            if (MyTable.Rows.Count >0)
+            {
+                txtOrderID.Text = MyTable.Rows[0]["OrderID"].ToString();
+                txtClinet.Text = MyTable.Rows[0]["ClientName"].ToString();
+                ddType.Text = MyTable.Rows[0]["OrderType"].ToString();
+                txtQty.Text = MyTable.Rows[0]["Qty"].ToString();
+                txtETA.Text = MyTable.Rows[0]["ETA_Time"].ToString();
+                DdStatus.Text = MyTable.Rows[0]["Status"].ToString();
+            }
+            else
+            {
+                Response.Redirect("~/Admin/CreateDashboard.aspx");
+            }
+
+
+
+            
 
         }
 

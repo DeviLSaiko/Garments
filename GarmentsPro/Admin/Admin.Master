@@ -9,22 +9,11 @@
     <link href="../Assets/Bootstrap/bootstrap.min5.css" rel="stylesheet" />
     <link href="../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../Assets/SweetAlert/sweetalert.min.js"></script>
+     
 
-    <style>
-
-        .nav navbar {
-            color:blanchedalmond
-        }
+    
 
 
-
-    </style>
-
-
-
-
-
-    <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

@@ -65,7 +65,7 @@
                                         <asp:BoundField DataField="Department" HeaderText="Department" />
                                         <asp:TemplateField HeaderText="Modify" ControlStyle-CssClass="btn btn-dark">
                                             <ItemTemplate>
-                                                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Users/Modify_User.aspx?ID={0}",
+                                                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Users/EditAccount.aspx?ID={0}",
                     HttpUtility.HtmlEncode (Eval("UID").ToString()))%>'>Modify</asp:HyperLink>
                                             </ItemTemplate>
                                         </asp:TemplateField>

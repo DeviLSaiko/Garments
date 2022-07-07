@@ -1,5 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="CreateOrder.aspx.cs" Inherits="GarmentsPro.Admin.Orders.CreateOrder" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <title>Create New Order</title>
+    <script>
+        $(document).ready(function () {
+        var url = window.location;
+        $('.navbar .nav').find('.active').removeClass('active');
+        $('.navbar collapse li a').each(function () {
+            if (this.href == url) {
+                $(this).parent().addClass('active');
+            }
+        }); 
+    });
+ </script>
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -15,7 +30,7 @@
 
                 <div class="col-md-4">
                     <label>OrderID</label>
-                    <asp:TextBox ID="txtOrderID" CssClass="form-control"  runat="server" TextMode="DateTimeLocal" Height="35px" Width="288px"></asp:TextBox>
+                    <asp:TextBox ID="txtOrderID" CssClass="form-control"  runat="server" TextMode="DateTimeLocal"   Height="35px" Width="288px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
                         ControlToValidate="txtOrderID"
                         Text=" This Field Cannot be Empty"
@@ -67,8 +82,8 @@
                     <br />
                 </div>
                 <div class="col-md-4">
-                    <label>ETA Complete Time</label>
-                    <asp:TextBox ID="txtETA" TextMode="Date" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
+                    <label> Deadline Time</label>
+                    <asp:TextBox ID="txtETA" TextMode="DateTimeLocal" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5"
                         ControlToValidate="txtETA"
                         Text=" This Field Cannot be Empty"
