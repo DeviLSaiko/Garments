@@ -83,7 +83,7 @@ namespace GarmentsPro.Admin.Orders
 
                 MyCmd.ExecuteNonQuery();
 
-                string mYq = "Insert into Status ( OID ,Yarn_Formation , Fabric_Formation , Wet_Processing ,  Fabrication  , Finished_Goods  ) values ( ( 'ORDid-' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  ) ) , @YF ,@FF ,@WP,@F,@FG)";
+                string mYq = "Insert into Status ( OID ,Yarn_Formation , Fabric_Formation , Wet_Processing ,  Fabrication  , Finished_Goods  ) values (  'ORDid-' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  )  , @YF ,@FF ,@WP,@F,@FG)";
                 SqlCommand MyCmd1 = new SqlCommand(mYq, MyCon);
 
                 

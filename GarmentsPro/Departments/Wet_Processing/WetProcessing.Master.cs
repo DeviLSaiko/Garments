@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Garments_Pro.Departments.Wet_Processing
+namespace GarmentsPro.Departments.Wet_Processing
 {
-    public partial class Dashboard : System.Web.UI.Page
+    public partial class WetProcessing : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

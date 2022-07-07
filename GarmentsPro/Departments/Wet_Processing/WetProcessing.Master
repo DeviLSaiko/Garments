@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Wet_Processing.master.cs" Inherits="Garments_Pro.Departments.Wet_Processing.Wet_Processing" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WetProcessing.master.cs" Inherits="GarmentsPro.Departments.Wet_Processing.WetProcessing" %>
 
 <!DOCTYPE html>
 

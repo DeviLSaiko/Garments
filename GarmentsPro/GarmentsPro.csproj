@@ -76,15 +76,16 @@
     <Content Include="Admin\Users\Accounts.aspx" />
     <Content Include="Admin\Users\CreateAccount.aspx" />
     <Content Include="Admin\Users\EditAccount.aspx" />
+    <Content Include="Departments\Wet_Processing\Order.aspx" />
     <Content Include="Departments\Yarn_Formation\Dashboard.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="Departments\Fabric_Formation\Fabric_Formation.Master" />
     <Content Include="Departments\Fabrication\Fabrication.Master" />
     <Content Include="Departments\Finished_Goods\Finished_Goods.Master" />
-    <Content Include="Departments\Wet_Processing\Wet_Processing.Master" />
     <Content Include="Departments\Yarn_Formation\YarnFormation.Master" />
     <Content Include="Admin\Admin.Master" />
+    <Content Include="Departments\Wet_Processing\WetProcessing.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -101,12 +102,10 @@
     <Content Include="Departments\Fabrication\Dashboard.aspx" />
     <Content Include="Departments\Fabrication\Orders.aspx" />
     <Content Include="Departments\Fabric_Formation\Dashboard.aspx" />
-    <Content Include="Departments\Fabric_Formation\Orders.aspx" />
+    <Content Include="Departments\Fabric_Formation\Orders_FF.aspx" />
     <Content Include="Departments\Finished_Goods\Dashboard.aspx" />
     <Content Include="Departments\Finished_Goods\Orders.aspx" />
     <Content Include="Departments\Login.aspx" />
-    <Content Include="Departments\Wet_Processing\Dashboard.aspx" />
-    <Content Include="Departments\Wet_Processing\Orders.aspx" />
     <Content Include="Departments\Yarn_Formation\Order.aspx" />
     <Content Include="Departments\Yarn_Formation\Style.css" />
     <Content Include="Global.asax" />
@@ -225,12 +224,12 @@
     <Compile Include="Departments\Fabric_Formation\Fabric_Formation.Master.designer.cs">
       <DependentUpon>Fabric_Formation.Master</DependentUpon>
     </Compile>
-    <Compile Include="Departments\Fabric_Formation\Orders.aspx.cs">
-      <DependentUpon>Orders.aspx</DependentUpon>
+    <Compile Include="Departments\Fabric_Formation\Orders_FF.aspx.cs">
+      <DependentUpon>Orders_FF.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Departments\Fabric_Formation\Orders.aspx.designer.cs">
-      <DependentUpon>Orders.aspx</DependentUpon>
+    <Compile Include="Departments\Fabric_Formation\Orders_FF.aspx.designer.cs">
+      <DependentUpon>Orders_FF.aspx</DependentUpon>
     </Compile>
     <Compile Include="Departments\Finished_Goods\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -260,26 +259,19 @@
     <Compile Include="Departments\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Departments\Wet_Processing\Dashboard.aspx.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
+    <Compile Include="Departments\Wet_Processing\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Departments\Wet_Processing\Dashboard.aspx.designer.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
+    <Compile Include="Departments\Wet_Processing\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Departments\Wet_Processing\Orders.aspx.cs">
-      <DependentUpon>Orders.aspx</DependentUpon>
+    <Compile Include="Departments\Wet_Processing\WetProcessing.Master.cs">
+      <DependentUpon>WetProcessing.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Departments\Wet_Processing\Orders.aspx.designer.cs">
-      <DependentUpon>Orders.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Departments\Wet_Processing\Wet_Processing.Master.cs">
-      <DependentUpon>Wet_Processing.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Departments\Wet_Processing\Wet_Processing.Master.designer.cs">
-      <DependentUpon>Wet_Processing.Master</DependentUpon>
+    <Compile Include="Departments\Wet_Processing\WetProcessing.Master.designer.cs">
+      <DependentUpon>WetProcessing.Master</DependentUpon>
     </Compile>
     <Compile Include="Departments\Yarn_Formation\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

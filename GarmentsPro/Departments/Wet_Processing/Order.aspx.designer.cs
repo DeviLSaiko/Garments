@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Garments_Pro.Departments.Fabric_Formation {
+namespace GarmentsPro.Departments.Wet_Processing {
     
     
-    public partial class Orders {
+    public partial class Order {
         
         /// <summary>
         /// GridView1 control.
