@@ -24,12 +24,7 @@
                 <div class="col-md-6">
                     <label>UserName</label>
                     <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
-                        ControlToValidate="txtUserName"
-                        Text=" This Field Cannot be Empty"
-                        ForeColor="red"
-                        Font-Size="Small"
-                        runat="server"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2"ControlToValidate="txtUserName" Text=" This Field Cannot be Empty" ForeColor="red" Font-Size="Small" runat="server"></asp:RequiredFieldValidator>
                     <br />
                     <label>Department</label>
                     <asp:DropDownList ID="ddDepartments" CssClass="form-select" Height="35px" Width="288px" runat="server"></asp:DropDownList>

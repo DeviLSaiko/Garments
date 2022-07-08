@@ -10,7 +10,14 @@
     <link href="../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../Assets/SweetAlert/sweetalert.min.js"></script>
      
+     <style>
 
+         body {
+             background-image: url(C:\IYAPPAN\GarmentsPro\GarmentsPro\Assets\Images\Bg1.jpg);
+         }
+
+
+    </style>
     
 
 

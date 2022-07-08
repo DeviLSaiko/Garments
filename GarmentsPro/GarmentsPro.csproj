@@ -76,6 +76,7 @@
     <Content Include="Admin\Users\Accounts.aspx" />
     <Content Include="Admin\Users\CreateAccount.aspx" />
     <Content Include="Admin\Users\EditAccount.aspx" />
+    <Content Include="Assets\Images\Bg1.jpg" />
     <Content Include="Departments\FabricFormation\Dashboard.aspx" />
     <Content Include="Departments\FabricFormation\Orders.aspx" />
     <Content Include="Departments\Wet_Processing\Order.aspx" />
@@ -308,7 +309,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
