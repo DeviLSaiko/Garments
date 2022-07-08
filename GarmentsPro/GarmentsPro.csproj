@@ -76,16 +76,18 @@
     <Content Include="Admin\Users\Accounts.aspx" />
     <Content Include="Admin\Users\CreateAccount.aspx" />
     <Content Include="Admin\Users\EditAccount.aspx" />
+    <Content Include="Departments\FabricFormation\Dashboard.aspx" />
+    <Content Include="Departments\FabricFormation\Orders.aspx" />
     <Content Include="Departments\Wet_Processing\Order.aspx" />
     <Content Include="Departments\Yarn_Formation\Dashboard.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
-    <Content Include="Departments\Fabric_Formation\Fabric_Formation.Master" />
     <Content Include="Departments\Fabrication\Fabrication.Master" />
     <Content Include="Departments\Finished_Goods\Finished_Goods.Master" />
     <Content Include="Departments\Yarn_Formation\YarnFormation.Master" />
     <Content Include="Admin\Admin.Master" />
     <Content Include="Departments\Wet_Processing\WetProcessing.Master" />
+    <Content Include="Departments\FabricFormation\FabricFormation.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -101,8 +103,6 @@
     <Content Include="Assets\SweetAlert\sweetalert.min.js" />
     <Content Include="Departments\Fabrication\Dashboard.aspx" />
     <Content Include="Departments\Fabrication\Orders.aspx" />
-    <Content Include="Departments\Fabric_Formation\Dashboard.aspx" />
-    <Content Include="Departments\Fabric_Formation\Orders_FF.aspx" />
     <Content Include="Departments\Finished_Goods\Dashboard.aspx" />
     <Content Include="Departments\Finished_Goods\Orders.aspx" />
     <Content Include="Departments\Login.aspx" />
@@ -210,26 +210,26 @@
     <Compile Include="Departments\Fabrication\Orders.aspx.designer.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Departments\Fabric_Formation\Dashboard.aspx.cs">
+    <Compile Include="Departments\FabricFormation\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Departments\Fabric_Formation\Dashboard.aspx.designer.cs">
+    <Compile Include="Departments\FabricFormation\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Departments\Fabric_Formation\Fabric_Formation.Master.cs">
-      <DependentUpon>Fabric_Formation.Master</DependentUpon>
+    <Compile Include="Departments\FabricFormation\FabricFormation.Master.cs">
+      <DependentUpon>FabricFormation.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Departments\Fabric_Formation\Fabric_Formation.Master.designer.cs">
-      <DependentUpon>Fabric_Formation.Master</DependentUpon>
+    <Compile Include="Departments\FabricFormation\FabricFormation.Master.designer.cs">
+      <DependentUpon>FabricFormation.Master</DependentUpon>
     </Compile>
-    <Compile Include="Departments\Fabric_Formation\Orders_FF.aspx.cs">
-      <DependentUpon>Orders_FF.aspx</DependentUpon>
+    <Compile Include="Departments\FabricFormation\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Departments\Fabric_Formation\Orders_FF.aspx.designer.cs">
-      <DependentUpon>Orders_FF.aspx</DependentUpon>
+    <Compile Include="Departments\FabricFormation\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Departments\Finished_Goods\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

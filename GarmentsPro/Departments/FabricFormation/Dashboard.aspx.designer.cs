@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Garments_Pro.Departments.Fabric_Formation
+namespace GarmentsPro.Departments.FabricFormation
 {
 
 

@@ -30,7 +30,7 @@ namespace GarmentsPro.Departments.Wet_Processing
 
             using (SqlConnection Sqlconnection = new SqlConnection(Con))
             {
-                string MyQ = "select a.OID, OrderID ,ClientName , OrderType , Qty ,ETA_Time  as Deadline, Created_Date, Status, Yarn_Formation from Orders a join Status b on a.OrderID = b.OID";
+                string MyQ = "select a.OID, OrderID ,ClientName , OrderType , Qty ,ETA_Time  as Deadline, Created_Date, Status, Finished_Goods from Orders a join Status b on a.OrderID = b.OID";
 
                 SqlDataAdapter myada = new SqlDataAdapter(MyQ, Sqlconnection);
                 myada.Fill(MyTable);
@@ -123,7 +123,7 @@ namespace GarmentsPro.Departments.Wet_Processing
                     btnhold.CssClass = "btn btn-warning btn-sm";
                     btnFinish.Visible = true;
 
-                    string MyQa = "update Status  set Yarn_Formation=@YP where OID=@OID";
+                    string MyQa = "update Status  set Finished_Goods=@YP where OID=@OID";
                     SqlCommand MyCmd = new SqlCommand(MyQa, Sqlconnection);
 
                     Sqlconnection.Open();
@@ -148,7 +148,7 @@ namespace GarmentsPro.Departments.Wet_Processing
 
                     btnFinish.Visible = false;
 
-                    string MysQ = "update Status  set Yarn_Formation=@YP where OID=@OID";
+                    string MysQ = "update Status  set Finished_Goods=@YP where OID=@OID";
                     SqlCommand MyCmds = new SqlCommand(MysQ, Sqlconnection);
 
                     Sqlconnection.Open();
@@ -164,7 +164,7 @@ namespace GarmentsPro.Departments.Wet_Processing
                 case "Finish":
                     gvRow.Visible = false;
 
-                    string MysQ1 = "update Status  set Yarn_Formation=@YP where OID=@OID";
+                    string MysQ1 = "update Status  set Finished_Goods=@YP where OID=@OID";
                     SqlCommand MyCmdss = new SqlCommand(MysQ1, Sqlconnection);
 
                     Sqlconnection.Open();

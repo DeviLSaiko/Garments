@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+      <link href="../../Assets/font-awesome.min.css" rel="stylesheet" />
+        <script src="../../Assets/SweetAlert/sweetalert.min.js"></script>
+        <link href="../../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
+        <link href="../../Assets/Bootstrap/bootstrap.min5.css" rel="stylesheet" />
+        <script src="../../Assets/Bootstrap/bootstrap.bundle.min5.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

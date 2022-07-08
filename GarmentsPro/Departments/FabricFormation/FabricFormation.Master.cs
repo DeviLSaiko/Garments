@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Garments_Pro.Departments.Fabric_Formation
+namespace GarmentsPro.Departments.FabricFormation
 {
-    public partial class Dashboard : System.Web.UI.Page
+    public partial class FabricFormation : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

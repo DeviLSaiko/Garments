@@ -14,7 +14,7 @@
                         <asp:BoundField DataField="ClientName" HeaderText="Client " />
                         <asp:BoundField DataField="OrderType" HeaderText="Order Type" />
                          <asp:BoundField DataField="DeadLine" HeaderText="DeadLine" />
-                         <asp:BoundField DataField="Yarn_Formation" HeaderText="Order Status" />
+                         <asp:BoundField DataField="Finished_Goods" HeaderText="Order Status" />
 
                         <asp:TemplateField HeaderText="Order Status" HeaderStyle-BackColor="White">
                             <ItemTemplate>
