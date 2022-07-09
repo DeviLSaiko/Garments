@@ -40,15 +40,6 @@ namespace GarmentsPro {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
-        /// ddDepartments control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddDepartments;
-        
-        /// <summary>
         /// txtPassword control.
         /// </summary>
         /// <remarks>
@@ -76,12 +67,12 @@ namespace GarmentsPro {
         protected global::System.Web.UI.WebControls.Button BtnCreate;
         
         /// <summary>
-        /// lblerror control.
+        ///  lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblerror;
+        protected global::System.Web.UI.WebControls.Label  lblError;
     }
 }

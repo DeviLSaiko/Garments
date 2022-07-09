@@ -9,7 +9,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
-    <div class="container" style="padding-top:250px">
+    <div class="container" style="padding-top: 250px">
         <div class="row">
             <center>
             <div class="col-md-12 align-content-center">

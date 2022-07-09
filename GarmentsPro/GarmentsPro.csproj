@@ -79,6 +79,7 @@
     <Content Include="Assets\Images\Bg1.jpg" />
     <Content Include="Departments\FabricFormation\Dashboard.aspx" />
     <Content Include="Departments\FabricFormation\Orders.aspx" />
+    <Content Include="Departments\Wet_Processing\Dashboard.aspx" />
     <Content Include="Departments\Wet_Processing\Order.aspx" />
     <Content Include="Departments\Yarn_Formation\Dashboard.aspx" />
     <Content Include="Login.aspx" />
@@ -106,7 +107,6 @@
     <Content Include="Departments\Fabrication\Orders.aspx" />
     <Content Include="Departments\Finished_Goods\Dashboard.aspx" />
     <Content Include="Departments\Finished_Goods\Orders.aspx" />
-    <Content Include="Departments\Login.aspx" />
     <Content Include="Departments\Yarn_Formation\Order.aspx" />
     <Content Include="Departments\Yarn_Formation\Style.css" />
     <Content Include="Global.asax" />
@@ -253,12 +253,12 @@
     <Compile Include="Departments\Finished_Goods\Orders.aspx.designer.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Departments\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Departments\Wet_Processing\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Departments\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Departments\Wet_Processing\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Departments\Wet_Processing\Order.aspx.cs">
       <DependentUpon>Order.aspx</DependentUpon>

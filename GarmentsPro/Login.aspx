@@ -23,8 +23,12 @@
         <div class="mt-5">
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
+             <div class="row p-5 mt-5"></div>
+            <div class="row p-5 mt-5">
+                <div class="col-md-4">
+            </div>
+                <div class="col-md-4">
+                    </div>
                     <label>UserName</label>
                     <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
@@ -33,9 +37,6 @@
                         ForeColor="red"
                         Font-Size="Small"
                         runat="server"></asp:RequiredFieldValidator>
-                    <br />
-                    <label>Department</label>
-                    <asp:DropDownList ID="ddDepartments" CssClass="form-select" Height="35px" Width="288px" runat="server"></asp:DropDownList>
                     <br />
                     <label>Password</label>
                     <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
@@ -49,11 +50,9 @@
                     <div class="d-grid">
                         <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-dark" Width="207px" Height="39px" />
                     </div>
-                    <asp:Label ID="lblerror" runat="server" Text=""></asp:Label>
-
+                    <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
                      <a style="color:aliceblue" href="/Admin/AdminLogin.aspx">L</a>
                 </div>
-            </div>
         </div>
     </form>
 </body>

@@ -14,6 +14,40 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+        <!-- Header -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../../logo.png" alt="Avatar Logo" style="width: 40px;" class="rounded-pill">  Garments Pro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href=  "Dashboard.aspx">DashBoard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Order.aspx">Orders</a>
+                    </li>
+                  
+                    
+                </ul>
+                  <ul class="navbar-nav" style="padding-left: 700PX">
+                     <li class="nav-item ">
+                        <a class="nav-link " href="/Admin/AdminLogin.aspx"> <div style=" color: mintcream" >  <asp:Label ID="lblWelcome" runat="server" Text=""></asp:Label> </div> </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="/Login.aspx">Logout</a>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

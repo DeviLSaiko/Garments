@@ -9,23 +9,32 @@
     <link href="../Assets/Bootstrap/bootstrap.min5.css" rel="stylesheet" />
     <link href="../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../Assets/SweetAlert/sweetalert.min.js"></script>
-     
-     <style>
 
-         body {
-             background-image: url(C:\IYAPPAN\GarmentsPro\GarmentsPro\Assets\Images\Bg1.jpg);
-         }
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
 
+        #page-content {
+            flex: 1 0 auto;
+        }
 
+        /* Other Classes for Page Styling */
+
+        body {
+            background:#b200ff ;
+            background: linear-gradient(to right, #0062E6, #33AEFF);
+        }
     </style>
-    
+
 
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-     <!-- Header -->
+    <!-- Header -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
         <div class="container ">
 
@@ -47,13 +56,17 @@
 
                 </ul>
                 <ul class="navbar-nav" style="padding-left: 700PX">
-                     <li class="nav-item ">
-                        <a class="nav-link " href="/Admin/AdminLogin.aspx"> <div style=" color: mintcream" >  <asp:Label ID="lblWelcome" runat="server" Text=""></asp:Label> </div> </a>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="/Admin/AdminLogin.aspx">
+                            <div style="color: mintcream">
+                                <asp:Label ID="lblWelcome" runat="server" Text=""></asp:Label>
+                            </div>
+                        </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link " href="/Login.aspx">Logout</a>
                     </li>
-                    
+
 
                 </ul>
             </div>
@@ -61,14 +74,18 @@
     </nav>
     <!-- Header -->
 
-
+         
 
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Copyright &copy; Your Website</small>
+        </div>
+    </footer>
 </body>
 </html>

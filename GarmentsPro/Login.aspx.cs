@@ -15,39 +15,10 @@ namespace GarmentsPro
         String MyCon = @"Data Source =.; Initial Catalog = GarmentsPro; Integrated Security =SSPI ";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                DataTable MyTable = new DataTable();
-
-                using (SqlConnection Sqlconnection = new SqlConnection(MyCon))
-                {
-                    SqlDataAdapter myada = new SqlDataAdapter("select * from Departments ", Sqlconnection);
-                    myada.Fill(MyTable);
-                }
-                ddDepartments.DataTextField = "DepName";
-                ddDepartments.DataValueField = "DepName";
-                ddDepartments.DataSource = MyTable;
-                ddDepartments.DataBind();
-            }
             Session.RemoveAll();
-            Session.Remove("UserName");
-            Session.Remove("UserName");
         }
 
-        private void LoginDetails(string Username, string Password)
-        {
-
-            //LoginDetails MyObj = new LoginDetails();
-
-            //MyObj.IsAuthUser = false;
-
-            using (SqlConnection Sqlconnection = new SqlConnection(MyCon))
-            {
-                SqlDataAdapter myada = new SqlDataAdapter("select * from Departments ", Sqlconnection);
-                //myada.Fill(MyTable);
-            }
-
-        }
+       
 
         //public static class Authentication
         //{
@@ -101,32 +72,41 @@ namespace GarmentsPro
             SqlCommand cmd = new SqlCommand("SELECT UserName , Password , Department from UserInfo  where UserName=@UserName and Password=@Password", Sqlconnection);
             cmd.Parameters.AddWithValue("@UserName", txtUserName.Text.Trim());
             cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
-            cmd.Parameters.AddWithValue("@Department", ddDepartments.Text.Trim());
+            
             SqlDataReader dr = cmd.ExecuteReader();
 
             if (dr.HasRows)
             {
                 while (dr.Read())
                 {
-                    Session["Department"] = dr.GetValue(0).ToString();
 
-                    if (ddDepartments.Text == "Fabric Formation")
+                    Session["Department"] = dr["Department"].ToString();
+                    Session["Password"] = dr["Password"].ToString();
+                    Session["UserName"] = dr["UserName"].ToString();
+
+                    string Dep = dr["Department"].ToString();
+                    string Pass = dr["Password"].ToString();
+                    string User = dr["UserName"].ToString();
+
+
+
+                    if (Dep == "Yarn Formation" && User == "@UserName" && Pass == "@Password")
                     {
-                        Response.Redirect("/Departments/Yarn_Formation/Dashboard.aspx ");
+                        Response.Redirect("~/Departments/Yarn_Formation/Dashboard.aspx");
                     }
-                    else if (dr.GetValue(2).ToString() == "Fabric Formation")
+                    else if (Dep == "Fabric Formation" && User == "@UserName" && Pass == "@Password")
                     {
                         Response.Redirect("~/Departments/Fabric_Formation/Dashboard.aspx");
                     }
-                    else if (dr.GetValue(2).ToString() == "Wet Processing")
+                    else if (Dep == "Wet Processing" && User == "@UserName" && Pass == "@Password")
                     {
                         Response.Redirect("~/Departments/Wet_Processing/Dashboard.aspx");
                     }
-                    else if (dr.GetValue(2).ToString() == "Fabrication")
+                    else if (Dep == "Fabrication" && User == "@UserName" && Pass == "@Password")
                     {
                         Response.Redirect("~/Departments/Fabrication/Dashboard.aspx");
                     }
-                    else if (dr.GetValue(2).ToString() == "Finished Goods")
+                    else if (Dep == "Finished Goods" && User == "@UserName" && Pass == "@Password")
                     {
                         Response.Redirect("~/Departments/Finished_Goods/Dashboard.aspx");
                     }
@@ -134,9 +114,11 @@ namespace GarmentsPro
             }
             else
             {
-                Response.Redirect("~/Login.aspx");
 
-                 
+                lblError.Text = "Login Error !! ";
+
+                txtUserName.Text = string.Empty;
+                txtPassword.Text = string.Empty;
                 txtUserName.Focus();
             }
         }

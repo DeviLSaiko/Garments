@@ -61,17 +61,17 @@ namespace GarmentsPro.Admin.Orders
         protected void BtnCreate_Click(object sender, EventArgs e)
         {
             SqlConnection MyCon = new SqlConnection(MyConnection());
-            string MyInsQ = "Update Orders set OrderID=@OID ,ClientName=@CN, OrderType=@OType ,QtY=@Qty , ETA_Time=@ETA , Status=@Stat where OID=@ID";
+            string MyInsQ = "Update Orders set ClientName=@CN, OrderType=@OType ,QtY=@Qty , ETA_Time=@ETA , Status=@Stat where OID=@ID";
             SqlCommand MyCmd = new SqlCommand(MyInsQ, MyCon);
 
             MyCon.Open();
             MyCmd.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
-            MyCmd.Parameters.AddWithValue("@OID", txtOrderID.Text);
+           
             MyCmd.Parameters.AddWithValue("@CN", txtClinet.Text);
             MyCmd.Parameters.AddWithValue("@OType", ddType.SelectedValue);
             MyCmd.Parameters.AddWithValue("@Qty", txtQty.Text);
             MyCmd.Parameters.AddWithValue("@ETA", txtETA.Text);
-            MyCmd.Parameters.AddWithValue("@Stat", DdStatus.Text);
+            MyCmd.Parameters.AddWithValue("@Stat", DdStatus.SelectedValue);
 
             MyCmd.ExecuteNonQuery();
             ClientScript.RegisterClientScriptBlock(this.GetType(), "script", "swal(' Order Details Updated  ' , 'Details Updated Successfully ' , 'success')", true);
@@ -91,7 +91,7 @@ namespace GarmentsPro.Admin.Orders
                 MyCmd.ExecuteNonQuery();
 
                 Sqlconnection.Close();
-                Response.Redirect("~/Admin/Orders/CreateOrder.aspx");
+                Response.Redirect("~/Admin/Orders/Orders.aspx");
 
             }
             LoadUsers();

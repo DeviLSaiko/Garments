@@ -16,7 +16,6 @@ namespace GarmentsPro.Admin.Orders
             }
         }
 
-
         private string MyConnection()
         {
             return @"Data Source =.; Initial Catalog = GarmentsPro; Integrated Security = SSPI ";
@@ -40,11 +39,12 @@ namespace GarmentsPro.Admin.Orders
             DataTable MT = new DataTable();
 
             SqlConnection MyCon = new SqlConnection(MyConnection());
-            SqlDataAdapter MA = new SqlDataAdapter("Select * from Orders", MyCon);
+            SqlDataAdapter MA = new SqlDataAdapter("Select top (4) * from Orders ORDER BY OId DESC", MyCon);
             MA.Fill(MT);
 
             GridView1.DataSource = MT;
             GridView1.DataBind();
+
 
             if (MT.Rows.Count == 0)
             {
@@ -71,7 +71,7 @@ namespace GarmentsPro.Admin.Orders
 
 
                 SqlCommand MyCmd = new SqlCommand("Insert into Orders (OrderID,ClientName,OrderType,Qty,ETA_Time,Status)"+
-                    "values (  'ORDid-' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108),':','')),@CN,@OType,@Qty,@ETA,@Stat)", MyCon);
+                    "values (  'ORD' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108),':','')),@CN,@OType,@Qty,@ETA,@Stat)", MyCon);
 
 
                 MyCmd.Parameters.AddWithValue("@CN", txtClinet.Text);
@@ -83,7 +83,7 @@ namespace GarmentsPro.Admin.Orders
                 MyCmd.ExecuteNonQuery();
 
                 string mYq = "Insert into Status ( OID ,Yarn_Formation , Fabric_Formation , Wet_Processing ,  Fabrication  , Finished_Goods  )"+
-                   " values (  'ORDid-' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  )  , @YF ,@FF ,@WP,@F,@FG)";
+                   " values (  'ORD' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  )  , @YF ,@FF ,@WP,@F,@FG)";
                 SqlCommand MyCmd1 = new SqlCommand(mYq, MyCon);
 
                 
@@ -95,9 +95,23 @@ namespace GarmentsPro.Admin.Orders
                 MyCmd1.ExecuteNonQuery();
 
 
+
+                string mYqa = "Insert into OrderStatus ( OID ,Yarn_Formation , Fabric_Formation , Wet_Processing ,  Fabrication  , Finished_Goods  )" +
+                  " values (  'ORD' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  )  , @YF ,@FF ,@WP,@F,@FG)";
+                SqlCommand MyCmd1a = new SqlCommand(mYqa, MyCon);
+
+
+                MyCmd1a.Parameters.AddWithValue("@YF", "Yet To Start");
+                MyCmd1a.Parameters.AddWithValue("@FF", "Yet To Start");
+                MyCmd1a.Parameters.AddWithValue("@WP", "Yet To Start");
+                MyCmd1a.Parameters.AddWithValue("@F", "Yet To Start");
+                MyCmd1a.Parameters.AddWithValue("@FG", "Yet To Start");
+                MyCmd1a.ExecuteNonQuery();
+
+
                 //For Histry Table
                 SqlCommand MyCmdHis = new SqlCommand("Insert into History (OrderID,ClientName,OrderType,Qty,ETA_Time,Status)"+
-                    "values (  'ORDid-' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  )   ,@CN,@OType,@Qty,@ETA,@Stat)", MyCon);
+                    "values (  'ORD' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  )   ,@CN,@OType,@Qty,@ETA,@Stat)", MyCon);
 
 
                 MyCmdHis.Parameters.AddWithValue("@CN", txtClinet.Text);
@@ -110,7 +124,7 @@ namespace GarmentsPro.Admin.Orders
 
                 MyCon.Close();
 
-
+                Response.Redirect("/admin/Orders/Orders.aspx");
 
                 txtOrderID.Text = "";
                 txtClinet.Text = "";

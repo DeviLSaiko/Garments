@@ -11,9 +11,16 @@ namespace Garments_Pro.Yarn_Formation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //string Txt = "Hello! ";
+            string Txt = "Hello! ";
 
-            //lblWelcome.Text = Txt + (Session["UserName"].ToString());
+            if (Session["UserName"] != null)
+            {
+                lblWelcome.Text = Txt + (Session["UserName"].ToString());
+            }
+            else
+            {
+                Response.Redirect("~/Admin/AdminLogin.aspx");
+            }
         }
     }
 }

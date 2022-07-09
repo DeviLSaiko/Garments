@@ -14,7 +14,6 @@
     });
  </script>
 
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -25,7 +24,7 @@
 <ContentTemplate>  
    
         <div class="container mt-5">
-             <h2>Create New Account</h2>
+             <h2>Create New Order</h2>
             <div class="row ">
 
                 <div class="col-md-4">
@@ -97,10 +96,8 @@
 
                         <label>Status</label>
                         <asp:DropDownList ID="DdStatus" CssClass="form-select" Height="35px" Width="288px" runat="server">
-                            <asp:ListItem Text="-- Select --"></asp:ListItem>
-                            <asp:ListItem Text="On Progress" Value="Current"></asp:ListItem>
-                            <asp:ListItem Text="Pending" Value="Pending"></asp:ListItem>
-                            <asp:ListItem Text="Finished" Value="Finished"></asp:ListItem>
+                            <asp:ListItem Text="Created"></asp:ListItem>
+                            
                         </asp:DropDownList>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6"
                             ControlToValidate="DdStatus"
@@ -118,11 +115,11 @@
                 </div>
             </div>
             <center>
-            <h4>Orders</h4>
+            <h3>Privious Orders</h3>
 
         </center>
 
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-sm-12">
                    <asp:GridView ID="GridView1" CssClass=" table table-hover"  AutoGenerateColumns="false" runat="server">
                                 <Columns>
@@ -134,12 +131,7 @@
                                     <asp:BoundField DataField="ETA_Time" HeaderText="ETA_Time" />
                                     <asp:BoundField DataField="Created_Date" HeaderText="Created_Date" />
                                      <asp:BoundField DataField="Status" HeaderText="Status" />
-             <asp:TemplateField HeaderText="Modify" ControlStyle-CssClass="btn btn-dark" >
-     <ItemTemplate>
-                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Orders/EditOrder.aspx?ID={0}",
-                    HttpUtility.HtmlEncode (Eval("OID").ToString()))%>'>Modify</asp:HyperLink>
-     </ItemTemplate>
-      </asp:TemplateField>  
+            
                                    
      </Columns>
      </asp:GridView>
