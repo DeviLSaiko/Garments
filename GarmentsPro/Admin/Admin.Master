@@ -10,30 +10,20 @@
     <link href="../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../Assets/SweetAlert/sweetalert.min.js"></script>
 
-    <style>
-        html,
-        body {
-            height: 100%;
-        }
-
-        #page-content {
-            flex: 1 0 auto;
-        }
-
-        /* Other Classes for Page Styling */
-
-        body {
-            background:#b200ff ;
-            background: linear-gradient(to right, #0062E6, #33AEFF);
-        }
-    </style>
+    
 
 
 
-    <asp:ContentPlaceHolder ID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head"  runat="server">
+     
     </asp:ContentPlaceHolder>
 </head>
 <body>
+
+    <div class="  p-4 bg-primary text-white  ">
+  <h1>Jumbotron Example</h1>
+  <p>Lorem ipsum...</p>
+</div>
     <!-- Header -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
         <div class="container ">
@@ -72,20 +62,39 @@
             </div>
         </div>
     </nav>
+       
     <!-- Header -->
-
-         
-
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
-    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50 bottom-0">
         <div class="container text-center">
+           
             <small>Copyright &copy; Your Website</small>
         </div>
     </footer>
+    
+   
 </body>
 </html>

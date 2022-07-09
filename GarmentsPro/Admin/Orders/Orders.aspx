@@ -9,8 +9,15 @@
            <div class="col-sm-12" >
         
         <div class="align-content-center">  
+            <div>
+                 <asp:DropDownList ID="DropDownList1" CssClass="form-select-sm" runat="server"></asp:DropDownList> 
+            <asp:TextBox ID="TextBox1" CssClass="form-control-sm" runat="server"></asp:TextBox>
+            <asp:Button ID="Button1" CssClass="btn btn-secondary" runat="server" Text="Search"></asp:Button>
+            </div>
+          
+            <br />
              <table class="table-hover     ">
-                            <asp:GridView ID="GridView1" CssClass=" table table-hover"  AutoGenerateColumns="false" runat="server">
+                            <asp:GridView ID="GridView1" CssClass=" table table-hover" HeaderStyle-ForeColor="White" HeaderStyle-BackColor="#666633"  AutoGenerateColumns="false" runat="server">
                                 <Columns>
                                     <asp:BoundField DataField="OID"   HeaderText="ID" />
                                     <asp:BoundField DataField="OrderID"   HeaderText="Order ID" />

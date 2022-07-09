@@ -15,8 +15,6 @@ namespace Garments_Pro.Yarn_Formation
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
             if (!IsPostBack)
             {
                 LoadGrid();
@@ -38,74 +36,48 @@ namespace Garments_Pro.Yarn_Formation
             GridView1.DataSource = MyTable;
             GridView1.DataBind();
 
-            if(MyTable.Rows.Count == 0)
+            if (MyTable.Rows.Count == 0)
             {
                 txtError.Text = "No Orders Found Please Wait....";
             }
         }
 
-        protected void btnHold_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
 
-            //DataTable MyTable = new DataTable();
+            DataTable MyTable = new DataTable();
 
-            //SqlConnection Sqlconnection = new SqlConnection(Con);
+            SqlConnection Sqlconnection = new SqlConnection(Con);
 
-            //string MyQ = "select a.OID, OrderID ,ClientName , OrderType , Qty ,ETA_Time  as Deadline, Created_Date, Status, Yarn_Formation from Orders a join Status b on a.OrderID = b.OID";
+            string MyQ = "select a.OID, OrderID ,ClientName , OrderType , Qty ,ETA_Time  as Deadline, Created_Date, Status, Yarn_Formation from Orders a join Status b on a.OrderID = b.OID";
 
-            //SqlDataAdapter myada = new SqlDataAdapter(MyQ, Sqlconnection);
-            //myada.Fill(MyTable);
+            SqlDataAdapter myada = new SqlDataAdapter(MyQ, Sqlconnection);
+            myada.Fill(MyTable);
 
 
 
+
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                Button btnst = e.Row.Cells[6].FindControl("btnstart") as Button;
+                Button btnupdate = e.Row.Cells[7].FindControl("btnhold") as Button;
+                Button btnDel = e.Row.Cells[8].FindControl("btnfinish") as Button;
+
+                string Col_Status = e.Row.Cells[5].Text;
+
+                if (Col_Status == "In Progress")
+                {
+                    btnst.Text = "In Progress";
+                }
+              else if(Col_Status== "on Hold")
+                {
+                    btnupdate.Text = "on Hold";
+                }
+            }
         }
-
-
-
-
-
-
-
-
-        protected void btnStart_Click(object sender, EventArgs e)
-        {
-            //foreach (GridViewRow row in GridView1.Rows)
-            //{
-            //    if (row.RowType == DataControlRowType.DataRow)
-            //    {
-            //        Button btnStart = (row.Cells[4].FindControl("btnStart") as Button);
-            //        if (Convert.ToBoolean(btnStart.OnClientClick) == true)
-            //        {
-            //            using (SqlConnection Sqlconnection = new SqlConnection(Con))
-            //            {
-            //                Sqlconnection.Open();
-
-            //                string MyQ = "Update Status set Yarn_Formation=@YP where StaID=@ID";
-            //                SqlCommand MyCmd = new SqlCommand(MyQ, Sqlconnection);
-            //                MyCmd.Parameters.AddWithValue("@YP", "In Progress") ;
-            //                MyCmd.Parameters.AddWithValue("@ID", row.Cells[0].Text);
-            //                //MyCmd.ExecuteNonQuery();
-
-            //                Sqlconnection.Close();
-
-
-            //            }
-            //        }
-            //    }
-            //}
-        }
-
-
 
         protected void GridView1_RowCommand1(object sender, GridViewCommandEventArgs e)
         {
-
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow gvRow = GridView1.Rows[index];
             SqlConnection Sqlconnection = new SqlConnection(Con);
@@ -113,10 +85,6 @@ namespace Garments_Pro.Yarn_Formation
             Button btnstart = (gvRow.Cells[5].FindControl("btnstart") as Button);
             Button btnhold = (gvRow.Cells[6].FindControl("btnhold") as Button);
             Button btnFinish = (gvRow.Cells[7].FindControl("btnfinish") as Button);
-
-
-           
-
 
             switch (e.CommandName)
             {
@@ -127,7 +95,6 @@ namespace Garments_Pro.Yarn_Formation
                     btnhold.Text = "Hold";
                     btnhold.CssClass = "btn btn-warning btn-sm";
                     btnFinish.Visible = true;
-                   
 
                     string MyQa = "update Status  set Yarn_Formation=@YP where OID=@OID";
                     SqlCommand MyCmd = new SqlCommand(MyQa, Sqlconnection);
@@ -136,9 +103,6 @@ namespace Garments_Pro.Yarn_Formation
                     MyCmd.Parameters.AddWithValue("@YP", "In Progress");
                     MyCmd.ExecuteNonQuery();
                     Sqlconnection.Close();
-
-                  
-
 
                     //btns = (row.Cells[5].FindControl("lblStatus") as Label).Text = "In progress";
                     //btns = (row.Cells[5].FindControl("lblStatus") as Label).CssClass = ("Color" "Danger");
@@ -152,7 +116,7 @@ namespace Garments_Pro.Yarn_Formation
                     btnstart.CssClass = "btn btn-success btn-sm";
 
                     btnFinish.Visible = false;
-                     
+
                     string MysQ = "update Status  set Yarn_Formation=@YP where OID=@OID";
                     SqlCommand MyCmds = new SqlCommand(MysQ, Sqlconnection);
                     Sqlconnection.Open();
@@ -161,39 +125,32 @@ namespace Garments_Pro.Yarn_Formation
                     MyCmds.ExecuteNonQuery();
                     Sqlconnection.Close();
                     break;
-                    
 
                 case "Finish":
                     gvRow.Visible = false;
-                    
+
                     string MysQ1 = "Update Orders set Status=@YP where OrderID=@OID";
                     SqlCommand MyCmdss = new SqlCommand(MysQ1, Sqlconnection);
                     Sqlconnection.Open();
                     MyCmdss.Parameters.AddWithValue("@OID", gvRow.Cells[1].Text);
                     MyCmdss.Parameters.AddWithValue("@YP", "Completed");
-                     
+
                     MyCmdss.ExecuteNonQuery();
 
-                    
-                        
-
-                        string MyQ = "Delete from Status where OID=@ID";
-                        SqlCommand MyCmdDSS = new SqlCommand(MyQ, Sqlconnection);
+                    string MyQ = "Delete from Status where OID=@ID";
+                    SqlCommand MyCmdDSS = new SqlCommand(MyQ, Sqlconnection);
                     MyCmdDSS.Parameters.AddWithValue("@ID", gvRow.Cells[1].Text);
                     MyCmdDSS.ExecuteNonQuery();
 
-                        Sqlconnection.Close();
-                        
-
-                   
-
                     Sqlconnection.Close();
-                    break;
-                 
 
+                    break;
 
             }
+            LoadGrid();
         }
+
+
     }
 }
 

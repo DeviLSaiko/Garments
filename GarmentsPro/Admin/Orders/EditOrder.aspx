@@ -130,10 +130,10 @@
 
                                 <div class="align-content-center">
                                 <table>
-                                    <asp:GridView ID="GridView1" CssClass="table"   AutoGenerateColumns="false" runat="server">
+                                    <asp:GridView ID="GridView1" CssClass="table"  OnRowCommand="GridView1_RowCommand"  AutoGenerateColumns="false" runat="server">
                                         <Columns>
-                                            <asp:BoundField DataField="OrderID" HeaderText="Order ID" HeaderStyle-BackColor="WhiteSmoke" />
-                                            <asp:BoundField DataField="ClientName" HeaderText="Client Name" HeaderStyle-BackColor="WhiteSmoke" />
+                                            <asp:BoundField DataField="OrderID"  HeaderText="Order ID" HeaderStyle-BackColor="WhiteSmoke" />
+                                            <asp:BoundField DataField="ClientName"  HeaderText="Client Name" HeaderStyle-BackColor="WhiteSmoke" />
                                             <asp:BoundField DataField="OrderType" HeaderText="Order Type" HeaderStyle-BackColor="WhiteSmoke" />
                                             <asp:BoundField DataField="Qty" HeaderText="Qty" HeaderStyle-BackColor="WhiteSmoke" />
                                             <asp:BoundField DataField="ETA_Time" HeaderText="Deadline" HeaderStyle-BackColor="WhiteSmoke" />

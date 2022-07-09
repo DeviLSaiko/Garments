@@ -18,52 +18,6 @@ namespace GarmentsPro
             Session.RemoveAll();
         }
 
-       
-
-        //public static class Authentication
-        //{
-        //    static void SignIn( HttpContextBase context,string emailAddress,bool rememberMe, LoggedInUser user != null)
-        //    {
-        //        var cookie = FormsAuthentication.GetAuthCookie(
-        //            emailAddress.ToLower(),
-        //            rememberMe);
-
-
-        //        var oldTicket = FormsAuthentication.Decrypt(cookie.Value);
-        //        var newTicket = new FormsAuthenticationTicket(
-        //            oldTicket.Version,
-        //            oldTicket.Name,
-        //            oldTicket.IssueDate,
-        //            oldTicket.Expiration,
-        //            oldTicket.IsPersistent,
-        //            JsonConvert.SerializeObject(user ?? new LoggedInUser()));
-
-        //        cookie.Value = FormsAuthentication.Encrypt(newTicket);
-
-        //        context.Response.Cookies.Add(cookie);
-        //    }
-
-        //    static void SignOut(HttpContextBase context)
-        //    {
-        //        FormsAuthentication.SignOut();
-        //    }
-
-        //    static LoggedInUser GetLoggedInUser()
-        //    {
-        //        if (HttpContext.Current.User?.Identity?.Name != null) ;
-
-        //        return new LoggedInUser();
-        //    }
-        //}
-
-
-
-        //if (HttpContext.Current.User?.Identity?.Name != null && HttpContext.Current.User?.Identity is FormsIdentity identity)
-        //           return JsonConvert.DeserializeObject<LoggedInUser>(identity.Ticket.UserData);
-
-
-
-
         protected void BtnCreate_Click(object sender, EventArgs e)
         {
             SqlConnection Sqlconnection = new SqlConnection(MyCon);
@@ -72,7 +26,7 @@ namespace GarmentsPro
             SqlCommand cmd = new SqlCommand("SELECT UserName , Password , Department from UserInfo  where UserName=@UserName and Password=@Password", Sqlconnection);
             cmd.Parameters.AddWithValue("@UserName", txtUserName.Text.Trim());
             cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
-            
+
             SqlDataReader dr = cmd.ExecuteReader();
 
             if (dr.HasRows)
@@ -80,13 +34,13 @@ namespace GarmentsPro
                 while (dr.Read())
                 {
 
-                    Session["Department"] = dr["Department"].ToString();
-                    Session["Password"] = dr["Password"].ToString();
-                    Session["UserName"] = dr["UserName"].ToString();
+                    //Session["Department"] = dr["Department"].ToString();
+                    //Session["Password"] = dr["Password"].ToString();
+                    //Session["UserName"] = dr["UserName"].ToString();
 
-                    string Dep = dr["Department"].ToString();
-                    string Pass = dr["Password"].ToString();
-                    string User = dr["UserName"].ToString();
+                    string Dep = dr.GetValue(2).ToString();
+                    string Pass = dr.GetValue(1).ToString();
+                    string User = dr.GetValue(0).ToString();
 
 
 
@@ -110,12 +64,15 @@ namespace GarmentsPro
                     {
                         Response.Redirect("~/Departments/Finished_Goods/Dashboard.aspx");
                     }
+                    else
+                    {
+                        lblError.Text = "Login Error !! ";
+                    }
                 }
             }
             else
             {
 
-                lblError.Text = "Login Error !! ";
 
                 txtUserName.Text = string.Empty;
                 txtPassword.Text = string.Empty;

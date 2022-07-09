@@ -67,12 +67,21 @@ namespace GarmentsPro {
         protected global::System.Web.UI.WebControls.Button BtnCreate;
         
         /// <summary>
-        ///  lblError control.
+        /// lblForget control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label  lblError;
+        protected global::System.Web.UI.WebControls.Label lblForget;
+        
+        /// <summary>
+        /// lblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
     }
 }

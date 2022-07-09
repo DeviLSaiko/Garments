@@ -15,21 +15,12 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+     <div class="  p-4 bg-primary text-white  ">
+  <h1>Yarn Formation</h1>
+  <p>Lorem ipsum...</p>
+</div>
 
-
-   <%-- <header class="Header">
-        <a href="" class="Logo"><i class="fa fa-lastfm-square" ></i> BoAt-X </a>
-
-        <nav class="navbar">
-           <a href="#Home">Home</a>
-           <a href="#Features">Features</a>
-           <a href="#Categories">Categories</a>
-           <a href="#Products">Products</a>
-           <a href="#Reviews">Reviews</a>
-           <a href="#Blogs">Blogs</a>
-        </nav>
-        
-    </header>--%>
+   
 
 
 
@@ -38,7 +29,7 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="../../logo.png" alt="Avatar Logo" style="width: 40px;" class="rounded-pill">  Garments Pro
+                  Garments Pro
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>

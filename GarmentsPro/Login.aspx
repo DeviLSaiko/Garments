@@ -28,8 +28,7 @@
                 <div class="col-md-4">
             </div>
                 <div class="col-md-4">
-                    </div>
-                    <label>UserName</label>
+                        <label>UserName</label> 
                     <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
                         ControlToValidate="txtUserName"
@@ -48,10 +47,15 @@
                         runat="server"></asp:RequiredFieldValidator>
                     <br />
                     <div class="d-grid">
-                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-dark" Width="207px" Height="39px" />
+                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-dark   ms-3" Width="250px" Height="39px" /> 
+                        <asp:Label ID="lblForget" runat="server" CssClass="mt-3 ms-5" Text="Forget Password ?"> </asp:Label>   <a href="/Admin/AdminLogin.aspx">L</a>
                     </div>
                     <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
                      <a style="color:aliceblue" href="/Admin/AdminLogin.aspx">L</a>
+                    </div>
+
+                 
+                
                 </div>
         </div>
     </form>

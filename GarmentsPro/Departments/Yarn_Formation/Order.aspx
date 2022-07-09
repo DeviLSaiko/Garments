@@ -20,17 +20,11 @@
                         <asp:BoundField DataField="ClientName" HeaderText="Client " />
                         <asp:BoundField DataField="OrderType" HeaderText="Order Type" />
                          <asp:BoundField DataField="DeadLine" HeaderText="DeadLine" />
-                         <asp:BoundField DataField="Yarn_Formation" HeaderText="Order Status" />
-
-                        <asp:TemplateField HeaderText="Order Status" HeaderStyle-BackColor="White">
-                            <ItemTemplate>
-                                <asp:Label ID="lblStatus" runat="server" Text=""></asp:Label>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-
+                         <asp:BoundField Visible="false" DataField="Yarn_Formation" HeaderText="Order Status" />
+                       
                         <asp:TemplateField HeaderText="Set Start" HeaderStyle-BackColor="White">
                             <ItemTemplate>
-                                <asp:Button ID="btnstart" CommandName="Start"   CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-success btn-sm " Width="100px" runat="server" Text="Start" />
+                                <asp:Button ID="btnstart" CommandName="Start"     CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-success btn-sm " Width="100px" runat="server" Text="Start" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Put on Hold"   HeaderStyle-BackColor="White">
@@ -45,7 +39,6 @@
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
-                
                 <asp:Label runat="server" ID="txtError" Text=""></asp:Label>
             </div>
         </div>
