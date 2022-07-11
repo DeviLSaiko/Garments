@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace GarmentsPro.Departments.FabricFormation
@@ -23,8 +27,8 @@ namespace GarmentsPro.Departments.FabricFormation
 
             using (SqlConnection Sqlconnection = new SqlConnection(Con))
             {
-                string MyQ = "select a.OID, OrderID ,ClientName , OrderType , Qty ,ETA_Time  as Deadline, Created_Date, Status, "+
-                               "b.Fabric_Formation from Orders a join OrderStatus b on a.OrderID = b.OID where b.Yarn_Formation = 'Completed'";
+                string MyQ = "select a.OID, OrderID ,ClientName , OrderType , Qty ,ETA_Time  as Deadline, Created_Date, Status, Fabric_Formation from Orders a join Status b on a.OrderID = b.OID";
+
                 SqlDataAdapter myada = new SqlDataAdapter(MyQ, Sqlconnection);
                 myada.Fill(MyTable);
             }
@@ -45,8 +49,7 @@ namespace GarmentsPro.Departments.FabricFormation
 
             SqlConnection Sqlconnection = new SqlConnection(Con);
 
-            string MyQ = "select   a.OID, OrderID ,ClientName , OrderType , Qty ,ETA_Time  as Deadline, Created_Date, Status,"+
-                            " b.Fabric_Formation from Orders a join OrderStatus b on a.OrderID = b.OID where b.Yarn_Formation = 'Completed'";
+            string MyQ = "select a.OID, OrderID ,ClientName , OrderType , Qty ,ETA_Time  as Deadline, Created_Date, Status, Fabric_Formation from Orders a join Status b on a.OrderID = b.OID";
 
             SqlDataAdapter myada = new SqlDataAdapter(MyQ, Sqlconnection);
             myada.Fill(MyTable);
@@ -65,11 +68,12 @@ namespace GarmentsPro.Departments.FabricFormation
                 if (Col_Status == "In Progress")
                 {
                     btnst.Text = "In Progress";
-                    btnst.CssClass = "text-success btn btn-info";
+                    btnst.CssClass = "text-success btn  ";
                 }
                 else if (Col_Status == "on Hold")
                 {
                     btnupdate.Text = "on Hold";
+                    btnupdate.CssClass = "text-danger btn  ";
                 }
             }
         }
@@ -152,6 +156,7 @@ namespace GarmentsPro.Departments.FabricFormation
         }
     }
 }
+
 
 
 
