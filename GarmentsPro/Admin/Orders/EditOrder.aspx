@@ -96,9 +96,11 @@
                                 <label>Status</label>
                                 <asp:DropDownList ID="DdStatus" CssClass="form-select"   Height="35px" Width="288px" runat="server">
                                     <asp:ListItem Text="-- Select --"></asp:ListItem>
-                                    <asp:ListItem Text="Current" Value="Current"></asp:ListItem>
-                                    <asp:ListItem Text="Pending" Value="Pending"></asp:ListItem>
-                                    <asp:ListItem Text="Finished" Value="Finished"></asp:ListItem>
+                                    <asp:ListItem Text="Created" Value="Current"></asp:ListItem>
+                                    <asp:ListItem Text="Start" Value="Current"></asp:ListItem>
+                                    <asp:ListItem Text="hold" Value="Pending"></asp:ListItem>
+                                    <asp:ListItem Text="finish" Value="Finished"></asp:ListItem>
+                                    <asp:ListItem Text="cancelled" Value="Finished"></asp:ListItem>
                                 </asp:DropDownList>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator12"
                                     ControlToValidate="DdStatus"
@@ -114,7 +116,7 @@
                     </div>
 
                     <div class="row">
-                              <div style="margin-left:20px">  <asp:Button ID="Button1" runat="server" OnClick="BtnCreate_Click" Text="Update Details" CssClass="btn btn-dark" Width="140px" Height="39px" />
+                              <div style="margin-left:20px">  <asp:Button ID="Button1" runat="server" OnClick="BtnCreate_Click" Text="Update Details" CssClass="btn btn-sm btn-secondary " Width="140px" Height="39px" />
                          <button type="button" class="btn btn-danger" runat="server" style="width:auto; height:39px; margin-left:20px" id="btnModal" data-bs-toggle="modal" data-bs-target="#myModal">
                                                Delete  
                                    
@@ -124,8 +126,8 @@
                 <br />
                  <div class="container mt-3">
                     <div class="row">
-                        <div class="col-md-8">
-                            <h2>Delete</h2>
+                        <div class="col-md-10">
+                            <h2>Order Info</h2>
                             <center>
 
                                 <div class="align-content-center">
@@ -138,6 +140,7 @@
                                             <asp:BoundField DataField="Qty" HeaderText="Qty" HeaderStyle-BackColor="WhiteSmoke" />
                                             <asp:BoundField DataField="ETA_Time" HeaderText="Deadline" HeaderStyle-BackColor="WhiteSmoke" />
                                             <asp:BoundField DataField="Status" HeaderText="Status" HeaderStyle-BackColor="WhiteSmoke" />
+                                            <asp:BoundField DataField="Created_Date" HeaderText="Created On" HeaderStyle-BackColor="WhiteSmoke" />
                                             
                                         </Columns>
                                     </asp:GridView>

@@ -4,7 +4,7 @@
     <style>
 
         body {
-            background-image: url(Assets/Images/Bg1.jpg);
+            background-color:#fbfbfb;
         }
 
 

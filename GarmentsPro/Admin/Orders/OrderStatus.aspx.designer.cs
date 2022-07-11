@@ -7,37 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GarmentsPro.Admin.Orders {
+namespace GarmentsPro.Admin {
     
     
-    public partial class Orders {
+    public partial class OrderStatus {
         
         /// <summary>
-        /// ddSearch control.
+        /// scriptmanager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddSearch;
+        protected global::System.Web.UI.ScriptManager scriptmanager1;
         
         /// <summary>
-        /// txtSearch control.
+        /// updatepnl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearch;
-        
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.UpdatePanel updatepnl;
         
         /// <summary>
         /// GridView1 control.
@@ -47,14 +38,5 @@ namespace GarmentsPro.Admin.Orders {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
-        
-        /// <summary>
-        /// txtError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtError;
     }
 }

@@ -116,12 +116,13 @@
                 </div>
             </div>
             <center>
-            <h3>Privious Orders</h3>
+            <h3>Recent Orders</h3>
 
         </center>
 
             <div class="row mt-5">
                 <div class="col-sm-12">
+                    <asp:HyperLink ID="viewAll" NavigateUrl="~/Admin/Orders/Orders.aspx" runat="server">View All Orders</asp:HyperLink>
                    <asp:GridView ID="GridView1" CssClass=" table table-hover"  AutoGenerateColumns="false" runat="server">
                                 <Columns>
                                     <asp:BoundField DataField="OID"   HeaderText="ID" />

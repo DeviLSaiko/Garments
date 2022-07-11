@@ -13,29 +13,69 @@ namespace GarmentsPro.Admin.Orders
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadOrder();
+
+            if (!IsPostBack)
+            {
+                string l_Query = "Select * From Orders Orders";
+
+                LoadOrder(l_Query);
+            }
+            
         }
         private string MyConnection()
         {
             return @"Data Source =.; Initial Catalog = GarmentsPro; Integrated Security = SSPI ";
         }
-        private void LoadOrder()
+
+
+        private void LoadOrder(string a_Query)
         {
             DataTable MT = new DataTable();
 
             SqlConnection MyCon = new SqlConnection(MyConnection());
-            SqlDataAdapter MA = new SqlDataAdapter("Select  * from Orders ", MyCon);
+            SqlDataAdapter MA = new SqlDataAdapter(a_Query, MyCon);
             MA.Fill(MT);
 
             GridView1.DataSource = MT;
             GridView1.DataBind();
 
 
-            if (MT.Rows.Count == 0)
+            if (MT.Rows.Count < 0)
             {
                 txtError.Text = "No Record Found";
             }
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
+                string l_Query = string.Empty;
+
+                if (ddSearch.SelectedValue == "1")
+                {
+                    // Name search
+                    l_Query = "Select   * from Orders  where ClientName like '%" + txtSearch.Text + "%'";
+                }
+                else if (ddSearch.SelectedValue == "2")
+                {
+                    // Batch wise search
+                    l_Query = "Select * from Orders  where OrderType like '%" + txtSearch.Text + "%'";
+                }
+                else
+                {
+                // Department wise search
+                l_Query = "Select * from Orders   where  Status like '%" + txtSearch.Text + "%'";
+                }
+
+            LoadOrder(l_Query);
+            }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            string l_Query = "Select * From Orders Orders";
+
+            LoadOrder(l_Query);
         }
     }
 }

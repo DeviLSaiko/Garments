@@ -13,6 +13,24 @@ namespace Garments_Pro.Departments.Finished_Goods {
     public partial class Orders {
         
         /// <summary>
+        /// scriptmanager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager scriptmanager1;
+        
+        /// <summary>
+        /// updatepnl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatepnl;
+        
+        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>

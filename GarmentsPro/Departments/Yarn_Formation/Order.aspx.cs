@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -38,7 +35,7 @@ namespace Garments_Pro.Yarn_Formation
 
             if (MyTable.Rows.Count == 0)
             {
-                txtError.Text = "No Orders Found Please Wait....";
+                txtError.Text = "No Orders Found ....";
             }
         }
 
@@ -54,7 +51,7 @@ namespace Garments_Pro.Yarn_Formation
             SqlDataAdapter myada = new SqlDataAdapter(MyQ, Sqlconnection);
             myada.Fill(MyTable);
 
-
+            e.Row.Cells[5].Visible = false;
 
 
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -68,6 +65,7 @@ namespace Garments_Pro.Yarn_Formation
                 if (Col_Status == "In Progress")
                 {
                     btnst.Text = "In Progress";
+                    btnst.CssClass = "text-success btn btn-info";
                 }
               else if(Col_Status== "on Hold")
                 {
@@ -93,20 +91,20 @@ namespace Garments_Pro.Yarn_Formation
                     btnstart.Text = "In progress";
                     btnstart.CssClass = "text-success";
                     btnhold.Text = "Hold";
-                    btnhold.CssClass = "btn btn-warning btn-sm";
+                    btnhold.CssClass = "disabled ";
                     btnFinish.Visible = true;
 
-                    string MyQa = "update Status  set Yarn_Formation=@YP where OID=@OID";
+
+                    string MyQa = "BEGIN TRANSACTION; UPDATE OrderStatus SET OrderStatus.Yarn_Formation =@YP   FROM OrderStatus T1,  Status T2 WHERE T1.OID = T2.OID and T1.OID = @OID; " +
+                                   "UPDATE Status SET Status.Yarn_Formation =@YP   FROM OrderStatus T1, Status T2 WHERE T1.OID = T2.OID and T1.OID = @OID; COMMIT;";
                     SqlCommand MyCmd = new SqlCommand(MyQa, Sqlconnection);
                     Sqlconnection.Open();
                     MyCmd.Parameters.AddWithValue("@OID", gvRow.Cells[1].Text);
                     MyCmd.Parameters.AddWithValue("@YP", "In Progress");
                     MyCmd.ExecuteNonQuery();
                     Sqlconnection.Close();
-
-                    //btns = (row.Cells[5].FindControl("lblStatus") as Label).Text = "In progress";
-                    //btns = (row.Cells[5].FindControl("lblStatus") as Label).CssClass = ("Color" "Danger");
-                    break;
+                    
+                    break; 
 
                 case "Hold":
                     btnhold.Text = "on Hold";
@@ -117,7 +115,8 @@ namespace Garments_Pro.Yarn_Formation
 
                     btnFinish.Visible = false;
 
-                    string MysQ = "update Status  set Yarn_Formation=@YP where OID=@OID";
+                    string MysQ = "BEGIN TRANSACTION; UPDATE OrderStatus SET OrderStatus.Yarn_Formation =@YP   FROM OrderStatus T1,  Status T2 WHERE T1.OID = T2.OID and T1.OID = @OID; " +
+                                   "UPDATE Status SET Status.Yarn_Formation =@YP   FROM OrderStatus T1, Status T2 WHERE T1.OID = T2.OID and T1.OID = @OID; COMMIT;";  
                     SqlCommand MyCmds = new SqlCommand(MysQ, Sqlconnection);
                     Sqlconnection.Open();
                     MyCmds.Parameters.AddWithValue("@OID", gvRow.Cells[1].Text);
@@ -125,17 +124,19 @@ namespace Garments_Pro.Yarn_Formation
                     MyCmds.ExecuteNonQuery();
                     Sqlconnection.Close();
                     break;
-
+                     
                 case "Finish":
+
                     gvRow.Visible = false;
 
-                    string MysQ1 = "Update Orders set Status=@YP where OrderID=@OID";
-                    SqlCommand MyCmdss = new SqlCommand(MysQ1, Sqlconnection);
+                    string MYQF = "BEGIN TRANSACTION; UPDATE OrderStatus SET OrderStatus.Yarn_Formation =@YP   FROM OrderStatus T1,  Status T2 WHERE T1.OID = T2.OID and T1.OID = @OID;" +
+                                        "UPDATE Status SET Status.Yarn_Formation =@YP   FROM OrderStatus T1, Status T2 WHERE T1.OID = T2.OID and T1.OID = @OID; COMMIT; ";
+                    
+                    SqlCommand Cmd11 = new SqlCommand(MYQF, Sqlconnection);
                     Sqlconnection.Open();
-                    MyCmdss.Parameters.AddWithValue("@OID", gvRow.Cells[1].Text);
-                    MyCmdss.Parameters.AddWithValue("@YP", "Completed");
-
-                    MyCmdss.ExecuteNonQuery();
+                    Cmd11.Parameters.AddWithValue("@OID", gvRow.Cells[1].Text);
+                    Cmd11.Parameters.AddWithValue("@YP", "Completed");
+                    Cmd11.ExecuteNonQuery();
 
                     string MyQ = "Delete from Status where OID=@ID";
                     SqlCommand MyCmdDSS = new SqlCommand(MyQ, Sqlconnection);
@@ -149,8 +150,6 @@ namespace Garments_Pro.Yarn_Formation
             }
             LoadGrid();
         }
-
-
     }
 }
 

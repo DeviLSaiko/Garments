@@ -1,31 +1,22 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Orders.aspx.cs" Inherits="GarmentsPro.Admin.Orders.Orders" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="OrderStatus.aspx.cs" Inherits="GarmentsPro.Admin.OrderStatus" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+     <asp:ScriptManager ID="scriptmanager1" runat="server">  
+</asp:ScriptManager> 
+       <asp:UpdatePanel ID="updatepnl" runat="server">  
+<ContentTemplate>  
+    <div class="container mt-5">
 
-    <center>
-            <div class="container">
-       <div class="row" style="margin-top:100px">
-           <div class="col-sm-12" >
-        
-        <div class="align-content-center">  
-            <div>
-                 <asp:DropDownList ID="ddSearch" CssClass="form-select-sm" runat="server">
-                      <asp:ListItem Text="Client Name" Value="1"></asp:ListItem>
-                <asp:ListItem Text="Status" Value="2"></asp:ListItem>
-                <asp:ListItem Text="OrderType" Value="3"></asp:ListItem>
-                 </asp:DropDownList> 
-            <asp:TextBox ID="txtSearch" CssClass="form-control-sm" runat="server"></asp:TextBox>
-            <asp:Button ID="Button1" CssClass="btn btn-secondary btn-sm" OnClick="Button1_Click" runat="server" Text="Search"></asp:Button>
-            </div>
-          
-            <br />
+         <div class="row ">
+
+        <div class="col-10">
             <div class="table-responsive">
 
                  <table class="table-hover     ">
-                            <asp:GridView ID="GridView1"  OnPageIndexChanging="GridView1_PageIndexChanging" CssClass=" table " HeaderStyle-ForeColor="White" HeaderStyle-BackColor="Teal"  AutoGenerateColumns="false" runat="server">
-                                <Columns>
+                            <asp:GridView ID="GridView1"    CssClass=" table " HeaderStyle-ForeColor="White" HeaderStyle-BackColor="Teal"  AutoGenerateColumns="true" runat="server">
+                            <Columns>
                                     <asp:BoundField DataField="OID"   HeaderText="ID" />
                                     <asp:BoundField DataField="OrderID"   HeaderText="Order ID" />
                                      <asp:BoundField DataField="ClientName"   HeaderText="Client Name" />
@@ -42,28 +33,24 @@
       </asp:TemplateField>   
                                         <asp:TemplateField HeaderText="View Status" ControlStyle-CssClass="btn btn-dark btn-sm" >
      <ItemTemplate>
-                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Orders/OrderStatus.aspx?ID={0}",
+                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Orders/EditOrder.aspx?ID={0}",
                     HttpUtility.HtmlEncode (Eval("OID").ToString()))%>'>View Status</asp:HyperLink>
      </ItemTemplate>
-      </asp:TemplateField> 
-     </Columns>
+      </asp:TemplateField>  
+      </Columns> 
      </asp:GridView>
                 </table>
 
             </div>
-            
-            </div>
-             
-           </div>
-            </div>
-           </div>
-                 
-          </center>
-    <center>
-        <div>
-            <asp:Label ID="txtError" runat="server" Text=""></asp:Label>
-       </div>
-      </center>
+
+        </div>
 
 
+
+
+    </div>
+    </div>
+   
+            </ContentTemplate>  
+</asp:UpdatePanel>  
 </asp:Content>

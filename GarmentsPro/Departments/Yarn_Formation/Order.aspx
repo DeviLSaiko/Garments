@@ -1,35 +1,40 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Departments/Yarn_Formation/YarnFormation.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Garments_Pro.Yarn_Formation.Order" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title> Yarn Formation</title>
 
     <script src="../../Assets/Bootstrap/bootstrap.bundle.min5.js"></script>
     <link href="../../Assets/Bootstrap/bootstrap.min5.css" rel="stylesheet" />
+
     <link href="../../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../../Assets/SweetAlert/sweetalert.min.js"></script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
+    <asp:ScriptManager ID="scriptmanager1" runat="server">
+        </asp:ScriptManager>
+        <asp:UpdatePanel ID="updatepnl" runat="server">
+            <ContentTemplate>
     <div class="container" style="padding-top: 250px">
         <div class="row">
             <center>
             <div class="col-md-12 align-content-center">
-                <asp:GridView ID="GridView1" CssClass=" table table-responsive"  HeaderStyle-CssClass="align-content-center" OnRowDataBound="GridView1_RowDataBound" OnRowCommand= "GridView1_RowCommand1" AutoGenerateColumns="False" runat="server">
+                <asp:GridView ID="GridView1" CssClass=" table table-responsive "  HeaderStyle-CssClass="align-content-center" OnRowDataBound="GridView1_RowDataBound" OnRowCommand= "GridView1_RowCommand1" AutoGenerateColumns="False" runat="server">
                     <Columns>
                         <asp:BoundField DataField="OID" HeaderText="ID" />
                         <asp:BoundField DataField="OrderID" HeaderText="Order ID" />
                         <asp:BoundField DataField="ClientName" HeaderText="Client " />
                         <asp:BoundField DataField="OrderType" HeaderText="Order Type" />
                          <asp:BoundField DataField="DeadLine" HeaderText="DeadLine" />
-                         <asp:BoundField Visible="false" DataField="Yarn_Formation" HeaderText="Order Status" />
-                       
+                         <asp:BoundField   DataField="Yarn_Formation" HeaderText="Order Status" />
                         <asp:TemplateField HeaderText="Set Start" HeaderStyle-BackColor="White">
                             <ItemTemplate>
-                                <asp:Button ID="btnstart" CommandName="Start"     CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-success btn-sm " Width="100px" runat="server" Text="Start" />
+                                <asp:Button ID="btnstart" CommandName="Start"    CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-success btn-sm " Width="100px" runat="server" Text="Start" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Put on Hold"   HeaderStyle-BackColor="White">
                             <ItemTemplate>
-                                <asp:Button ID="btnhold"  CommandName="Hold"   CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-warning btn-sm" Width="100px" runat="server"  Text="Hold" />
+                                <asp:Button ID="btnhold"  CommandName="Hold" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-warning btn-sm" Width="100px" runat="server"  Text="Hold" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Completed" HeaderStyle-BackColor="White">
@@ -43,5 +48,6 @@
             </div>
         </div>
     </div>
-
+    </ContentTemplate>  
+</asp:UpdatePanel> 
 </asp:Content>

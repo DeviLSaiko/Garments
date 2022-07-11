@@ -14,11 +14,16 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-        <!-- Header -->
+   
+     <div class="  p-4 bg-primary text-white  ">
+  <h1>Finished Goods</h1>
+  <p>Lorem ipsum...</p>
+</div>
+    <!-- Header -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="../../logo.png" alt="Avatar Logo" style="width: 40px;" class="rounded-pill">  Garments Pro
+                  Garments Pro
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -48,6 +53,7 @@
         </div>
     </nav>
     <!-- Header -->
+
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

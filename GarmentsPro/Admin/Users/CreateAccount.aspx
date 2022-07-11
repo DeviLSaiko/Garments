@@ -14,7 +14,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label>Name</label>
-                            <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
+                            <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="300px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
                                 ControlToValidate="txtName"
                                 Text=" This Field Cannot be Empty"
@@ -23,7 +23,7 @@
                                 runat="server"></asp:RequiredFieldValidator>
                             <br />
                             <label>UserName</label>
-                            <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
+                            <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" Height="35px" Width="300px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
                                 ControlToValidate="txtUserName"
                                 Text=" This Field Cannot be Empty"
@@ -32,7 +32,7 @@
                                 runat="server"></asp:RequiredFieldValidator>
                             <br />
                             <label>Department</label>
-                            <asp:DropDownList ID="ddDepartments" CssClass="form-select" Height="35px" Width="288px" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="ddDepartments" CssClass="form-select" Height="35px" Width="300px" runat="server"></asp:DropDownList>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3"
                                 ControlToValidate="ddDepartments"
                                 Text=" This Field Cannot be Empty"
@@ -41,7 +41,7 @@
                                 runat="server"></asp:RequiredFieldValidator>
                             <br />
                             <label>Password</label>
-                            <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
+                            <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server" Height="35px" Width="300px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
                                 ControlToValidate="txtPassword"
                                 Text=" This Field Cannot be Empty"

@@ -94,7 +94,7 @@ namespace GarmentsPro.Admin.Orders
                 MyCmd1.Parameters.AddWithValue("@FG", "Yet To Start");
                 MyCmd1.ExecuteNonQuery();
 
-
+                 
 
                 string mYqa = "Insert into OrderStatus ( OID ,Yarn_Formation , Fabric_Formation , Wet_Processing ,  Fabrication  , Finished_Goods  )" +
                   " values (  'ORD' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  )  , @YF ,@FF ,@WP,@F,@FG)";

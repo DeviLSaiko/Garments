@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    
       <link href="../../Assets/font-awesome.min.css" rel="stylesheet" />
         <script src="../../Assets/SweetAlert/sweetalert.min.js"></script>
         <link href="../../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
@@ -13,12 +13,16 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
-        <!-- Header -->
+<body> 
+     <div class="  p-4 bg-primary text-white  ">
+  <h1>Wet Processing</h1>
+  <p>Department</p>
+</div>
+    <!-- Header -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="../../logo.png" alt="Avatar Logo" style="width: 40px;" class="rounded-pill">  Garments Pro
+                  Garments Pro
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -48,6 +52,7 @@
         </div>
     </nav>
     <!-- Header -->
+
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
