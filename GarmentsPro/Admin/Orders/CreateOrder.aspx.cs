@@ -39,7 +39,7 @@ namespace GarmentsPro.Admin.Orders
             DataTable MT = new DataTable();
 
             SqlConnection MyCon = new SqlConnection(MyConnection());
-            SqlDataAdapter MA = new SqlDataAdapter("Select top (10) * from Orders ORDER BY OId DESC", MyCon);
+            SqlDataAdapter MA = new SqlDataAdapter("Select top (5) * from Orders ORDER BY OId DESC", MyCon);
             MA.Fill(MT);
 
             GridView1.DataSource = MT;
@@ -70,57 +70,31 @@ namespace GarmentsPro.Admin.Orders
                 // "Select replace(convert(varchar, txtOrderID.Text, 101), '/', '') +replace(convert(varchar, txtOrderID.Text, 108), ':', '') )";
 
 
-                SqlCommand MyCmd = new SqlCommand("Insert into Orders (OrderID,ClientName,OrderType,Qty,ETA_Time,Status)"+
-                    "values (  'ORD' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108),':','')),@CN,@OType,@Qty,@ETA,@Stat)", MyCon);
+                SqlCommand MyCmd = new SqlCommand("InsertOrder", MyCon);
+                MyCmd.CommandType = CommandType.StoredProcedure;
 
 
-                MyCmd.Parameters.AddWithValue("@CN", txtClinet.Text);
-                MyCmd.Parameters.AddWithValue("@OType", ddType.SelectedValue);
+                MyCmd.Parameters.AddWithValue("@ClientName", txtClinet.Text);
+                MyCmd.Parameters.AddWithValue("@OrderType", ddType.SelectedValue);
                 MyCmd.Parameters.AddWithValue("@Qty", txtQty.Text);
-                MyCmd.Parameters.AddWithValue("@ETA", txtETA.Text);
-                MyCmd.Parameters.AddWithValue("@Stat", DdStatus.SelectedValue);
+                MyCmd.Parameters.AddWithValue("@ETA_Time", txtETA.Text);
+                MyCmd.Parameters.AddWithValue("@Status", DdStatus.SelectedValue);
 
                 MyCmd.ExecuteNonQuery();
 
-                string mYq = "Insert into Status ( OID ,Yarn_Formation , Fabric_Formation , Wet_Processing ,  Fabrication  , Finished_Goods  )"+
-                   " values (  'ORD' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  )  , @YF ,@FF ,@WP,@F,@FG)";
-                SqlCommand MyCmd1 = new SqlCommand(mYq, MyCon);
+                string MyQOS = "Insert into OrderStatus (OrderID,Current_Department, Status) values ( 'ORD' + (select replace(convert(varchar, getdate(), 103), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  ),@FF,@WP)";
+                SqlCommand MyCmdOS = new SqlCommand(MyQOS, MyCon);
+                MyCmdOS.Parameters.AddWithValue("@FF", "1");
+                MyCmdOS.Parameters.AddWithValue("@WP", DdStatus.SelectedValue);
+                MyCmdOS.ExecuteNonQuery();
 
-                
-                MyCmd1.Parameters.AddWithValue("@YF", "Yet To Start");
-                MyCmd1.Parameters.AddWithValue("@FF", "Yet To Start");
-                MyCmd1.Parameters.AddWithValue("@WP", "Yet To Start");
-                MyCmd1.Parameters.AddWithValue("@F", "Yet To Start");
-                MyCmd1.Parameters.AddWithValue("@FG", "Yet To Start");
+                string  MyQH = "Insert into OrderHistory (OrderID,Current_Department, Status ,Remarks) values ( 'ORD' + (select replace(convert(varchar, getdate(), 103), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  ),@FF,@WP ,@Remarks)";
+                SqlCommand MyCmd1 = new SqlCommand(MyQH, MyCon);
+                MyCmd1.Parameters.AddWithValue("@FF", "1");
+                MyCmd1.Parameters.AddWithValue("@WP", DdStatus.SelectedValue);
+                MyCmd1.Parameters.AddWithValue("@Remarks",'-');
+
                 MyCmd1.ExecuteNonQuery();
-
-                 
-
-                string mYqa = "Insert into OrderStatus ( OID ,Yarn_Formation , Fabric_Formation , Wet_Processing ,  Fabrication  , Finished_Goods  )" +
-                  " values (  'ORD' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  )  , @YF ,@FF ,@WP,@F,@FG)";
-                SqlCommand MyCmd1a = new SqlCommand(mYqa, MyCon);
-
-
-                MyCmd1a.Parameters.AddWithValue("@YF", "Yet To Start");
-                MyCmd1a.Parameters.AddWithValue("@FF", "Yet To Start");
-                MyCmd1a.Parameters.AddWithValue("@WP", "Yet To Start");
-                MyCmd1a.Parameters.AddWithValue("@F", "Yet To Start");
-                MyCmd1a.Parameters.AddWithValue("@FG", "Yet To Start");
-                MyCmd1a.ExecuteNonQuery();
-
-
-                //For Histry Table
-                SqlCommand MyCmdHis = new SqlCommand("Insert into History (OrderID,ClientName,OrderType,Qty,ETA_Time,Status)"+
-                    "values (  'ORD' + (select replace(convert(varchar, getdate(), 101), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  )   ,@CN,@OType,@Qty,@ETA,@Stat)", MyCon);
-
-
-                MyCmdHis.Parameters.AddWithValue("@CN", txtClinet.Text);
-                MyCmdHis.Parameters.AddWithValue("@OType", ddType.SelectedValue);
-                MyCmdHis.Parameters.AddWithValue("@Qty", txtQty.Text);
-                MyCmdHis.Parameters.AddWithValue("@ETA", txtETA.Text);
-                MyCmdHis.Parameters.AddWithValue("@Stat", DdStatus.SelectedValue);
-
-                MyCmdHis.ExecuteNonQuery();
 
                 MyCon.Close();
 

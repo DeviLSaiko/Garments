@@ -22,7 +22,7 @@
         
     }
 
-    . 
+    
 
     </style>
 
@@ -96,11 +96,11 @@
                                 <label>Status</label>
                                 <asp:DropDownList ID="DdStatus" CssClass="form-select"   Height="35px" Width="288px" runat="server">
                                     <asp:ListItem Text="-- Select --"></asp:ListItem>
-                                    <asp:ListItem Text="Created" Value="Current"></asp:ListItem>
-                                    <asp:ListItem Text="Start" Value="Current"></asp:ListItem>
-                                    <asp:ListItem Text="hold" Value="Pending"></asp:ListItem>
-                                    <asp:ListItem Text="finish" Value="Finished"></asp:ListItem>
-                                    <asp:ListItem Text="cancelled" Value="Finished"></asp:ListItem>
+                                    <asp:ListItem Text="Created" Value="1"></asp:ListItem>
+                                    <asp:ListItem Text="In Progress" Value="2"></asp:ListItem>
+                                    <asp:ListItem Text="on Hold" Value="3"></asp:ListItem>
+                                    <asp:ListItem Text="Finished" Value="4"></asp:ListItem>
+                                    <asp:ListItem Text="Cancelled" Value="5"></asp:ListItem>
                                 </asp:DropDownList>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator12"
                                     ControlToValidate="DdStatus"
@@ -132,7 +132,7 @@
 
                                 <div class="align-content-center">
                                 <table>
-                                    <asp:GridView ID="GridView1" CssClass="table"  OnRowCommand="GridView1_RowCommand"  AutoGenerateColumns="false" runat="server">
+                                    <asp:GridView ID="GridView1" CssClass="table"   AutoGenerateColumns="false" runat="server">
                                         <Columns>
                                             <asp:BoundField DataField="OrderID"  HeaderText="Order ID" HeaderStyle-BackColor="WhiteSmoke" />
                                             <asp:BoundField DataField="ClientName"  HeaderText="Client Name" HeaderStyle-BackColor="WhiteSmoke" />

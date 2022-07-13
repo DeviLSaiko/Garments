@@ -52,7 +52,7 @@ namespace GarmentsPro.Admin
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from Orders ";
+            string MYQ = "select count(*) as Total from Orders";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
@@ -64,7 +64,7 @@ namespace GarmentsPro.Admin
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from Orders where Status='Created' ";
+            string MYQ = "select count(*) as Total from Orders where Status='1' ";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
@@ -76,7 +76,7 @@ namespace GarmentsPro.Admin
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from Orders where Status='Pending' ";
+            string MYQ = "select count(*) as Total from Orders where Status='2' ";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
@@ -88,7 +88,7 @@ namespace GarmentsPro.Admin
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from Orders where Status='Completed' ";
+            string MYQ = "select count(*) as Total from Orders where Status='3' ";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();

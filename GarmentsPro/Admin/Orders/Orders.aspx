@@ -24,8 +24,13 @@
             <div class="table-responsive">
 
                  <table class="table-hover     ">
-                            <asp:GridView ID="GridView1"  OnPageIndexChanging="GridView1_PageIndexChanging" CssClass=" table " HeaderStyle-ForeColor="White" HeaderStyle-BackColor="Teal"  AutoGenerateColumns="false" runat="server">
+                            <asp:GridView ID="GridView1"  OnPageIndexChanging="GridView1_PageIndexChanging"   CssClass=" table " HeaderStyle-ForeColor="White" HeaderStyle-BackColor="ActiveBorder"  AutoGenerateColumns="false" runat="server">
                                 <Columns>
+
+                                    <asp:TemplateField HeaderText=" ">   
+                                        <ItemTemplate> <%# Container.DataItemIndex + 1 %> </ItemTemplate>
+                                    </asp:TemplateField>
+
                                     <asp:BoundField DataField="OID"   HeaderText="ID" />
                                     <asp:BoundField DataField="OrderID"   HeaderText="Order ID" />
                                      <asp:BoundField DataField="ClientName"   HeaderText="Client Name" />

@@ -51,11 +51,6 @@ namespace GarmentsPro.Admin.Orders
             {
                 Response.Redirect("~/Admin/CreateDashboard.aspx");
             }
-
-
-
-            
-
         }
 
         protected void BtnCreate_Click(object sender, EventArgs e)
@@ -97,9 +92,6 @@ namespace GarmentsPro.Admin.Orders
             LoadUsers();
         }
 
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-
-        }
+       
     }
 }
