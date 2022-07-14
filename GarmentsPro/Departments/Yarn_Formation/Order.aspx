@@ -21,7 +21,7 @@
             <div class="col-md-12 align-content-center">
                 <asp:GridView ID="GridView1" CssClass=" table table-responsive "  HeaderStyle-CssClass="align-content-center" OnRowDataBound="GridView1_RowDataBound" OnRowCommand= "GridView1_RowCommand1" AutoGenerateColumns="False" runat="server">
                     <Columns>
-                        
+                          
                         <asp:BoundField DataField="OrderID" HeaderText="Order ID" />
                         <asp:BoundField DataField="ClientName" HeaderText="Client " />
                         <asp:BoundField DataField="OrderType" HeaderText="Order Type" />

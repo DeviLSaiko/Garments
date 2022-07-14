@@ -51,7 +51,7 @@ namespace Garments_Pro.Yarn_Formation
             SqlDataAdapter myada = new SqlDataAdapter(MyQ, Sqlconnection);
             myada.Fill(MyTable);
 
-          // e.Row.Cells[4].Visible = false;
+            // e.Row.Cells[4].Visible = false;
 
 
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -67,16 +67,16 @@ namespace Garments_Pro.Yarn_Formation
                     btnst.Text = "In Progress";
                     btnst.CssClass = "text-success btn";
                 }
-              else if(Col_Status== "3")
+                else if (Col_Status == "3")
                 {
-                    btnupdate.Text = "on Hold"; 
+                    btnupdate.Text = "on Hold";
                     btnupdate.CssClass = "text-danger btn";
                 }
                 else
                 {
                     e.Row.Cells[7].FindControl("btnfinish").Visible = false;
                 }
-               
+
             }
         }
 
@@ -109,14 +109,6 @@ namespace Garments_Pro.Yarn_Formation
                     MyCmd.ExecuteNonQuery();
                     Sqlconnection.Close();
 
-                    string MyQak = "Update Orders SET Status=@Status where OrderID=@ID ";
-                    SqlCommand MyCmdc = new SqlCommand(MyQak, Sqlconnection);
-                    Sqlconnection.Open();
-                    MyCmdc.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
-                    MyCmdc.Parameters.AddWithValue("@Status", "2");
-                    MyCmdc.ExecuteNonQuery();
-                    Sqlconnection.Close();
-
                     string MyQIn = "insert into OrderHistory (OrderID,Current_Department,Status,Remarks) Values (@ID,@CD,@St,@Re)";
                     SqlCommand MyCmdda = new SqlCommand(MyQIn, Sqlconnection);
                     Sqlconnection.Open();
@@ -135,7 +127,7 @@ namespace Garments_Pro.Yarn_Formation
                     MyCmdz.ExecuteNonQuery();
                     Sqlconnection.Close();
 
-                    break; 
+                    break;
 
                 case "Hold":
                     btnhold.Text = "on Hold";
@@ -146,23 +138,16 @@ namespace Garments_Pro.Yarn_Formation
 
                     btnFinish.Visible = false;
 
-                    string MysQ = "Update OrderStatus SET Status=@Status where OrderID=@ID";  
+                    string MysQ = "Update OrderStatus SET Status=@Status where OrderID=@ID";
                     SqlCommand MyCmds = new SqlCommand(MysQ, Sqlconnection);
                     Sqlconnection.Open();
                     MyCmds.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
                     MyCmds.Parameters.AddWithValue("@Status", "3");
                     MyCmds.ExecuteNonQuery();
 
-                    string MyQakc = "Update Orders SET Status=@Status where OrderID=@ID ";
-                    SqlCommand MyCmdcs = new SqlCommand(MyQakc, Sqlconnection);
-                   
-                    MyCmdcs.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
-                    MyCmdcs.Parameters.AddWithValue("@Status", "3");
-                    MyCmdcs.ExecuteNonQuery();
-
                     string MyQInz = "insert into OrderHistory ( OrderID, Current_Department , Status , Remarks) values (@ID,@CD,@St,@Re)  ";
                     SqlCommand MyCmddxa = new SqlCommand(MyQInz, Sqlconnection);
-                    
+
                     MyCmddxa.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
                     MyCmddxa.Parameters.AddWithValue("@CD", "1");
                     MyCmddxa.Parameters.AddWithValue("@St", "3");
@@ -170,28 +155,20 @@ namespace Garments_Pro.Yarn_Formation
                     MyCmddxa.ExecuteNonQuery();
                     Sqlconnection.Close();
 
-
                     break;
-                     
+
                 case "Finish":
 
                     gvRow.Visible = false;
 
                     string MYQF = "Update OrderStatus SET Status=@Status ,Current_Department=@CD  where OrderID=@ID ";
-                    
+
                     SqlCommand Cmd11 = new SqlCommand(MYQF, Sqlconnection);
                     Sqlconnection.Open();
                     Cmd11.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
-                    Cmd11.Parameters.AddWithValue("@Status", "4");
+                    Cmd11.Parameters.AddWithValue("@Status","1");
                     Cmd11.Parameters.AddWithValue("@CD", "2");
                     Cmd11.ExecuteNonQuery();
-
-                    string MyQxakc = "Update Orders SET Status=@Status where OrderID=@ID ";
-                    SqlCommand MyCmdcds = new SqlCommand(MyQxakc, Sqlconnection);
-
-                    MyCmdcds.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
-                    MyCmdcds.Parameters.AddWithValue("@Status", "4");
-                    MyCmdcds.ExecuteNonQuery();
 
                     string MyQIndz = "insert into OrderHistory ( OrderID, Current_Department , Status , Remarks) values (@ID,@CD,@St,@Re)  ";
                     SqlCommand MyCcmddxa = new SqlCommand(MyQIndz, Sqlconnection);
@@ -202,11 +179,7 @@ namespace Garments_Pro.Yarn_Formation
                     MyCcmddxa.Parameters.AddWithValue("@Re", "-");
                     MyCcmddxa.ExecuteNonQuery();
                     Sqlconnection.Close();
-
-                    Sqlconnection.Close();
-
                     break;
-
             }
             LoadGrid();
         }

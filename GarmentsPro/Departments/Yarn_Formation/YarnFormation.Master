@@ -17,7 +17,7 @@
 <body>
      <div class="  p-4 bg-primary text-white  ">
   <h1>Yarn Formation</h1>
-  <p>Lorem ipsum...</p>
+<p>Department</p>
 </div>
     <!-- Header -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
