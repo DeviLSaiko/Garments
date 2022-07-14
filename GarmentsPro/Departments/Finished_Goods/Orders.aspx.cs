@@ -168,6 +168,15 @@ namespace Garments_Pro.Departments.Finished_Goods
                     Cmd11.Parameters.AddWithValue("@CD", "2");
                     Cmd11.ExecuteNonQuery();
 
+
+                    string MYQFc = "Update Orders  SET Status=@Status where OrderID=@ID";
+
+                    SqlCommand Cmd11c = new SqlCommand(MYQFc, Sqlconnection);
+                    
+                    Cmd11c.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
+                    Cmd11c.Parameters.AddWithValue("@Status", "4");
+                    Cmd11c.ExecuteNonQuery();
+
                     string MyQIndz = "insert into OrderHistory ( OrderID, Current_Department , Status , Remarks) values (@ID,@CD,@St,@Re)";
                     SqlCommand MyCcmddxa = new SqlCommand(MyQIndz, Sqlconnection);
 
@@ -176,7 +185,6 @@ namespace Garments_Pro.Departments.Finished_Goods
                     MyCcmddxa.Parameters.AddWithValue("@St", "1");
                     MyCcmddxa.Parameters.AddWithValue("@Re", "-");
                     MyCcmddxa.ExecuteNonQuery();
-                    Sqlconnection.Close();
 
                     Sqlconnection.Close();
 

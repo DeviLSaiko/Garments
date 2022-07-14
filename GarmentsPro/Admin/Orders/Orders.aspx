@@ -24,7 +24,7 @@
             <div class="table-responsive">
 
                  <table class="table-hover     ">
-                            <asp:GridView ID="GridView1"  OnPageIndexChanging="GridView1_PageIndexChanging"   CssClass=" table " HeaderStyle-ForeColor="White" HeaderStyle-BackColor="ActiveBorder"  AutoGenerateColumns="false" runat="server">
+                            <asp:GridView ID="GridView1"  OnPageIndexChanging="GridView1_PageIndexChanging"  AllowPaging="true"  PageSize="5"  CssClass=" table " HeaderStyle-ForeColor="White"  HeaderStyle-BackColor="#999999"  AutoGenerateColumns="false" runat="server">
                                 <Columns>
 
                                     <asp:TemplateField HeaderText=" ">   
@@ -39,7 +39,7 @@
                                     <asp:BoundField DataField="ETA_Time" HeaderText="Deadline On" />
                                     <asp:BoundField DataField="Created_Date" HeaderText="Created_Date" />
                                      <asp:BoundField DataField="Status" HeaderText="Current Status" />
-             <asp:TemplateField HeaderText="Modify" ControlStyle-CssClass="btn btn-outline-secondary  btn-sm " >
+             <asp:TemplateField HeaderText="Modify" ControlStyle-CssClass="btn btn-secondary  btn-sm " >
      <ItemTemplate>
                 <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Orders/EditOrder.aspx?ID={0}",
                     HttpUtility.HtmlEncode (Eval("OID").ToString()))%>'>Modify</asp:HyperLink>

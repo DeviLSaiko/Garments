@@ -21,24 +21,19 @@
 
         #sticky-footer{
             position:fixed;
-            marg
+            
         }
-
         .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color:  black;
-  color: white;
-  text-align: center;
-  height:80px;
-          
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            height: 80px;
+        }
     </style>
-
-    
-
-
     <asp:ContentPlaceHolder ID="head"  runat="server">
      
     </asp:ContentPlaceHolder>
@@ -47,7 +42,7 @@
 
     <div class="  p-4 bg-primary text-white  " style="background-color:#82d3ff">
   <h1>Production Engineer</h1>
-  <p>Lorem ipsum...</p>
+  <p>Admin</p>
 </div>
     <!-- Header -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
@@ -71,6 +66,9 @@
                      <li class="nav-item">
                         <a class="nav-link " href="/Admin/Orders/CreateOrder.aspx">View Stocks </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/admin/AddProducts.aspx">Products</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" >
                     <li class="nav-item ">
@@ -81,7 +79,7 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="/Login.aspx">Logout</a>
+                        <a class="nav-link " href="/Admin/AdminLogin.aspx">Logout</a>
                     </li>
 
 

@@ -74,6 +74,7 @@ namespace GarmentsPro.Admin.Orders
 
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
+            GridView1.PageIndex = e.NewPageIndex;
             string l_Query = "Select * From Orders Orders";
 
             LoadOrder(l_Query);

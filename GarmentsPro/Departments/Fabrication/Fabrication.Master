@@ -9,6 +9,33 @@
     <link href="../../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <link href="../../Assets/Bootstrap/bootstrap.min5.css" rel="stylesheet" />
     <script src="../../Assets/Bootstrap/bootstrap.bundle.min5.js"></script>
+
+
+       <style>
+
+        body{
+            background-color:whitesmoke
+        }
+
+        #sticky-footer{
+            position:fixed;
+            
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            height: 80px;
+        }
+          
+    </style>
+
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -58,5 +85,11 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
+     <footer id="sticky-footer" class="footer">
+        <div class="container text-center">
+           
+            <p class="mt-3">Copyright &copy; Your Website</p>
+        </div>
+    </footer>
 </body>
 </html>

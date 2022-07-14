@@ -98,8 +98,7 @@
                                     <asp:ListItem Text="-- Select --"></asp:ListItem>
                                     <asp:ListItem Text="Created" Value="1"></asp:ListItem>
                                     <asp:ListItem Text="In Progress" Value="2"></asp:ListItem>
-                                    <asp:ListItem Text="on Hold" Value="3"></asp:ListItem>
-                                    <asp:ListItem Text="Finished" Value="4"></asp:ListItem>
+                                    <asp:ListItem Text="Completed" Value="4"></asp:ListItem>
                                     <asp:ListItem Text="Cancelled" Value="5"></asp:ListItem>
                                 </asp:DropDownList>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator12"

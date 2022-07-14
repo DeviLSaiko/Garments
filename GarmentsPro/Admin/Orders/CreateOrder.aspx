@@ -29,17 +29,7 @@
                 <h2>Create New Order</h2>
                 <div class="row ">
 
-                    <div class="col-md-4">
-                        <label>OrderID</label>
-                        <asp:TextBox ID="txtOrderID" CssClass="form-control" runat="server" TextMode="DateTimeLocal" Height="35px" Width="288px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
-                            ControlToValidate="txtOrderID"
-                            Text=" This Field Cannot be Empty"
-                            ForeColor="red"
-                            Font-Size="Small"
-                            runat="server"></asp:RequiredFieldValidator>
-                        <br />
-                    </div>
+                     
                     <div class="col-md-4">
                         <label>Clinet Name</label>
                         <asp:TextBox ID="txtClinet" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
@@ -68,10 +58,7 @@
                             runat="server"></asp:RequiredFieldValidator>
                         <br />
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4">
+                      <div class="col-md-4">
                         <label>Quantity</label>
                         <asp:TextBox ID="txtQty" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
@@ -82,6 +69,10 @@
                             runat="server"></asp:RequiredFieldValidator>
                         <br />
                     </div>
+                </div>
+
+                <div class="row">
+                  
                     <div class="col-md-4">
                         <label>Deadline Time</label>
                         <asp:TextBox ID="txtETA" TextMode="DateTimeLocal" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
@@ -111,7 +102,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click1" Text="Create New Order" CssClass="btn btn-success " Width="207px" Height="39px" />
+                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click1" Text="Create New Order" CssClass="btn btn-info  " Width="207px" Height="39px" />
                     </div>
                 </div>
                 <center>
