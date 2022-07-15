@@ -49,15 +49,6 @@ namespace GarmentsPro.Admin {
         protected global::System.Web.UI.WebControls.Label lblCurrentOrders;
         
         /// <summary>
-        /// lblpending control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblpending;
-        
-        /// <summary>
         /// lblFinshedOrds control.
         /// </summary>
         /// <remarks>
@@ -65,6 +56,15 @@ namespace GarmentsPro.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFinshedOrds;
+        
+        /// <summary>
+        /// lblpending control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblpending;
         
         /// <summary>
         /// GridView1 control.

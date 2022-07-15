@@ -7,7 +7,6 @@
             <center>
                  <label> Welcome : </label><asp:Label ID="lblWelcome" runat="server" Font-Size="Large"   Text=" Admin "></asp:Label>
             </center>
-
             <div class="row mt-5">
                 <div class="col-md-2 bg-black  ms-3 text-light" style="height: 100px">
                     <center>
@@ -26,7 +25,6 @@
                 </div>
             </div>
             <br />
-
             <div class="row">
                 <div class="col-md-2 bg-secondary  ms-3 text-light" style="height: 100px">
                     <label>Current Orders  </label>
@@ -37,30 +35,21 @@
                     </center>
                 </div>
                 <div class="col-md-2 bg-danger ms-3 text-light" style="height: 100px">
-
                     <label>Pending Orders  </label>
-
                     <br />
                     <center>
-
                          <asp:Label ID="lblpending" runat="server"  Font-Size="XX-Large" Text="5"></asp:Label>
                     </center>
                 </div>
                 <div class="col-md-2 bg-info ms-3 text-light" style="height: 100px">
-
                     <label>Finshed Orders  </label>
-
                     <br />
                     <center>
-
                          <asp:Label ID="lblFinshedOrds" runat="server"  Font-Size="XX-Large"   Text="20"></asp:Label>
                     </center>
                 </div>
             </div>
-
             <asp:GridView ID="GridView1" Visible="false" runat="server"></asp:GridView>
-
         </div>
-
     </div>
 </asp:Content>

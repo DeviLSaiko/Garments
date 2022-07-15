@@ -27,7 +27,7 @@ namespace GarmentsPro.Admin.Orders
         private void LoadUsers()
         {
             DataTable MyTable = new DataTable();
-            string MYQ = "select OID, OrderID, ClientName, OrderType, Qty, ETA_Time, Created_Date, Status from Orders where OID=@ID";
+            string MYQ = "select  OrderID, ClientName, OrderType, Qty, ETA_Time, Created_Date, Status from Orders where OrderID=@ID";
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
                 SqlDataAdapter myada = new SqlDataAdapter(MYQ, Sqlconnection);
@@ -56,7 +56,7 @@ namespace GarmentsPro.Admin.Orders
         protected void BtnCreate_Click(object sender, EventArgs e)
         {
             SqlConnection MyCon = new SqlConnection(MyConnection());
-            string MyInsQ = "Update Orders set ClientName=@CN, OrderType=@OType ,QtY=@Qty , ETA_Time=@ETA , Status=@Stat where OID=@ID";
+            string MyInsQ = "Update Orders set ClientName=@CN, OrderType=@OType ,QtY=@Qty , ETA_Time=@ETA , Status=@Stat where OrderID=@ID";
             SqlCommand MyCmd = new SqlCommand(MyInsQ, MyCon);
 
             MyCon.Open();

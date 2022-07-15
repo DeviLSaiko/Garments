@@ -65,7 +65,7 @@ namespace Garments_Pro.Yarn_Formation
                 if (Col_Status == "2")
                 {
                     btnst.Text = "In Progress";
-                    btnst.CssClass = "text-success btn";
+                    btnst.CssClass = "text-success btn text";
                 }
                 else if (Col_Status == "3")
                 {

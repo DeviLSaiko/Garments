@@ -46,16 +46,7 @@
                          <asp:Label ID="lblCurrentOrders" runat="server"   Font-Size="XX-Large"     Text=""></asp:Label>
                     </center>
                 </div>
-                <div class="col-md-2 bg-danger ms-3 text-light" style="height: 100px">
 
-                    <label>Pending Orders  </label>
-
-                    <br />
-                    <center>
-
-                         <asp:Label ID="lblpending" runat="server"  Font-Size="XX-Large" Text="5"></asp:Label>
-                    </center>
-                </div>
                 <div class="col-md-2 bg-info ms-3 text-light" style="height: 100px">
 
                     <label>Finshed Orders  </label>
@@ -64,6 +55,16 @@
                     <center>
 
                          <asp:Label ID="lblFinshedOrds" runat="server"  Font-Size="XX-Large"   Text="20"></asp:Label>
+                    </center>
+                </div>
+                <div class="col-md-2 bg-danger ms-3 text-light" style="height: 100px">
+
+                    <label>Cancelled Orders  </label>
+
+                    <br />
+                    <center>
+
+                         <asp:Label ID="lblpending" runat="server"  Font-Size="XX-Large" Text="5"></asp:Label>
                     </center>
                 </div>
             </div>

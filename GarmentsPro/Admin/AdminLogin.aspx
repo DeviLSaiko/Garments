@@ -29,13 +29,12 @@
         </div>
     </nav>
     <!-- Header -->
-
-     
-        <div class="mt-5">
-        </div>
         <div class="container">
+             <div class="row p-5 mt-5"></div>
+            <div class="row p-5 mt-5"></div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
                     <label>UserName</label> 
                     <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
@@ -54,10 +53,11 @@
                         Font-Size="Small"
                         runat="server"></asp:RequiredFieldValidator>
                     <br />
-                    <div class="d-grid">
-                         <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-dark" Width="157px" Height="39px" /> 
+                    <div class="d-grid align-content-center" >
+                         <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-dark" Width="207px" Height="39px" /> 
                     </div>
                 </div>
+                <div class="col-md-4"></div>
             </div>
         </div>
     </div>

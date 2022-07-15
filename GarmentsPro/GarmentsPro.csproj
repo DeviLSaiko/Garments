@@ -77,8 +77,6 @@
     <Content Include="Admin\Users\CreateAccount.aspx" />
     <Content Include="Admin\Users\EditAccount.aspx" />
     <Content Include="Assets\Images\Bg1.jpg" />
-    <Content Include="Dash.aspx" />
-    <Content Include="Dashboard.html" />
     <Content Include="Departments\FabricFormation\Dashboard.aspx" />
     <Content Include="Departments\FabricFormation\Orders.aspx" />
     <Content Include="Departments\Wet_Processing\Dashboard.aspx" />
@@ -110,9 +108,7 @@
     <Content Include="Departments\Finished_Goods\Dashboard.aspx" />
     <Content Include="Departments\Finished_Goods\Orders.aspx" />
     <Content Include="Departments\Yarn_Formation\Order.aspx" />
-    <Content Include="Departments\Yarn_Formation\Style.css" />
     <Content Include="Global.asax" />
-    <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -192,13 +188,6 @@
     </Compile>
     <Compile Include="Admin\Users\EditAccount.aspx.designer.cs">
       <DependentUpon>EditAccount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dash.aspx.cs">
-      <DependentUpon>Dash.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dash.aspx.designer.cs">
-      <DependentUpon>Dash.aspx</DependentUpon>
     </Compile>
     <Compile Include="Departments\Fabrication\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

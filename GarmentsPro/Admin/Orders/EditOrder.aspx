@@ -32,7 +32,7 @@
         </asp:ScriptManager>
         <asp:UpdatePanel ID="updatepnl" runat="server">
             <ContentTemplate>
-                <div class="container mt-5">
+                <div class="container mt-3">
                     <h2>Update</h2>
                     <div class="row">
 

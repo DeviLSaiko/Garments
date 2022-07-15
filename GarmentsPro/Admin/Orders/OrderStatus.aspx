@@ -12,32 +12,18 @@
 
                 <div class="row ">
 
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="table-responsive">
 
                             <table class="table-hover     ">
                                 <asp:GridView ID="GridView1" CssClass=" table " HeaderStyle-ForeColor="White" HeaderStyle-BackColor="Teal" AutoGenerateColumns="false" runat="server">
                                     <Columns>
-                                        <asp:BoundField DataField="OID" HeaderText="ID" />
-                                        <asp:BoundField DataField="OrderID" HeaderText="Order ID" />
-                                        <asp:BoundField DataField="ClientName" HeaderText="Client Name" />
-                                        <asp:BoundField DataField="OrderType" HeaderText="Order Type" />
-                                        <asp:BoundField DataField="Qty" HeaderText="Quantity" />
-                                        <asp:BoundField DataField="ETA_Time" HeaderText="Deadline On" />
-                                        <asp:BoundField DataField="Created_Date" HeaderText="Created_Date" />
-                                        <asp:BoundField DataField="Status" HeaderText="Current Status" />
-                                        <asp:TemplateField HeaderText="Modify" ControlStyle-CssClass="btn btn-outline-secondary  btn-sm ">
-                                            <ItemTemplate>
-                                                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Orders/EditOrder.aspx?ID={0}",
-                    HttpUtility.HtmlEncode (Eval("OID").ToString()))%>'>Modify</asp:HyperLink>
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-                                        <asp:TemplateField HeaderText="View Status" ControlStyle-CssClass="btn btn-dark btn-sm">
-                                            <ItemTemplate>
-                                                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Orders/EditOrder.aspx?ID={0}",
-                    HttpUtility.HtmlEncode (Eval("OID").ToString()))%>'>View Status</asp:HyperLink>
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
+                                         <asp:TemplateField HeaderText=" ">   
+                                        <ItemTemplate> <%# Container.DataItemIndex + 1 %> </ItemTemplate>
+                                    </asp:TemplateField>
+                                        <asp:BoundField DataField="OrderID" HeaderText="OrderID" />
+                                        <asp:BoundField DataField="Current_Department" HeaderText="Department" />
+                                        <asp:BoundField DataField="Status" HeaderText="Status" />
                                     </Columns>
                                 </asp:GridView>
                             </table>

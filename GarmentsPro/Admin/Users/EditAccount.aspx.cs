@@ -14,28 +14,29 @@ namespace GarmentsPro.Admin.Users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
             if (!IsPostBack)
             {
                 LoadUsers();
                 if (!IsPostBack)
                 {
-                    DataTable MyTable = new DataTable();
-                    SqlConnection MyCon = new SqlConnection(MyConnection());
-
-                    SqlDataAdapter MyAda = new SqlDataAdapter("select * from Departments", MyCon);
-                    MyAda.Fill(MyTable);
-
-                    ddDepartments.DataTextField = "DepName";
-                    ddDepartments.DataValueField = "DepName";
-                    ddDepartments.DataSource = MyTable;
-                    ddDepartments.DataBind();
-
+                    LoadDep();
                 }
 
             }
 
+        }
+        private void LoadDep()
+        {
+            DataTable MyTable = new DataTable();
+            SqlConnection MyCon = new SqlConnection(MyConnection());
+
+            SqlDataAdapter MyAda = new SqlDataAdapter("select * from Departments", MyCon);
+            MyAda.Fill(MyTable);
+
+            ddDepartments.DataTextField = "DepName";
+            ddDepartments.DataValueField = "DepName";
+            ddDepartments.DataSource = MyTable;
+            ddDepartments.DataBind();
         }
 
         protected void BtnDel_Click1(object sender, EventArgs e)
@@ -55,12 +56,7 @@ namespace GarmentsPro.Admin.Users
                 Response.Redirect("~/Admin/UsersList.aspx");
 
             }
-
-
-
             LoadUsers();
-
-
         }
         private string MyConnection()
         {
@@ -75,13 +71,11 @@ namespace GarmentsPro.Admin.Users
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
                 SqlDataAdapter myada = new SqlDataAdapter(MYQ, Sqlconnection);
-
                 myada.SelectCommand.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
                 myada.Fill(MyTable);
             }
             GridView1.DataSource = MyTable;
             GridView1.DataBind();
-
 
             txtName.Text = MyTable.Rows[0]["Name"].ToString();
             txtUserName.Text = MyTable.Rows[0]["UserName"].ToString();
@@ -91,27 +85,16 @@ namespace GarmentsPro.Admin.Users
         private void LoadUsersUpdate()
         {
             DataTable MyTable = new DataTable();
-
-
             string MYQ = "Select UID ,Name , UserName , Password ,   Department from UserInfo   where UID=@ID";
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
                 SqlDataAdapter myada = new SqlDataAdapter(MYQ, Sqlconnection);
                 myada.SelectCommand.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
-
                 myada.Fill(MyTable);
             }
             GridView1.DataSource = MyTable;
             GridView1.DataBind();
-
-            if (MyTable.Rows.Count > 0)
-            {
-
-
-            }
         }
-
-
         protected void BtnCreate_Click(object sender, EventArgs e)
         {
             SqlConnection MyCon = new SqlConnection(MyConnection());

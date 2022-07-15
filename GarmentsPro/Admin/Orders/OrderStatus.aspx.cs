@@ -22,7 +22,8 @@ namespace GarmentsPro.Admin
         private void LoadOrder()
         {
             DataTable MyTable = new DataTable();
-            string MYQ = "select OID, OrderID, ClientName, OrderType, Qty, ETA_Time, Created_Date, Status from Orders where OID=@ID";
+            string MYQ = "select OrderID,  Current_Department, Status  from OrderStatus where OrderID=@ID";
+      
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
                 SqlDataAdapter myada = new SqlDataAdapter(MYQ, Sqlconnection);

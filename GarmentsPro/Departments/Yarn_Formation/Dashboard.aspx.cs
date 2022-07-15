@@ -74,7 +74,7 @@ namespace GarmentsPro.Departments.Yarn_Formation
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from Orders where Status='2' ";
+            string MYQ = "select count(*) as Total from Orders where Status='5' ";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
