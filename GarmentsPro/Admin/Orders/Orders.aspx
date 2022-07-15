@@ -7,7 +7,7 @@
     <center>
             <div class="container">
        <div class="row" style="margin-top:100px">
-           <div class="col-sm-12" >
+           <div class="col-md-12" >
         
         <div class="align-content-center">  
             <div>

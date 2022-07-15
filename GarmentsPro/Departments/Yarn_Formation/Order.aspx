@@ -15,7 +15,7 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-            <div class="container" style="padding-top: 250px">
+            <div class="container" style="padding-top: 50px">
                 <div class="row">
                     <center>
             <div class="col-md-12 align-content-center">

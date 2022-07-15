@@ -16,7 +16,7 @@
        <style>
 
         body{
-            background-color:whitesmoke
+            background-color:#FFFFFF
         }
 
         #sticky-footer{

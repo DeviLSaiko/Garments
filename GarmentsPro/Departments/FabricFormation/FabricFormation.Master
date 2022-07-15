@@ -31,7 +31,7 @@
             background-color: black;
             color: white;
             text-align: center;
-            height: 80px;
+            height: 60px;
         }
           
     </style>
