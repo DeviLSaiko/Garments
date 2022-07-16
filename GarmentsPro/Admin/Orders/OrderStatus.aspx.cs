@@ -14,6 +14,7 @@ namespace GarmentsPro.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadOrder();
+            LoadHistory();
         }
         private string MyConnection()
         {
@@ -31,8 +32,31 @@ namespace GarmentsPro.Admin
                 myada.SelectCommand.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
                 myada.Fill(MyTable);
             }
-            GridView1.DataSource = MyTable;
-            GridView1.DataBind();
+            GvCutDep.DataSource = MyTable;
+            GvCutDep.DataBind();
+
+
+            if (MyTable.Rows.Count < 0)
+            {
+                //txtError.Text = "No Record Found";
+            }
+
+        }
+
+        private void LoadHistory()
+        {
+            DataTable MyTable = new DataTable();
+            string MYQ = "select OrderID, Current_Department, Status ,Remarks , Created_Date from OrderHistory where OrderID=@ID";
+
+            using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
+            {
+                SqlDataAdapter myada = new SqlDataAdapter(MYQ, Sqlconnection);
+
+                myada.SelectCommand.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
+                myada.Fill(MyTable);
+            }
+            gvHistry.DataSource = MyTable;
+            gvHistry.DataBind();
 
 
             if (MyTable.Rows.Count < 0)

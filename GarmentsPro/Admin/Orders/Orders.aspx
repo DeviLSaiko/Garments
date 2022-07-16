@@ -2,13 +2,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Orders</title>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <asp:ScriptManager ID="scriptmanager1" runat="server">
+    <asp:ScriptManager ID="scriptmanager1" runat="server">
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-    <center>
+            <center>
             <div class="container">
        <div class="row" style="margin-top:50px">
            <div class="col-sm-12" >
@@ -53,9 +54,21 @@
                     HttpUtility.HtmlEncode (Eval("OrderID").ToString()))%>'>View</asp:HyperLink>
      </ItemTemplate>
       </asp:TemplateField> 
-                                        <asp:TemplateField HeaderText="Cancel" ControlStyle-CssClass="btn btn-danger  btn-sm" >
+                                        <asp:TemplateField HeaderText="Cancel"   >
      <ItemTemplate>
-         <asp:Button ID="btnCancel" runat="server"  CommandName="OrderCancel" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="Cancel"></asp:Button>
+         <asp:Button ID="btnCancel"  CssClass="btn btn-danger btn-sm" runat="server"  CommandName="OrderCancel" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="Cancel"></asp:Button>
+  </button>
+                 
+     </ItemTemplate>
+      </asp:TemplateField> 
+       <asp:TemplateField HeaderText="Remarks"   >
+     <ItemTemplate>
+         <asp:Button ID="btnRemarks"  CssClass="btn" runat="server"  data-bs-toggle="modal" data-bs-target="#myModal"   CommandName="Remarks" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="-"></asp:Button>
+
+ 
+    
+     
+  </button>
                  
      </ItemTemplate>
       </asp:TemplateField> 
@@ -73,12 +86,36 @@
            </div>
                  
           </center>
-    <center>
+            <center>
+        <!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
         <div>
             <asp:Label ID="txtError" runat="server" Text=""></asp:Label>
        </div>
       </center>
-            </ContentTemplate>
+        </ContentTemplate>
     </asp:UpdatePanel>
 
 </asp:Content>

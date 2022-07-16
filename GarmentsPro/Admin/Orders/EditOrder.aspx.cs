@@ -80,7 +80,7 @@ namespace GarmentsPro.Admin.Orders
             {
                 Sqlconnection.Open();
 
-                string MyQ = "Delete from Orders where OID=@ID";
+                string MyQ = "Delete from Orders where OrderID=@ID";
                 SqlCommand MyCmd = new SqlCommand(MyQ, Sqlconnection);
                 MyCmd.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
                 MyCmd.ExecuteNonQuery();

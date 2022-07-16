@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="CreateAccount.aspx.cs" Inherits="GarmentsPro.Admin.Users.CreateAccount" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <title>Create New Account</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -12,7 +14,7 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <label>Name</label>
                             <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="300px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
@@ -53,17 +55,17 @@
                                 <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Create New Account" CssClass="btn btn-dark" Width="207px" Height="39px" />
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-8">
 
                             <table class="table-hover     ">
-                                <asp:GridView ID="GridView1" CssClass=" table table-hover" AutoGenerateColumns="false" runat="server">
+                                <asp:GridView ID="GridView1" HeaderStyle-BackColor="#808080" HeaderStyle-ForeColor="White" CssClass=" table  " AutoGenerateColumns="false" runat="server">
                                     <Columns>
                                         <asp:BoundField DataField="UID" HeaderText="ID" />
                                         <asp:BoundField DataField="Name" HeaderText="Name" />
                                         <asp:BoundField DataField="Username" HeaderText="Username" />
                                         <asp:BoundField DataField="Password" HeaderText="Password" />
                                         <asp:BoundField DataField="Department" HeaderText="Department" />
-                                        <asp:TemplateField HeaderText="Modify" ControlStyle-CssClass="btn btn-dark">
+                                        <asp:TemplateField HeaderText="Modify" ControlStyle-CssClass="btn btn-dark btn-sm">
                                             <ItemTemplate>
                                                 <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Users/EditAccount.aspx?ID={0}",
                     HttpUtility.HtmlEncode (Eval("UID").ToString()))%>'>Modify</asp:HyperLink>

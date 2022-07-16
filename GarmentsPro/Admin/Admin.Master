@@ -15,7 +15,9 @@
      
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        
+        NAV{
+            height:50PX;
+        }
         body {
             background-color: #FFFFFF;
         }
@@ -39,7 +41,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="  p-1  bg-info bg-opacity-75 text-white  " style="background-color: #82d3ff">
+    <div class="  p-1  bg-primary bg-opacity-75 text-white  " style="background-color: #82d3ff">
         <div class="ps-2">
                <h1>Production Engineer</h1>
         <p>Admin</p>
