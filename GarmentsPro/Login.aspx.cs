@@ -21,6 +21,7 @@ namespace GarmentsPro
         protected void BtnCreate_Click(object sender, EventArgs e)
         {
 
+
             string Department;
 
             SqlConnection Sqlconnection = new SqlConnection(MyCon);
@@ -53,6 +54,15 @@ namespace GarmentsPro
                         break;
                 }
             }
+            else
+            {
+                Label1.Visible = true;
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "HideLabel();", true);
+                
+
+            }
+            txtPassword.Text = "";
+            txtUserName.Text = "";
         }
     }
 }

@@ -94,6 +94,7 @@ namespace GarmentsPro.Admin.Orders
 
                     btnCancel.Text = "Cancelled";
                     btnCancel.CssClass = "text-danger btn";
+                    
 
                     string MyQa = "Update Orders SET Status=@Status where OrderID=@ID ";
                     SqlCommand MyCmd = new SqlCommand(MyQa, Sqlconnection);
@@ -122,7 +123,9 @@ namespace GarmentsPro.Admin.Orders
 
                     break;
             }
+            string l_Query = "Select OrderID , ClientName , OrderType , b.Status ,Created_Date from Orders a join Status b on a.Status = b.ID";
 
+            LoadOrder(l_Query);
         }
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -151,7 +154,9 @@ namespace GarmentsPro.Admin.Orders
                 {
                     btnCancel.Text = "Cancelled";
                     btnCancel.CssClass = "text-danger btn";
-                    
+                     
+
+
                 }
                  
                 else if (Col_Status == "Completed")

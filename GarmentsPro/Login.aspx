@@ -13,48 +13,66 @@
     <link href="../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../Assets/SweetAlert/sweetalert.min.js"></script>
     <style>
-        body {
+        body{
+            background-color:antiquewhite;
+        }
+        .MyCon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% ,-50%);
+            background:#ffffff ;
+            width:360px;
+            padding:30px;
+            box-shadow: rgb(255, 0, 0) 10px , 3px ,10px, 10px ,rgb(255, 0, 0)  10px , 3px ,10px, 10px ;
         }
     </style>
+    <script type="text/javascript">
+    function HideLabel() {
+        var seconds = 5;
+        setTimeout(function () {
+            document.getElementById("<%=Label1.ClientID %>").style.display = "none";
+        }, seconds * 1000);
+    };
+</script>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="mt-5">
-        </div>
-        <div class="container">
-            <div class="row p-5 mt-5"></div>
-            <div class="row p-5 mt-5">
-                <div class="col-md-4">
+
+        <div class="MyCon">
+            <h2 style="text-align:center" > Login </h2>
+            <label>UserName</label>
+            <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
+                ControlToValidate="txtUserName"
+                Text="Username is Required"
+                ForeColor="red"
+                Font-Size="Small"
+                runat="server"></asp:RequiredFieldValidator>
+            <br />
+            <label>Password</label>
+            <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
+                ControlToValidate="txtPassword"
+                Text="You Need to Enter the Password"
+                ForeColor="red"
+                Font-Size="Small"
+                runat="server"></asp:RequiredFieldValidator>
+            <br />
+            <div class="d-grid mt-2">
+                <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-secondary ms-3 " Width="250px" Height="39px" />
+                <asp:Label ID="Label1" runat="server" CssClass="mt-3 ms-3 text-danger" Text="Login Failed! Invalid Username or Password" Visible="false"></asp:Label>
+
+                <div class="d-block mt-3" >
+                <asp:Label ID="lblForget" runat="server" CssClass="mt-3 ms-3" Text="Forget Password ?"> </asp:Label> <a style="text-decoration:dotted;" href="#" >Contact Admin</a>
+
+
                 </div>
-                <div class="col-md-4">
-                    <label>UserName</label>
-                    <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
-                        ControlToValidate="txtUserName"
-                        Text=" This Field Cannot be Empty"
-                        ForeColor="red"
-                        Font-Size="Small"
-                        runat="server"></asp:RequiredFieldValidator>
-                    <br />
-                    <label>Password</label>
-                    <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
-                        ControlToValidate="txtPassword"
-                        Text=" This Field Cannot be Empty"
-                        ForeColor="red"
-                        Font-Size="Small"
-                        runat="server"></asp:RequiredFieldValidator>
-                    <br />
-                    <div class="d-grid">
-                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-dark   ms-3" Width="250px" Height="39px" />
-                        <asp:Label ID="lblForget" runat="server" CssClass="mt-3 ms-5" Text="Forget Password ?"> </asp:Label>
-                        <a href="/Admin/AdminLogin.aspx">L</a>
-                    </div>
-                    <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
-                    <a style="color: white" href="/Admin/AdminLogin.aspx">L</a>
-                </div>
+               
             </div>
+            
         </div>
+
     </form>
 </body>
 </html>

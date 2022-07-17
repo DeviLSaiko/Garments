@@ -24,7 +24,8 @@ namespace Garments_Pro.Yarn_Formation
 
             using (SqlConnection Sqlconnection = new SqlConnection(Con))
             {
-                string MyQ = " Select a.OrderID , ClientName , OrderType , Qty ,Eta_Time as Deadline , b.Status as Status  , b.Current_Department from Orders a join OrderStatus b on a.OrderID = b.OrderID   where b.Status != '4' and b.Status != '5' and b.Current_Department = '1'";
+                string MyQ = " Select a.OrderID,ClientName,OrderType,Qty,Eta_Time as Deadline,b.Status as Status,b.Current_Department from Orders a join " +
+                    " OrderStatus b on a.OrderID = b.OrderID   where b.Status != '4' and b.Status != '5' and b.Current_Department = '1'";
 
                 SqlDataAdapter myada = new SqlDataAdapter(MyQ, Sqlconnection);
                 myada.Fill(MyTable);
@@ -46,7 +47,8 @@ namespace Garments_Pro.Yarn_Formation
 
             SqlConnection Sqlconnection = new SqlConnection(Con);
 
-            string MyQ = " Select a.OrderID , ClientName , OrderType , Qty ,Eta_Time as Deadline , b.Status as Status  , b.Current_Department from Orders a join OrderStatus b on a.OrderID = b.OrderID   where b.Status != '4' and b.Status != '5' and b.Current_Department = '1'";
+            string MyQ = " Select a.OrderID , ClientName , OrderType , Qty ,Eta_Time as Deadline , b.Status as Status  , b.Current_Department from Orders a join "+
+                "OrderStatus b on a.OrderID = b.OrderID   where b.Status != '4' and b.Status != '5' and b.Current_Department = '1'";
 
             SqlDataAdapter myada = new SqlDataAdapter(MyQ, Sqlconnection);
             myada.Fill(MyTable);
@@ -71,6 +73,7 @@ namespace Garments_Pro.Yarn_Formation
                 {
                     btnupdate.Text = "on Hold";
                     btnupdate.CssClass = "text-danger btn";
+                    btnDel.Visible = false;
                 }
                 else
                 {
@@ -100,28 +103,26 @@ namespace Garments_Pro.Yarn_Formation
                     btnhold.CssClass = "disabled ";
                     btnFinish.Visible = true;
 
-
                     string MyQa = "Update OrderStatus SET Status=@Status where OrderID=@ID ";
                     SqlCommand MyCmd = new SqlCommand(MyQa, Sqlconnection);
                     Sqlconnection.Open();
                     MyCmd.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
                     MyCmd.Parameters.AddWithValue("@Status", "2");
                     MyCmd.ExecuteNonQuery();
-                    Sqlconnection.Close();
 
-                    string MyQIn = "insert into OrderHistory (OrderID,Current_Department,Status,Remarks) Values (@ID,@CD,@St,@Re)";
-                    SqlCommand MyCmdda = new SqlCommand(MyQIn, Sqlconnection);
-                    Sqlconnection.Open();
+                    SqlCommand MyCmdda = new SqlCommand("InsertOrderHistory", Sqlconnection);
+                    MyCmdda.CommandType = CommandType.StoredProcedure;
+
                     MyCmdda.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
                     MyCmdda.Parameters.AddWithValue("@CD", "1");
                     MyCmdda.Parameters.AddWithValue("@St", "2");
                     MyCmdda.Parameters.AddWithValue("@Re", "-");
                     MyCmdda.ExecuteNonQuery();
-                    Sqlconnection.Close();
+
 
                     string MyQaz = "Update OrderStatus SET Status=@Status where OrderID=@ID ";
                     SqlCommand MyCmdz = new SqlCommand(MyQaz, Sqlconnection);
-                    Sqlconnection.Open();
+
                     MyCmdz.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
                     MyCmdz.Parameters.AddWithValue("@Status", "2");
                     MyCmdz.ExecuteNonQuery();
@@ -135,8 +136,9 @@ namespace Garments_Pro.Yarn_Formation
                     btnstart.Text = "Start";
                     btnstart.CssClass = "none";
                     btnstart.CssClass = "btn btn-success btn-sm";
-
                     btnFinish.Visible = false;
+
+
 
                     string MysQ = "Update OrderStatus SET Status=@Status where OrderID=@ID";
                     SqlCommand MyCmds = new SqlCommand(MysQ, Sqlconnection);
@@ -145,8 +147,8 @@ namespace Garments_Pro.Yarn_Formation
                     MyCmds.Parameters.AddWithValue("@Status", "3");
                     MyCmds.ExecuteNonQuery();
 
-                    string MyQInz = "insert into OrderHistory ( OrderID, Current_Department , Status , Remarks) values (@ID,@CD,@St,@Re)  ";
-                    SqlCommand MyCmddxa = new SqlCommand(MyQInz, Sqlconnection);
+                    SqlCommand MyCmddxa = new SqlCommand("InsertOrderHistory", Sqlconnection);
+                    MyCmddxa.CommandType = CommandType.StoredProcedure;
 
                     MyCmddxa.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
                     MyCmddxa.Parameters.AddWithValue("@CD", "1");
@@ -161,18 +163,17 @@ namespace Garments_Pro.Yarn_Formation
 
                     gvRow.Visible = false;
 
-                    string MYQF = "Update OrderStatus SET Status=@Status ,Current_Department=@CD  where OrderID=@ID ";
+                    SqlCommand Cmd11 = new SqlCommand("UpdateOrderStatus", Sqlconnection);
+                    Cmd11.CommandType = CommandType.StoredProcedure;
 
-                    SqlCommand Cmd11 = new SqlCommand(MYQF, Sqlconnection);
                     Sqlconnection.Open();
                     Cmd11.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
-                    Cmd11.Parameters.AddWithValue("@Status","1");
+                    Cmd11.Parameters.AddWithValue("@Sta", "1");
                     Cmd11.Parameters.AddWithValue("@CD", "2");
                     Cmd11.ExecuteNonQuery();
 
-                    string MyQIndz = "insert into OrderHistory ( OrderID, Current_Department , Status , Remarks) values (@ID,@CD,@St,@Re)  ";
-                    SqlCommand MyCcmddxa = new SqlCommand(MyQIndz, Sqlconnection);
-
+                    SqlCommand MyCcmddxa = new SqlCommand("InsertOrderHistory", Sqlconnection);
+                    MyCcmddxa.CommandType = CommandType.StoredProcedure;
                     MyCcmddxa.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
                     MyCcmddxa.Parameters.AddWithValue("@CD", "1");
                     MyCcmddxa.Parameters.AddWithValue("@St", "4");
@@ -185,13 +186,3 @@ namespace Garments_Pro.Yarn_Formation
         }
     }
 }
-
-
-
-
-
-
-
-
-
-

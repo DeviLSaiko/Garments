@@ -14,7 +14,7 @@
        <div class="row" style="margin-top:50px">
            <div class="col-sm-12" >
         
-        <div class="align-content-center">  
+        <div class="align-content-center" style="font-weight:400;">  
             <div>
                  <asp:DropDownList ID="ddSearch" CssClass="form-select-sm" runat="server">
                       <asp:ListItem Text="Client Name" Value="1"></asp:ListItem>
@@ -56,7 +56,7 @@
       </asp:TemplateField> 
                                         <asp:TemplateField HeaderText="Cancel"   >
      <ItemTemplate>
-         <asp:Button ID="btnCancel"  CssClass="btn btn-danger btn-sm" runat="server"  CommandName="OrderCancel" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="Cancel"></asp:Button>
+         <asp:Button ID="btnCancel"  CssClass="btn btn-danger btn-sm "  runat="server"  CommandName="OrderCancel" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="Cancel"></asp:Button>
   </button>
                  
      </ItemTemplate>
