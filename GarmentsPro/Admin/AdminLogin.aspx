@@ -10,9 +10,8 @@
     <link href="../Assets/Bootstrap/bootstrap.min5.css" rel="stylesheet" />
     <style>
         body {
-            background-color:   silver;
+            background-color: silver;
         }
-
         .MyCon {
             position: absolute;
             top: 50%;
@@ -23,11 +22,7 @@
             padding: 30px;
             box-shadow: #00ff21;
         }
-
-        
     </style>
-
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -48,6 +43,7 @@
             </nav>
             <!-- Header -->
             <div class="MyCon">
+                <h2 style="text-align: center">Admin Login </h2>
                 <label>UserName</label>
                 <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
@@ -67,7 +63,7 @@
                     runat="server"></asp:RequiredFieldValidator>
                 <br />
                 <div class="d-grid align-content-center">
-                    <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-dark" Width="207px" Height="39px" />
+                    <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-secondary ms-3 " Width="250px" Height="39px" />
                 </div>
             </div>
         </div>

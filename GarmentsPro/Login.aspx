@@ -6,7 +6,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Login</title>
 
     <script src="../Assets/Bootstrap/bootstrap.bundle.min5.js"></script>
     <link href="../Assets/Bootstrap/bootstrap.min5.css" rel="stylesheet" />
