@@ -34,6 +34,7 @@ namespace GarmentsPro
             sda.Fill(dt);
             if (dt.Rows.Count > 0)
             {
+                Session["UserName"] = dt.Rows[0]["UserName"].ToString();
                 Department = dt.Rows[0]["Department"].ToString(); 
                 switch (Department)
                 {

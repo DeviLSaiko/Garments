@@ -77,6 +77,7 @@ namespace GarmentsPro.Departments.Wet_Processing
                 {
                     btnupdate.Text = "on Hold";
                     btnupdate.CssClass = "text-danger btn";
+                    btnDel.Visible = false;
                 }
                 else
                 {
@@ -120,7 +121,7 @@ namespace GarmentsPro.Departments.Wet_Processing
                     SqlCommand MyCmdda = new SqlCommand(MyQIn, Sqlconnection);
                     Sqlconnection.Open();
                     MyCmdda.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
-                    MyCmdda.Parameters.AddWithValue("@CurntDep", "2");
+                    MyCmdda.Parameters.AddWithValue("@CurntDep", "3");
                     MyCmdda.Parameters.AddWithValue("@Status", "2");
                     MyCmdda.Parameters.AddWithValue("@Remarks", "-");
                     MyCmdda.ExecuteNonQuery();
@@ -150,7 +151,7 @@ namespace GarmentsPro.Departments.Wet_Processing
                     SqlCommand MyCmddxa = new SqlCommand(MyQInz, Sqlconnection);
 
                     MyCmddxa.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
-                    MyCmddxa.Parameters.AddWithValue("@CD", "2");
+                    MyCmddxa.Parameters.AddWithValue("@CD", "3");
                     MyCmddxa.Parameters.AddWithValue("@St", "3");
                     MyCmddxa.Parameters.AddWithValue("@Re", "Not Enogh Stocks");
                     MyCmddxa.ExecuteNonQuery();

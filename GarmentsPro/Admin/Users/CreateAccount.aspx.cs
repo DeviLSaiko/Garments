@@ -38,11 +38,11 @@ namespace GarmentsPro.Admin.Users
             MyCmd.ExecuteNonQuery();
             LoadGrid();
             MyCon.Close();
-
+         
             txtName.Text = "";
             txtUserName.Text = "";
             txtPassword.Text = "";
-            ddDepartments.Text = "";
+           
 
         }
         private void LoadDep()
@@ -50,7 +50,7 @@ namespace GarmentsPro.Admin.Users
             DataTable MyTable = new DataTable();
             SqlConnection MyCon = new SqlConnection(MyConnection());
 
-            SqlDataAdapter MyAda = new SqlDataAdapter("select * from Departments", MyCon);
+            SqlDataAdapter MyAda = new SqlDataAdapter("ShowDepartments", MyCon);
             MyAda.Fill(MyTable);
 
             ddDepartments.DataTextField = "DepName";
@@ -64,7 +64,7 @@ namespace GarmentsPro.Admin.Users
 
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
-                SqlDataAdapter myada = new SqlDataAdapter("select UID, Name , UserName , Password ,  Department from UserInfo  ", Sqlconnection);
+                SqlDataAdapter myada = new SqlDataAdapter("select UID,Name,UserName,Password,Department from UserInfo", Sqlconnection);
                 myada.Fill(MyTable);
             }
             GridView1.DataSource = MyTable;

@@ -38,7 +38,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
+        
         <div class="MyCon">
             <h2 style="text-align:center" > Login </h2>
             <label>UserName</label>
@@ -61,7 +61,8 @@
             <br />
             <div class="d-grid mt-2">
                 <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-secondary ms-3 " Width="250px" Height="39px" />
-                <asp:Label ID="Label1" runat="server" CssClass="mt-3 ms-3 text-danger" Text="Login Failed! Invalid Username or Password" Visible="false"></asp:Label>
+
+                <asp:Label ID="Label1" runat="server" CssClass="mt-3 ms-3 text-danger" Text="Invalid Username or Password" Visible="false"></asp:Label>
 
                 <div class="d-block mt-3" >
                 <asp:Label ID="lblForget" runat="server" CssClass="mt-3 ms-3" Text="Forget Password ?"> </asp:Label> <a style="text-decoration:dotted;" href="#" >Contact Admin</a>

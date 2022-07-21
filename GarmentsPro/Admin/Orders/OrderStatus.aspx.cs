@@ -14,7 +14,7 @@ namespace GarmentsPro.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadOrder();
-            LoadHistory();
+            LoadYarnHistory();
         }
         private string MyConnection()
         {
@@ -23,8 +23,9 @@ namespace GarmentsPro.Admin
         private void LoadOrder()
         {
             DataTable MyTable = new DataTable();
-            string MYQ = "select OrderID,  Current_Department, Status  from OrderStatus where OrderID=@ID";
-      
+            string MYQ = "select OrderID, DepName as Current_Department, c.Status  from OrderStatus a join Departments b on a.Current_Department=b.DepID " +
+                            "join Status C ON a.Status = c.ID where OrderID = @ID";
+
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
                 SqlDataAdapter myada = new SqlDataAdapter(MYQ, Sqlconnection);
@@ -42,12 +43,12 @@ namespace GarmentsPro.Admin
             }
 
         }
-
-        private void LoadHistory()
+        private void LoadYarnHistory()
         {
             DataTable MyTable = new DataTable();
-            string MYQ = "select OrderID, Current_Department, Status ,Remarks , Created_Date from OrderHistory where OrderID=@ID";
-
+            string MYQ =" select a.ID ,OrderID, c.DepName as Current_Department, b.Status ,Remarks , Created_Date from OrderHistory a join"+
+                          " Status b on a.Status = b.ID  join Departments c on c.DepID = a.Current_Department  where OrderID =@ID order by a.ID DESC";
+             
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
                 SqlDataAdapter myada = new SqlDataAdapter(MYQ, Sqlconnection);
@@ -55,8 +56,8 @@ namespace GarmentsPro.Admin
                 myada.SelectCommand.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
                 myada.Fill(MyTable);
             }
-            gvHistry.DataSource = MyTable;
-            gvHistry.DataBind();
+            GridView1.DataSource = MyTable;
+            GridView1.DataBind();
 
 
             if (MyTable.Rows.Count < 0)
@@ -64,6 +65,12 @@ namespace GarmentsPro.Admin
                 //txtError.Text = "No Record Found";
             }
 
+        }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            LoadYarnHistory();
         }
     }
 }

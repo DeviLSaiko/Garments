@@ -77,7 +77,7 @@ namespace GarmentsPro.Departments.FabricFormation
                 {
                     btnupdate.Text = "on Hold";
                     btnupdate.CssClass = "text-danger btn";
-                    btnDel.CssClass="disabled";
+                    btnDel.Visible =false;
                 }
                 else
                 {

@@ -73,6 +73,7 @@ namespace Garments_Pro.Departments.Finished_Goods
                 {
                     btnupdate.Text = "on Hold";
                     btnupdate.CssClass = "text-danger btn";
+                    btnDel.Visible = false;
                 }
                 else
                 {
@@ -116,7 +117,7 @@ namespace Garments_Pro.Departments.Finished_Goods
                     SqlCommand MyCmdda = new SqlCommand(MyQIn, Sqlconnection);
                     Sqlconnection.Open();
                     MyCmdda.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
-                    MyCmdda.Parameters.AddWithValue("@CurntDep", "2");
+                    MyCmdda.Parameters.AddWithValue("@CurntDep", "5");
                     MyCmdda.Parameters.AddWithValue("@Status", "2");
                     MyCmdda.Parameters.AddWithValue("@Remarks", "-");
                     MyCmdda.ExecuteNonQuery();
@@ -146,7 +147,7 @@ namespace Garments_Pro.Departments.Finished_Goods
                     SqlCommand MyCmddxa = new SqlCommand(MyQInz, Sqlconnection);
 
                     MyCmddxa.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
-                    MyCmddxa.Parameters.AddWithValue("@CD", "2");
+                    MyCmddxa.Parameters.AddWithValue("@CD", "5");
                     MyCmddxa.Parameters.AddWithValue("@St", "3");
                     MyCmddxa.Parameters.AddWithValue("@Re", "Not Enogh Stocks");
                     MyCmddxa.ExecuteNonQuery();
@@ -165,7 +166,7 @@ namespace Garments_Pro.Departments.Finished_Goods
                     Sqlconnection.Open();
                     Cmd11.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
                     Cmd11.Parameters.AddWithValue("@Status", "4");
-                    Cmd11.Parameters.AddWithValue("@CD", "2");
+                    Cmd11.Parameters.AddWithValue("@CD", "5");
                     Cmd11.ExecuteNonQuery();
 
 
@@ -181,8 +182,8 @@ namespace Garments_Pro.Departments.Finished_Goods
                     SqlCommand MyCcmddxa = new SqlCommand(MyQIndz, Sqlconnection);
 
                     MyCcmddxa.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
-                    MyCcmddxa.Parameters.AddWithValue("@CD", "4");
-                    MyCcmddxa.Parameters.AddWithValue("@St", "1");
+                    MyCcmddxa.Parameters.AddWithValue("@CD", "5");
+                    MyCcmddxa.Parameters.AddWithValue("@St", "4");
                     MyCcmddxa.Parameters.AddWithValue("@Re", "-");
                     MyCcmddxa.ExecuteNonQuery();
 

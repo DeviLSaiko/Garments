@@ -12,6 +12,7 @@
         body {
             background-color: silver;
         }
+
         .MyCon {
             position: absolute;
             top: 50%;

@@ -8,20 +8,20 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-            <div class="container mt-2">
+            <div class="container mt-5">
 
-                <div class="row ">
-                     <h4>Current Status</h4>
-                    <div class="col-md-6">
+                <div class="row">
+                    <h6>Current Status</h6>
+                    <div class="col-md-4">
                         <div class="table-responsive">
 
                             <table class="table-hover     ">
-                                <asp:GridView ID="GvCutDep" CssClass=" table " HeaderStyle-ForeColor="White" HeaderStyle-BackColor="Teal" AutoGenerateColumns="false" runat="server">
+                                <asp:GridView ID="GvCutDep" CssClass=" table " HeaderStyle-ForeColor="White" HeaderStyle-BackColor="#808080" AutoGenerateColumns="false" runat="server">
                                     <Columns>
-                                         <asp:TemplateField HeaderText=" ">   
-                                        <ItemTemplate> <%# Container.DataItemIndex + 1 %> </ItemTemplate>
-                                    </asp:TemplateField>
-                                        <asp:BoundField DataField="OrderID" HeaderText="OrderID" />
+                                        <asp:TemplateField HeaderText=" ">
+                                            <ItemTemplate><%# Container.DataItemIndex + 1 %> </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:BoundField DataField="OrderID" HeaderText="Order ID" />
                                         <asp:BoundField DataField="Current_Department" HeaderText="Department" />
                                         <asp:BoundField DataField="Status" HeaderText="Status" />
                                     </Columns>
@@ -31,38 +31,37 @@
                         </div>
 
                     </div>
+                         <div class="row">
+                             
+                        <div class="col-md-12">
+                             <h6>Order History</h6>
 
+                            <div class="table">
+
+                                <table class="table-hover     ">
+                                    <asp:GridView ID="GridView1" AllowPaging="true" PageSize="10" OnPageIndexChanging="GridView1_PageIndexChanging" CssClass=" table " HeaderStyle-ForeColor="White" HeaderStyle-BackColor="#808080" AutoGenerateColumns="false" runat="server">
+                                        <Columns>
+                                            <asp:TemplateField HeaderText=" ">
+                                                <ItemTemplate><%# Container.DataItemIndex + 1 %> </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:BoundField DataField="OrderID" HeaderText="OrderID" />
+                                            <asp:BoundField DataField="Current_Department" HeaderText="Department" />
+                                            <asp:BoundField DataField="Status" HeaderText="Status" />
+                                            <asp:BoundField DataField="Remarks" HeaderText="Remarks" />
+                                            <asp:BoundField DataField="Created_Date" HeaderText="Created_Date" />
+                                        </Columns>
+                                    </asp:GridView>
+                                </table>
+                            </div>
+
+                        </div>
+                             
+                    </div>
+              
+
+                    </center>
                    
-                     <div class="col-sm-8">
-                        <div class="table-responsive">
-
-                            <table class="table-hover     ">
-                                <asp:GridView ID="gvHistry" CssClass=" table " HeaderStyle-ForeColor="White" HeaderStyle-BackColor="Teal" AutoGenerateColumns="false" runat="server">
-                                    <Columns>
-                                         <asp:TemplateField HeaderText=" ">   
-                                        <ItemTemplate> <%# Container.DataItemIndex + 1 %> </ItemTemplate>
-                                    </asp:TemplateField>
-                                        <asp:BoundField DataField="OrderID" HeaderText="OrderID" />
-                                        <asp:BoundField DataField="Current_Department" HeaderText="Department" />
-                                        <asp:BoundField DataField="Status" HeaderText="Status" />
-                                        <asp:BoundField DataField="Remarks" HeaderText="Remarks" />
-                                        <asp:BoundField DataField="Created_Date" HeaderText="Created_Date" />
-                                    </Columns>
-                                </asp:GridView>
-                            </table>
-
-                        </div>
-
-                    </div>
-
-
-
-
-
-
                 </div>
-            </div>
-
         </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>

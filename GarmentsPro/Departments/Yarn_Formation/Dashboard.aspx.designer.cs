@@ -22,40 +22,31 @@ namespace GarmentsPro.Departments.Yarn_Formation {
         protected global::System.Web.UI.WebControls.Label lblWelcome;
         
         /// <summary>
-        /// lblTotAccounts control.
+        /// lblYS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotAccounts;
+        protected global::System.Web.UI.WebControls.Label lblYS;
         
         /// <summary>
-        /// lblTOrders control.
+        /// lblInProgress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTOrders;
+        protected global::System.Web.UI.WebControls.Label lblInProgress;
         
         /// <summary>
-        /// lblCurrentOrders control.
+        /// lblHold control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCurrentOrders;
-        
-        /// <summary>
-        /// lblpending control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblpending;
+        protected global::System.Web.UI.WebControls.Label lblHold;
         
         /// <summary>
         /// lblFinshedOrds control.

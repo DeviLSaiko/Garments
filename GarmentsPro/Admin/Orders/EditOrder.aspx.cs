@@ -18,8 +18,6 @@ namespace GarmentsPro.Admin.Orders
                 LoadUsers();
             }
         }
-
-        
         private string MyConnection()
         {
             return @"Data Source =.; Initial Catalog = GarmentsPro; Integrated Security = SSPI ";

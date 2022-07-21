@@ -110,6 +110,14 @@ namespace Garments_Pro.Yarn_Formation
                     MyCmd.Parameters.AddWithValue("@Status", "2");
                     MyCmd.ExecuteNonQuery();
 
+
+                    string MyQas = "Update Orders  SET Status=@Status where OrderID=@ID ";
+                    SqlCommand MyCmdcv = new SqlCommand(MyQas, Sqlconnection);
+
+                    MyCmdcv.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
+                    MyCmdcv.Parameters.AddWithValue("@Status", "2");
+                    MyCmdcv.ExecuteNonQuery();
+
                     SqlCommand MyCmdda = new SqlCommand("InsertOrderHistory", Sqlconnection);
                     MyCmdda.CommandType = CommandType.StoredProcedure;
 
@@ -168,7 +176,7 @@ namespace Garments_Pro.Yarn_Formation
 
                     Sqlconnection.Open();
                     Cmd11.Parameters.AddWithValue("@ID", gvRow.Cells[0].Text);
-                    Cmd11.Parameters.AddWithValue("@Sta", "1");
+                    Cmd11.Parameters.AddWithValue("@St", "1");
                     Cmd11.Parameters.AddWithValue("@CD", "2");
                     Cmd11.ExecuteNonQuery();
 

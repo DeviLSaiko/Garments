@@ -13,80 +13,70 @@ namespace GarmentsPro.Departments.Yarn_Formation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserName"] != null)
-            {
-                LoadTotalAcc();
-                LoadOrders();
-                LoadCO();
-                LoadPO();
-                LoadFO();
-            }
-            else
-            {
-                Response.Redirect("~/Admin/AdminLogin.aspx");
-            }
+            //if (Session["UserName"] != null)
+            //{
+
+
+            
+            LoadInP();
+            LoadOnHold();
+            LoadFinished();
+            LoadYStart();
+            //}
+            //else
+            //{
+            //    Response.Redirect("~/Admin/AdminLogin.aspx");
+            //}
 
         }
         private string MyConnection()
         {
             return @"Data Source =.; Initial Catalog = GarmentsPro; Integrated Security = SSPI ";
         }
-
-        private void LoadTotalAcc()
-        {
-            DataTable MyTable = new DataTable();
-            string MYQ = "select count(*) as Total from UserInfo ";
-            SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-
-            Sqlconnection.Open();
-
-            SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
-
-            lblTotAccounts.Text = Convert.ToString(mYcMD.ExecuteScalar());
-            Sqlconnection.Close();
-        }
-        private void LoadOrders()
+        private void LoadYStart()
         {
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from Orders";
+            string MYQ = "select count(*) as Total from OrderStatus where Current_Department='1' and Status='1'";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
-            lblTOrders.Text = Convert.ToString(mYcMD.ExecuteScalar());
+            lblYS.Text = Convert.ToString(mYcMD.ExecuteScalar());
             Sqlconnection.Close();
         }
-        private void LoadCO()
+        private void LoadInP()
         {
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from Orders where Status='1' ";
+            string MYQ = "select count(*) as Total from OrderStatus where Current_Department='1' and Status='2'";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
-            lblCurrentOrders.Text = Convert.ToString(mYcMD.ExecuteScalar());
+            lblInProgress.Text = Convert.ToString(mYcMD.ExecuteScalar());
             Sqlconnection.Close();
         }
-        private void LoadPO()
+        private void LoadOnHold()
         {
+
+
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from Orders where Status='5' ";
+            string MYQ = "select count(*) as Total from OrderStatus  where Status='3' and Current_Department='1'";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
-            lblpending.Text = Convert.ToString(mYcMD.ExecuteScalar());
+            lblHold.Text = Convert.ToString(mYcMD.ExecuteScalar());
             Sqlconnection.Close();
         }
-        private void LoadFO()
+        private void LoadFinished()
         {
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from Orders where Status='3' ";
+            string MYQ = "select count(*) as Total from OrderStatus  where Status='1' and Current_Department='2'";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
