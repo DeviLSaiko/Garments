@@ -12,16 +12,16 @@
         <script src="../../Assets/Bootstrap/bootstrap.bundle.min5.js"></script>
 
 
-    
-       <style>
-
-        body{
-            background-color:whitesmoke
+     <style>
+        NAV{
+            height:50PX;
+        }
+        body {
+            background-color: #FFFFFF;
         }
 
-        #sticky-footer{
-            position:fixed;
-            
+        #sticky-footer {
+            position: fixed;
         }
 
         .footer {
@@ -34,7 +34,6 @@
             text-align: center;
             height: 80px;
         }
-          
     </style>
 
 
@@ -43,9 +42,11 @@
 </head>
 <body>
    
-     <div class="  p-4 bg-primary text-white  ">
+     <div class=" p-1  bg-primary bg-opacity-75 text-white ">
+          <div class="ps-4">
   <h1>Finished Goods</h1>
   <p>Department</p>
+              </div>
 </div>
     <!-- Header -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">

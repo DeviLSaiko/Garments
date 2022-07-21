@@ -12,9 +12,8 @@ namespace Garments_Pro.Departments.Fabrication
     public partial class Dashboard : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            //if (Session["UserName"] != null)
-            //{
+        { //if (Session["UserName"] != null)
+          //{
 
 
 
@@ -38,7 +37,7 @@ namespace Garments_Pro.Departments.Fabrication
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from OrderStatus where Current_Department='2' and Status='1'";
+            string MYQ = "select count(*) as Total from OrderStatus where Current_Department='4' and Status='1'";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
@@ -50,7 +49,7 @@ namespace Garments_Pro.Departments.Fabrication
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from OrderStatus where Current_Department='2' and Status='2'";
+            string MYQ = "select count(*) as Total from OrderStatus where Current_Department='4' and Status='2'";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
@@ -64,7 +63,7 @@ namespace Garments_Pro.Departments.Fabrication
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from OrderStatus  where Status='2' and Current_Department='1'";
+            string MYQ = "select count(*) as Total from OrderStatus  where Status='3' and Current_Department='4'";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
@@ -76,7 +75,7 @@ namespace Garments_Pro.Departments.Fabrication
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from OrderHistory  where Status='4' and Current_Department='2' and OrderID=@ID";
+            string MYQ = "SELECT count(*) FROM  OrderHistory WHERE Current_Department='4' and Status='4' and Created_Date >= DATEADD (day, -30, GETDATE())";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();

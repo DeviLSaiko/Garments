@@ -76,7 +76,7 @@ namespace GarmentsPro.Departments.Yarn_Formation
             DataTable MyTable = new DataTable();
 
             SqlConnection Sqlconnection = new SqlConnection(MyConnection());
-            string MYQ = "select count(*) as Total from OrderStatus  where Status='1' and Current_Department='2'";
+            string MYQ = "SELECT count(*) FROM  OrderHistory WHERE Current_Department='1' and Status='4' and Created_Date >= DATEADD (day, -30, GETDATE())";
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();

@@ -21,8 +21,8 @@
                 <asp:ListItem Text="Status" Value="2"></asp:ListItem>
                 <asp:ListItem Text="OrderType" Value="3"></asp:ListItem>
                  </asp:DropDownList> 
-            <asp:TextBox ID="txtSearch" CssClass="form-control-sm" runat="server"></asp:TextBox>
-            <asp:Button ID="Button1" CssClass="btn btn-secondary btn-sm" OnClick="Button1_Click" runat="server" Text="Search"></asp:Button>
+            <asp:TextBox ID="txtSearch"  Height="30px" runat="server"></asp:TextBox>
+            <asp:Button ID="Button1" CssClass="btn btn-secondary btn-sm mb-1" OnClick="Button1_Click" runat="server" Text="Search"></asp:Button>
             </div>
           
             <br />

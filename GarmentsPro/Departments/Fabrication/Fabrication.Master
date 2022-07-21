@@ -10,16 +10,16 @@
     <link href="../../Assets/Bootstrap/bootstrap.min5.css" rel="stylesheet" />
     <script src="../../Assets/Bootstrap/bootstrap.bundle.min5.js"></script>
 
-
-       <style>
-
-        body{
-            background-color:whitesmoke
+     <style>
+        NAV{
+            height:50PX;
+        }
+        body {
+            background-color: #FFFFFF;
         }
 
-        #sticky-footer{
-            position:fixed;
-            
+        #sticky-footer {
+            position: fixed;
         }
 
         .footer {
@@ -32,7 +32,6 @@
             text-align: center;
             height: 80px;
         }
-          
     </style>
 
 
@@ -41,9 +40,12 @@
 </head>
 <body>
     
-     <div class="  p-4 bg-primary text-white  ">
-         <h1>Fabrication</h1>
+     <div class=" p-1  bg-primary bg-opacity-75 text-white  ">
+         <div class="ps-4">
+            <h1>Fabrication</h1>
          <p>Department</p>
+        </div>
+         
      </div>
     <!-- Header -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -59,7 +61,7 @@
                         <a class="nav-link " href="Dashboard.aspx">DashBoard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Order.aspx">Orders</a>
+                        <a class="nav-link active" href="Orders.aspx">Orders</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav" style="padding-left: 700PX">

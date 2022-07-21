@@ -51,25 +51,22 @@ namespace GarmentsPro.Admin.Orders
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            string l_Query = string.Empty;
+            string SearchQ = string.Empty;
 
             if (ddSearch.SelectedValue == "1")
             {
-                // Name search
-                l_Query = "Select OrderID , ClientName , OrderType , b.Status ,Created_Date from Orders a join Status b on a.Status = b.ID where ClientName like '%" + txtSearch.Text + "%'";
+                SearchQ = "Select OrderID , ClientName , OrderType , b.Status ,Created_Date from Orders a join Status b on a.Status = b.ID where ClientName like '%" + txtSearch.Text + "%'";
             }
             else if (ddSearch.SelectedValue == "2")
             {
-                // Batch wise search
-                l_Query = "Select OrderID , ClientName , OrderType , b.Status ,Created_Date from Orders a join Status b on a.Status = b.ID where OrderType like '%" + txtSearch.Text + "%'";
+                SearchQ = "Select OrderID , ClientName , OrderType , b.Status ,Created_Date from Orders a join Status b on a.Status = b.ID where B.Status like '%" + txtSearch.Text + "%'";
             }
             else
             {
-                // Department wise search
-                l_Query = "Select OrderID , ClientName , OrderType , b.Status ,Created_Date from Orders a join Status b on a.Status = b.ID  where  Status like '%" + txtSearch.Text + "%'";
+                SearchQ = "Select OrderID , ClientName , OrderType , b.Status ,Created_Date from Orders a join Status b on a.Status = b.ID  where  OrderType like '%" + txtSearch.Text + "%'";
             }
 
-            LoadOrder(l_Query);
+            LoadOrder(SearchQ);
         }
 
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -154,12 +151,10 @@ namespace GarmentsPro.Admin.Orders
                 {
                     btnCancel.Text = "Cancelled";
                     btnCancel.CssClass = "text-danger btn";
-                     
-
 
                 }
                  
-                else if (Col_Status == "Completed")
+                else if (Col_Status == "Finished")
                 {
                     btnCancel.Visible = false;
                 }

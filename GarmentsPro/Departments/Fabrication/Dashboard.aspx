@@ -2,7 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
     <div class="container mt-4 mb-3">
         <center>
                  <label> Welcome : </label><asp:Label ID="lblWelcome" runat="server" Font-Size="Large"   Text=" Admin "></asp:Label>
@@ -11,7 +10,7 @@
         <div class="row mt-5">
              <div class="col-md-2 bg-black  ms-3 text-light" style="height: 100px">
                 <center>
-                        <label>On Pending</label>
+                        <label>Yet To Start</label>
                         <br />
                         <asp:Label ID="lblYS" runat="server" Font-Size="XX-Large"  Text=""></asp:Label>
                                 </center>
@@ -35,22 +34,16 @@
             <div class="col-md-2 bg-info ms-3 text-light" style="height: 100px">
 
                 <label>Finshed</label>
-
                 <br />
                 <center>
-
                          <asp:Label ID="lblFinshedOrds" runat="server"  Font-Size="XX-Large"   Text=""></asp:Label>
                     </center>
             </div>
-        
         </div>
         <br />
-
         <div class="row">
         </div>
         <asp:GridView ID="GridView1" Visible="false" runat="server"></asp:GridView>
-
     </div>
-
 
 </asp:Content>
