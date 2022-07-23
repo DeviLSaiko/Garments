@@ -21,13 +21,13 @@
 
 
     <style>
-        NAV {
+        nav {
             height: 40PX;
-            font-size:small
+            font-size: small;
+            
         }
 
         html {
-            font-size: 90.5%;
             overflow-x: hidden;
         }
 
@@ -43,7 +43,7 @@
             background-color: black;
             color: white;
             text-align: center;
-            height: 60px;
+            height: 10px;
             font-size: 14px;
         }
     </style>
@@ -51,15 +51,9 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="  p-1  bg-primary bg-opacity-75 text-white  " style="background-color: #82d3ff">
-        <div class="ps-4">
-            <h1>Production Engineer</h1>
-            <p>Admin</p>
-        </div>
 
-    </div>
     <!-- Header -->
-    <nav class="navbar navbar-expand-sm bg-dark text-black navbar-dark  ">
+    <nav class="navbar navbar-expand-sm bg-white  text-black  navbar-light  ">
         <div class="container ">
 
             <a class="navbar-brand" href="/Login.aspx">Garments Pro</a>
@@ -75,10 +69,10 @@
                         <a class="nav-link" href="/admin/Users/CreateAccount.aspx">Users</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="/Admin/Orders/CreateOrder.aspx">Orders</a>
+                        <a class="nav-link " href="/Admin/Orders/Orders.aspx">Orders</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="/Admin/Orders/CreateOrder.aspx">Clients</a>
+                        <a class="nav-link " href="/Admin/Orders/Orders.aspx">Clients</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="/admin/AddProducts.aspx">Products</a>
@@ -104,7 +98,6 @@
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
             </asp:ContentPlaceHolder>
         </div>
     </form>

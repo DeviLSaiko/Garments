@@ -87,14 +87,14 @@
                  
      </ItemTemplate>
       </asp:TemplateField> 
-       <asp:TemplateField HeaderText="Remarks"   >
+   <%--    <asp:TemplateField HeaderText="Remarks"   >
      <ItemTemplate>
          <asp:Button ID="btnRemarks"  CssClass=" dropdown-toggle" runat="server"   data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
                CommandName="Remarks" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="-"></asp:Button>
   </button>
                  
      </ItemTemplate>
-      </asp:TemplateField> 
+      </asp:TemplateField> --%>
                                     
      </Columns>
      </asp:GridView>
