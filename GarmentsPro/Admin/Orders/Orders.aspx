@@ -26,6 +26,31 @@
             </div>
           
             <br />
+
+            <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
             <div class="table-responsive">
 
                  <table class="table-hover     ">
@@ -42,32 +67,30 @@
                                     <asp:BoundField DataField="OrderType"   HeaderText="Order Type" />
                                      <asp:BoundField DataField="Status" HeaderText="Current Status" />
                                     <asp:BoundField DataField="Created_Date" HeaderText="Created_Date" />
-             <asp:TemplateField HeaderText="Modify" ControlStyle-CssClass="btn btn-secondary  btn-sm " >
+             <asp:TemplateField HeaderText="Edit" ControlStyle-CssClass="btn btn-primary  btn-sm " >
      <ItemTemplate>
                 <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Orders/EditOrder.aspx?ID={0}",
-                    HttpUtility.HtmlEncode (Eval("OrderID").ToString()))%>'>Modify</asp:HyperLink>
+                    HttpUtility.HtmlEncode (Eval("OrderID").ToString()))%>'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></asp:HyperLink>
      </ItemTemplate>
       </asp:TemplateField>   
-                                    <asp:TemplateField HeaderText="View" ControlStyle-CssClass="btn text-light btn-info btn-sm" >
+                                    <asp:TemplateField HeaderText="View" ControlStyle-CssClass="btn text-light btn-secondary    btn-sm" >
      <ItemTemplate>
                 <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/Orders/OrderStatus.aspx?ID={0}",
-                    HttpUtility.HtmlEncode (Eval("OrderID").ToString()))%>'>View</asp:HyperLink>
+                    HttpUtility.HtmlEncode (Eval("OrderID").ToString()))%>'><i class="fa fa-history" aria-hidden="true"></i></asp:HyperLink>
      </ItemTemplate>
-      </asp:TemplateField> 
+      </asp:TemplateField>  
                                         <asp:TemplateField HeaderText="Cancel"   >
      <ItemTemplate>
-         <asp:Button ID="btnCancel"  CssClass="btn btn-danger btn-sm "  runat="server"  CommandName="OrderCancel" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="Cancel"></asp:Button>
+         <asp:Button ID="btnCancel"  CssClass="btn btn-danger btn-sm"   runat="server" 
+              CommandName="OrderCancel" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="Cancel"></asp:Button>
   </button>
                  
      </ItemTemplate>
       </asp:TemplateField> 
        <asp:TemplateField HeaderText="Remarks"   >
      <ItemTemplate>
-         <asp:Button ID="btnRemarks"  CssClass="btn" runat="server"  data-bs-toggle="modal" data-bs-target="#myModal"   CommandName="Remarks" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="-"></asp:Button>
-
- 
-    
-     
+         <asp:Button ID="btnRemarks"  CssClass=" dropdown-toggle" runat="server"   data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
+               CommandName="Remarks" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="-"></asp:Button>
   </button>
                  
      </ItemTemplate>
@@ -76,7 +99,6 @@
      </Columns>
      </asp:GridView>
                 </table>
-
             </div>
             
             </div>
@@ -87,30 +109,6 @@
                  
           </center>
             <center>
-        <!-- The Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        Modal body..
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-      </div>
-
-    </div>
-  </div>
-</div>
         <div>
             <asp:Label ID="txtError" runat="server" Text=""></asp:Label>
        </div>

@@ -6,9 +6,11 @@
     <link href="../../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../../Assets/SweetAlert/sweetalert.min.js"></script>
    
-
+    <link href="../../Html/Dashboard.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+
     <asp:ScriptManager ID="scriptmanager1" runat="server">
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">

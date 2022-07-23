@@ -83,6 +83,8 @@
     <Content Include="Departments\Wet_Processing\Dashboard.aspx" />
     <Content Include="Departments\Wet_Processing\Order.aspx" />
     <Content Include="Departments\Yarn_Formation\Dashboard.aspx" />
+    <Content Include="Html\Dashboard.css" />
+    <Content Include="Html\Dashboard.html" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="Departments\Fabrication\Fabrication.Master" />

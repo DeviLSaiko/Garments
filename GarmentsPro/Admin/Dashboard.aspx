@@ -1,78 +1,153 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="GarmentsPro.Admin.Dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
+    <title>Dashboard</title>
     <style>
-        body {
-            background-color: #fbfbfb;
+        label {
+            font-size: 9px;
+        }
+
+        .viw {
+            font-size: 10px;
+        }
+
+        .Wid div {
+            width: 200px;
+            box-shadow: rgba(0,0,0, 4 ) 10px 0 0 0,;
+        }
+
+        #Label1 {
         }
     </style>
-
-
-
+    <link href="../Html/Dashboard.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
-        <div class="container mt-4 mb-3">
-            <center>
-                <%-- <label> Welcome : </label><asp:Label ID="lblWelcome" runat="server" Font-Size="Large"    Text=""></asp:Label>--%>
-            </center>
-
+        <div class="container mt-5 mb-3" style="padding-top: 30px;">
             <div class="row mt-5">
-                <div class="col-md-2 bg-dark  ms-3 text-light" style="height: 100px">
-                    <center>
-                            <label>Total Users Accounts:</label>
+                <div class="col-md-2"></div>
+                <%--Yarn Formation--%>
+                <div class="col-md-2 text-light shadow ms-3 rounded" style="background-color: maroon; display: flex; height: 110px; column-gap: 80px">
+
+                    <div class="d-flex align-items-start flex-column" style="height: 100px;">
+                        <div class="mb-auto">
+                            <label>Yet</label>
                             <br />
-                            <asp:Label ID="lblTotAccounts" runat="server"   Font-Size="XX-Large"   Text="5"></asp:Label>
-                        </center>
-                </div>
-                <div class="col-md-2 bg-secondary ms-3 text-light" style="height: 100px">
-                    <center>
-                        <label>Total Orders </label>
+                            <asp:Label ID="YAN1" runat="server" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                        <div>
+                            <label class="mt-4">On Hold</label><br />
+                            <asp:Label ID="YAN3" runat="server" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-end flex-column ps-3">
+                        <label>InPro </label>
+                        <asp:Label ID="YAN2" runat="server" Font-Size="small" Text=""></asp:Label>
                         <br />
-                        <asp:Label ID="lblTOrders" runat="server" Font-Size="XX-Large"  Text=""></asp:Label>
-                                </center>
-                    <br />
+                        <div class="ms-3">
+                            <label>Finished</label><br />
+                            <asp:Label ID="YAN4" runat="server" CssClass="ps-3" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                    </div>
                 </div>
-                   <div class="col-md-2 bg-success  ms-3 text-light" style="height: 100px">
-                    <label>Current Orders  </label>
-                    <br />
-                    <center>
+                <%-- Fabric Formation--%>
+                <div class="col-md-2 text-light shadow ms-3 rounded" style="background-color: darkgrey; display: flex; height: 110px; column-gap: 80px">
+                    <div class="d-flex align-items-start flex-column" style="height: 100px;">
+                        <div class="mb-auto">
+                            <label>Yet</label>
+                            <br />
+                            <asp:Label ID="FAB1" runat="server" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                        <div>
+                            <label class="mt-4">On Hold</label><br />
+                            <asp:Label ID="FAB3" runat="server" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-end flex-column ps-3">
 
-                         <asp:Label ID="lblCurrentOrders" runat="server"   Font-Size="XX-Large"     Text=""></asp:Label>
-                    </center>
+                        <label>InPro </label>
+                        <asp:Label ID="FAB2" runat="server" Font-Size="small" Text=""></asp:Label>
+                        <br />
+                        <div class="ms-3">
+                            <label>Finished</label><br />
+                            <asp:Label ID="FAB4" runat="server" CssClass="ps-3" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                    </div>
                 </div>
+                <%-- Wet Processing--%>
+                <div class="col-md-2 text-light shadow ms-3 mb-2 rounded" style="background-color: ActiveCaption; display: flex; height: 110px; column-gap: 80px">
+                    <div class="d-flex align-items-start flex-column" style="height: 100px;">
+                        <div class="mb-auto">
+                            <label>Yet</label>
+                            <br />
+                            <asp:Label ID="Wet1" runat="server" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                        <div>
+                            <label class="mt-4">On Hold</label><br />
+                            <asp:Label ID="Wet3" runat="server" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-end flex-column ps-3">
 
-                <div class="col-md-2 bg-info ms-3 text-light" style="height: 100px">
-
-                    <label>Finshed Orders  </label>
-
-                    <br />
-                    <center>
-
-                         <asp:Label ID="lblFinshedOrds" runat="server"  Font-Size="XX-Large"   Text="20"></asp:Label>
-                    </center>
-                </div>
-                <div class="col-md-2 bg-danger ms-3 text-light" style="height: 100px">
-
-                    <label>Cancelled Orders  </label>
-
-                    <br />
-                    <center>
-
-                         <asp:Label ID="lblpending" runat="server"  Font-Size="XX-Large" Text="5"></asp:Label>
-                    </center>
+                        <label>InPro </label>
+                        <asp:Label ID="Wet2" runat="server" Font-Size="small" Text=""></asp:Label>
+                        <br />
+                        <div class="ms-3">
+                            <label>Finished</label><br />
+                            <asp:Label ID="Wet4" runat="server" CssClass="ps-3" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br />
-
-            <div class="row">
-             
+            <div class="row mt-5">
+                <div class="col-md-3"></div>
+                <%--Fabrication--%>
+                <div class="col-md-2 text-light shadow ms-3 mb-2 rounded" style="background-color: darkcyan; display: flex; height: 110px; column-gap: 80px">
+                    <div class="d-flex align-items-start flex-column" style="height: 100px;">
+                        <div class="mb-auto">
+                            <label>Yet</label>
+                            <br />
+                            <asp:Label ID="FRC1" runat="server" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                        <div>
+                            <label class="mt-4">On Hold</label><br />
+                            <asp:Label ID="FRC3" runat="server" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-end flex-column ps-3">
+                        <label>InPro </label>
+                        <asp:Label ID="FRC2" runat="server" Font-Size="small" Text=""></asp:Label>
+                        <br />
+                        <div class="ms-3">
+                            <label>Finished</label><br />
+                            <asp:Label ID="FRC4" runat="server" CssClass="ps-3" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                    </div>
+                </div>
+                <%-- Finished Goods--%>
+                <div class="col-md-2 text-light shadow ms-3 mb-2 rounded" style="background-color: cadetblue; display: flex; height: 110px; column-gap: 80px">
+                    <div class="d-flex align-items-start flex-column" style="height: 100px;">
+                        <div class="mb-auto">
+                            <label>Yet</label>
+                            <br />
+                            <asp:Label ID="FG1" runat="server" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                        <div>
+                            <label class="mt-4">On Hold</label><br />
+                            <asp:Label ID="FG3" runat="server" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-end flex-column ps-3">
+                        <label>InPro </label>
+                        <asp:Label ID="FG2" runat="server" Font-Size="small" Text=""></asp:Label>
+                        <br />
+                        <div class="ms-3">
+                            <label>Finished</label><br />
+                            <asp:Label ID="FG4" runat="server" CssClass="ps-3" Font-Size="small" Text=""></asp:Label>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <asp:GridView ID="GridView1" Visible="false" runat="server"></asp:GridView>
-
         </div>
-
     </div>
 </asp:Content>

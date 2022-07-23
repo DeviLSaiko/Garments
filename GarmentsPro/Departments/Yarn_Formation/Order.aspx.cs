@@ -67,12 +67,13 @@ namespace Garments_Pro.Yarn_Formation
                 if (Col_Status == "2")
                 {
                     btnst.Text = "In Progress";
-                    btnst.CssClass = "text-success btn text";
+                    btnst.CssClass = " text-success btn disabled fw-bold  ";
+                    btnupdate.CssClass = "btn btn-warning btn-sm";
                 }
                 else if (Col_Status == "3")
                 {
                     btnupdate.Text = "on Hold";
-                    btnupdate.CssClass = "text-danger btn";
+                    btnupdate.CssClass = "text-danger btn disabled fw-bold  ";
                     btnDel.Visible = false;
                 }
                 else
@@ -97,10 +98,9 @@ namespace Garments_Pro.Yarn_Formation
             {
                 case "Start":
 
-                    btnstart.Text = "In progress";
-                    btnstart.CssClass = "text-success btn ";
+                    btnstart.Text = "In progress";   
                     btnhold.Text = "Hold";
-                    btnhold.CssClass = "disabled ";
+                    btnhold.CssClass = "btn btn-warning";
                     btnFinish.Visible = true;
 
                     string MyQa = "Update OrderStatus SET Status=@Status where OrderID=@ID ";
