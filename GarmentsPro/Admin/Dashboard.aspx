@@ -7,29 +7,9 @@
             background-color: ghostwhite;
         }
 
-      label {
+        label {
             font-size: 9px;
             color: black;
-        }
-       .MyLable {
-             font-size: 9px;
-       }
-
-        .viw {
-            font-size: 10px;
-        }
-
-        .Wid div {
-            width: 200px;
-            box-shadow: rgba(0,0,0, 4 ) 10px 0 0 0,;
-        }
-
-        #Label1 {
-        }
-
-        .auto-style1 {
-            width: 58%;
-            height: 0.3px;
         }
     </style>
     <link href="../Html/Dashboard.css" rel="stylesheet" />
@@ -39,202 +19,78 @@
 
     <div class="container ">
         <div class="row mt-4">
-            <%-- Fabric Formation--%>
+           
             <div class="col-md-1">
-                <label>Yarn Formation</label>
-
+                <%--<label>Yarn Formation</label>--%>
             </div>
+             <%--Yet To Start--%>
             <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
 
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Yet to Start</label>
+                        <br />
 
-                <label>Yet to Start</label>
-                <br />
+                        <asp:Label ID="Label1" runat="server" ForeColor="#996633" Font-Size="20px" CssClass="MyLable" Text="5"></asp:Label>
+                    </div>
+                    <div class="col-md-6">
 
-                 <asp:Label ID="Label1" runat="server" Font-Size="Small" CssClass="MyLable" Text="Label"></asp:Label>
+                        <i class="fa fa-hourglass-start   mt-4  " style="color: cadetblue; font-size: 33px; padding-left: 24px;"></i>
+                    </div>
+                </div>
 
             </div>
-            <%-- Wet Processing--%>
+            <%-- In Progressing--%>
             <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
 
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>In Progress</label>
+                        <br />
 
-                <label>In Progress</label>
-                <br />
+                        <asp:Label ID="Label2" runat="server" ForeColor="#996633" Font-Size="20px" CssClass="MyLable" Text="3"></asp:Label>
+                    </div>
+                    <div class="col-md-6">
 
-                <label>34</label>
+                        <i class="fa fa-spinner   mt-4  " style="color:  brown; font-size: 33px; padding-left: 24px;"></i>
+                    </div>
+                </div>
 
             </div>
-            <%--Fabrication--%>
+            <%--On Hold--%>
             <div class="col-md-2 text-light shadow    m-2 rounded" style="background-color: ghostwhite; height: 80px;">
 
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>On Hold</label>
+                        <br />
 
-                <label>On Hold</label>
-                <br />
+                        <asp:Label ID="Label4" runat="server" ForeColor="#996633" Font-Size="20px" CssClass="MyLable" Text="4"></asp:Label>
+                    </div>
+                    <div class="col-md-6">
 
-                <label>34</label>
+                        <i class="fa fa-clock-o   mt-4  " style="color: indigo; font-size: 33px; padding-left: 24px;"></i>
+                    </div>
+                </div>
 
             </div>
-            <%-- Finished Goods--%>
-
+            <%-- Finished --%>
             <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
 
+   <div class="row">
+                    <div class="col-md-6">
+                        <label>Finished</label>
+                        <br />
 
-                <label>Finished</label>
-                <br />
+                        <asp:Label ID="Label5" runat="server" ForeColor="#996633" Font-Size="20px" CssClass="MyLable" Text="12"></asp:Label>
+                    </div>
+                    <div class="col-md-6">
 
-                <label>34</label>
+                        <i class="fa fa-flag   mt-4  " style="color: darkmagenta; font-size: 33px; padding-left: 24px;"></i>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row mt-4">
-            <%-- Fabric Formation--%>
-            <div class="col-md-1">
-                <label>Yarn Formation</label>
-
-            </div>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-
-
-                <label>Yet to Start</label>
-                <br />
-
-                <label>34</label>
-
-            </div>
-            <%-- Wet Processing--%>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-
-
-                <label>In Progress</label>
-                <br />
-
-                <label>34</label>
-
-            </div>
-            <%--Fabrication--%>
-            <div class="col-md-2 text-light shadow    m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-
-
-                <label>On Hold</label>
-                <br />
-
-                <label>34</label>
-
-            </div>
-            <%-- Finished Goods--%>
-
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-
-
-                <label>Finished</label>
-                <br />
-
-                <label>34</label>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <%-- Fabric Formation--%>
-            <div class="col-md-1">
-                <label>Yarn Formation</label>
-
-            </div>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-
-
-                <label>Yet to Start</label>
-                <br />
-
-                <label>34</label>
-
-            </div>
-            <%-- Wet Processing--%>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-
-
-                <label>In Progress</label>
-                <br />
-
-                <label>34</label>
-
-            </div>
-            <%--Fabrication--%>
-            <div class="col-md-2 text-light shadow    m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-
-
-                <label>On Hold</label>
-                <br />
-
-                <label>34</label>
-
-            </div>
-            <%-- Finished Goods--%>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-
-                <label>Finished</label>
-                <br />
-                <label>34</label>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <%-- Fabric Formation--%>
-            <div class="col-md-1">
-                <label>Yarn Formation</label>
-            </div>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-                <label>Yet to Start</label>
-                <br />
-                <label>34</label>
-            </div>
-            <%-- Wet Processing--%>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-                <label>In Progress</label>
-                <br />
-
-                <label>34</label>
-            </div>
-            <%--Fabrication--%>
-            <div class="col-md-2 text-light shadow    m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-                <label>On Hold</label>
-                <br />
-                <label>34</label>
-            </div>
-            <%-- Finished Goods--%>
-
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-
-
-                <label>Finished</label>
-                <br />
-
-                <label>34</label>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <%-- Fabric Formation--%>
-            <div class="col-md-1">
-                <label>Yarn Formation</label>
-            </div>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-                <label>Yet to Start</label>
-                <br />
-                <label>34</label>
-            </div>
-            <%-- Wet Processing--%>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-                <label>In Progress</label>
-                <br />
-                <label>34</label>
-            </div>
-            <%--Fabrication--%>
-            <div class="col-md-2 text-light shadow    m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-                <label>On Hold</label>
-                <br />
-                <label>34</label>
-            </div>
-            <%-- Finished Goods--%>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
-                <label>Finished</label>
-                <br />
-                <label>34</label>
-            </div>
-        </div>
+        
     </div>
 </asp:Content>
