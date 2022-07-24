@@ -19,7 +19,7 @@ namespace GarmentsPro.Admin
             }
             else
             {
-                Response.Redirect("~/Admin/AdminLogin.aspx");
+                Response.Redirect("~/Login.aspx");
             }
 
 

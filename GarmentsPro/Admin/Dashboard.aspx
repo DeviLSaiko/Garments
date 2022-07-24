@@ -24,7 +24,7 @@
                 <%--<label>Yarn Formation</label>--%>
             </div>
              <%--Yet To Start--%>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
+            <div class="col-md-2 text-light   border   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
 
                 <div class="row">
                     <div class="col-md-6">

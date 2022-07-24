@@ -24,8 +24,6 @@
         nav {
             height: 40PX;
             font-size: small;
-           
-            
         }
 
         html {
@@ -57,7 +55,7 @@
     <nav class="navbar navbar-expand-sm bg-white  text-black  navbar-light border shadow-sm  ">
         <div class="container ">
 
-            <a style="font-family:'Baskerville Old Face'" class="navbar-brand" href="/Login.aspx">GarmentsPRO</a>
+            <a style="font-family: 'Baskerville Old Face'" class="navbar-brand" href="/Login.aspx">GarmentsPRO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -79,6 +77,10 @@
                         <a class="nav-link " href="/admin/AddProducts.aspx">Products</a>
                     </li>
                 </ul>--%>
+                <!-- Example single danger button -->
+
+                <
+                   
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item ">
                         <a class="nav-link " href="/Admin/AdminLogin.aspx">
@@ -87,14 +89,23 @@
                             </div>
                         </a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item "></li>
 
-                        <a class=" nav-link" href="/Admin/AdminLogin.aspx"><i class="fa fa-sign-out"></i></a>
-                    </li>
-                     <a class="nav-item " href="#">
-      <img src="../Assets/Images/3.png" alt="Avatar Logo"  style="width:30px; height:30px" class="rounded-pill"/> 
-    </a>
                 </ul>
+
+                <img src="../Assets/Images/3.png" alt="Avatar Logo" style="width: 30px; height: 30px" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-pill dropdown-toggle" />
+
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="/Admin/AdminLogin.aspx">Log out</a></li>
+                </ul>
+
             </div>
         </div>
     </nav>
