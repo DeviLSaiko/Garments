@@ -22,8 +22,8 @@
 
     <style>
         nav {
-            height: 40PX;
-            font-size: small;
+           
+            
         }
 
         html {
@@ -50,9 +50,9 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-
+   
     <!-- Header -->
-    <nav class="navbar navbar-expand-sm bg-white  text-black  navbar-light border shadow-sm  ">
+    <nav class="navbar navbar-expand-sm bg-white s  text-black  navbar-light border shadow-sm  ">
         <div class="container ">
 
             <a style="font-family: 'Baskerville Old Face'" class="navbar-brand" href="/Login.aspx">GarmentsPRO</a>
@@ -78,14 +78,13 @@
                     </li>
                 </ul>--%>
                 <!-- Example single danger button -->
-
-                <
+ 
                    
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item ">
                         <a class="nav-link " href="/Admin/AdminLogin.aspx">
                             <div style="color: mintcream">
-                                <asp:Label ID="lblWelcome" ForeColor="Black" runat="server" Text=""></asp:Label>
+                               
                             </div>
                         </a>
                     </li>
@@ -97,7 +96,7 @@
 
 
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#"> <asp:Label ID="lblWelcome" ForeColor="Black" runat="server" Text=""></asp:Label></a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                     <li>
@@ -106,9 +105,11 @@
                     <li><a class="dropdown-item" href="/Admin/AdminLogin.aspx">Log out</a></li>
                 </ul>
 
+
             </div>
         </div>
     </nav>
+ 
     <!-- Header -->
     <form id="form1" runat="server">
         <div>

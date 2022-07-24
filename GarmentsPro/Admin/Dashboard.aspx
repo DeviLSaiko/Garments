@@ -21,10 +21,10 @@
         <div class="row mt-4">
            
             <div class="col-md-1">
-                <%--<label>Yarn Formation</label>--%>
+                <label>Yarn Formation</label>
             </div>
              <%--Yet To Start--%>
-            <div class="col-md-2 text-light   border   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
+            <div class="col-md-2 text-light   border shadow-sm  m-2 rounded" style="background-color: ghostwhite; height: 80px;">
 
                 <div class="row">
                     <div class="col-md-6">
@@ -41,7 +41,7 @@
 
             </div>
             <%-- In Progressing--%>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
+            <div class="col-md-2 text-light border shadow-sm  m-2 rounded" style="background-color: ghostwhite; height: 80px;">
 
                 <div class="row">
                     <div class="col-md-6">
@@ -58,7 +58,7 @@
 
             </div>
             <%--On Hold--%>
-            <div class="col-md-2 text-light shadow    m-2 rounded" style="background-color: ghostwhite; height: 80px;">
+            <div class="col-md-2 text-light border shadow-sm    m-2 rounded" style="background-color: ghostwhite; height: 80px;">
 
                 <div class="row">
                     <div class="col-md-6">
@@ -75,7 +75,7 @@
 
             </div>
             <%-- Finished --%>
-            <div class="col-md-2 text-light shadow   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
+            <div class="col-md-2 text-light border shadow-sm   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
 
    <div class="row">
                     <div class="col-md-6">
