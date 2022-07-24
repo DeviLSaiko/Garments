@@ -57,7 +57,7 @@
     <nav class="navbar navbar-expand-sm bg-white  text-black  navbar-light border shadow-sm  ">
         <div class="container ">
 
-            <a class="navbar-brand" href="/Login.aspx">Yarn Formation</a>
+            <a style="font-family:'Baskerville Old Face'" class="navbar-brand" href="/Login.aspx">GarmentsPRO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -91,6 +91,9 @@
 
                         <a class=" nav-link" href="/Admin/AdminLogin.aspx"><i class="fa fa-sign-out"></i></a>
                     </li>
+                     <a class="nav-item " href="#">
+      <img src="../Assets/Images/3.png" alt="Avatar Logo"  style="width:30px; height:30px" class="rounded-pill"/> 
+    </a>
                 </ul>
             </div>
         </div>

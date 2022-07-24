@@ -21,23 +21,25 @@ namespace GarmentsPro
         protected void BtnCreate_Click(object sender, EventArgs e)
         {
 
-
-            string Department;
-
             SqlConnection Sqlconnection = new SqlConnection(MyCon);
-            SqlCommand cmd = new SqlCommand("SELECT UserName , Password , Department from UserInfo  where UserName=@UserName and Password=@Password", Sqlconnection);
-
+            string Department;
+            SqlCommand cmdf = new SqlCommand("SELECT Name,UserName , Password , Department from UserInfo  where UserName=@UserName and Password=@Password", Sqlconnection);
             DataTable dt = new DataTable();
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            cmd.Parameters.AddWithValue("@UserName", txtUserName.Text.Trim());
-            cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+            SqlDataAdapter sda = new SqlDataAdapter(cmdf);
+            cmdf.Parameters.AddWithValue("@UserName", txtUserName.Text.Trim());
+            cmdf.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
             sda.Fill(dt);
             if (dt.Rows.Count > 0)
             {
                 Session["UserName"] = dt.Rows[0]["UserName"].ToString();
+                Session["Department"]= dt.Rows[0]["Department"].ToString();
+                Session["Name"] = dt.Rows[0]["Name"].ToString();
                 Department = dt.Rows[0]["Department"].ToString(); 
                 switch (Department)
                 {
+                    case "Admin":
+                        Response.Redirect("/Admin/Dashboard.aspx");
+                        break;
                     case "Yarn Formation":
                         Response.Redirect("/Departments/Yarn_Formation/Dashboard.aspx");
                         break;

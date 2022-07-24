@@ -76,6 +76,8 @@
     <Content Include="Admin\Users\Accounts.aspx" />
     <Content Include="Admin\Users\CreateAccount.aspx" />
     <Content Include="Admin\Users\EditAccount.aspx" />
+    <Content Include="Assets\Images\2.jpg" />
+    <Content Include="Assets\Images\3.png" />
     <Content Include="Assets\Images\Admin.svg" />
     <Content Include="Assets\Images\Bg1.jpg" />
     <Content Include="DB\Departments.sql" />
