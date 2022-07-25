@@ -11,19 +11,32 @@
         <ContentTemplate>
             <center>
             <div class="container">
-       <div class="row" style="margin-top:50px">
-           <div class="col-sm-12" >
-        
-        <div class="align-content-center" style="font-weight:400;">  
-            <div>
-                 <asp:DropDownList ID="ddSearch" CssClass="form-select-sm" runat="server">
+                <div class="row mt-3">
+                    <div class="col-md-4">
+
+                        <asp:HyperLink ID="HyperLink1" class="btn btn-secondary btn-sm" NavigateUrl="CreateOrder.aspx"  runat="server">Create Order</asp:HyperLink>
+                               
+                    </div>
+                    <div class="col-md-4">
+                         <div>
+                 <asp:DropDownList ID="ddSearch" CssClass="form-select-sm" Font-Size="Small" runat="server">
                       <asp:ListItem Text="Client Name" Value="1"></asp:ListItem>
                 <asp:ListItem Text="Status" Value="2"></asp:ListItem>
                 <asp:ListItem Text="OrderType" Value="3"></asp:ListItem>
                  </asp:DropDownList> 
             <asp:TextBox ID="txtSearch"  Height="30px" runat="server"></asp:TextBox>
-            <asp:Button ID="Button1" CssClass="btn btn-secondary btn-sm mb-1" OnClick="Button1_Click" runat="server" Text="Search"></asp:Button>
+            <asp:Button ID="Button1" CssClass="btn btn-secondary btn-sm mb-1" OnClick="Button1_Click" font-size="small" runat="server" Text="Search"></asp:Button>
             </div>
+                    </div>
+                      <div class="col-md-4">
+
+                    </div>
+                </div>
+       <div class="row"  >
+           <div class="col-sm-12" >
+        
+        <div class="align-content-center" style="font-weight:400;">  
+           
           
             <br />
 
@@ -50,8 +63,8 @@
 
 
 
-
-            <div class="table-responsive">
+            <div class="p-4   shadow" style="background-color:white;">
+            <div class="table-responsive border">
 
                  <table class="table-hover     ">
                             <asp:GridView ID="GridView1"  OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand"  AllowPaging="true"  PageSize="5"  CssClass=" table " HeaderStyle-ForeColor="White"  HeaderStyle-BackColor="#999999"  AutoGenerateColumns="false" runat="server">
@@ -99,6 +112,7 @@
      </Columns>
      </asp:GridView>
                 </table>
+            </div>
             </div>
             
             </div>
