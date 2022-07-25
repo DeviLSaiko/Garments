@@ -13,57 +13,39 @@ namespace GarmentsPro.Departments.Yarn_Formation {
     public partial class Dashboard {
         
         /// <summary>
-        /// lblWelcome control.
+        /// YAN1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWelcome;
+        protected global::System.Web.UI.WebControls.Label YAN1;
         
         /// <summary>
-        /// lblYS control.
+        /// YAN2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblYS;
+        protected global::System.Web.UI.WebControls.Label YAN2;
         
         /// <summary>
-        /// lblInProgress control.
+        /// YAN3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInProgress;
+        protected global::System.Web.UI.WebControls.Label YAN3;
         
         /// <summary>
-        /// lblHold control.
+        /// YAN4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHold;
-        
-        /// <summary>
-        /// lblFinshedOrds control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFinshedOrds;
-        
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label YAN4;
     }
 }

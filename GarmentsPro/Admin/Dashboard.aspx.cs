@@ -21,7 +21,7 @@ namespace GarmentsPro.Admin
             }
             else
             {
-                Response.Redirect("~/Admin/AdminLogin.aspx");
+                Response.Redirect("~/Login.aspx");
             }
 
         }
@@ -49,42 +49,30 @@ namespace GarmentsPro.Admin
             DataSet ds = new DataSet();
             adp.Fill(ds);
 
+            YAN1.Text = ds.Tables[0].Rows[0]["Total"].ToString();
+            YAN2.Text = ds.Tables[1].Rows[0]["Total"].ToString();
+            YAN3.Text = ds.Tables[2].Rows[0]["Total"].ToString();
+            YAN4.Text = ds.Tables[3].Rows[0]["Total"].ToString();
 
-            //int i = 1;
+            FAB1.Text = ds.Tables[4].Rows[0]["Total"].ToString();
+            FAB2.Text = ds.Tables[5].Rows[0]["Total"].ToString();
+            FAB3.Text = ds.Tables[6].Rows[0]["Total"].ToString();
+            FAB4.Text = ds.Tables[7].Rows[0]["Total"].ToString();
 
-            //foreach (var item in Label.Controls)
-            //{
-            //    if (item is Label)
-            //    {
-            //        ((Label)item).Text = "YAN" + i;
-            //        i++;
-            //    }
-            //}
+            WET1.Text = ds.Tables[8].Rows[0]["Total"].ToString();
+            WET2.Text = ds.Tables[9].Rows[0]["Total"].ToString();
+            WET3.Text = ds.Tables[10].Rows[0]["Total"].ToString();
+            WET4.Text = ds.Tables[11].Rows[0]["Total"].ToString();
 
-        //for (int i=0;i<20;i++)
-        //{
-        //    Label.FindControl("YAN"+i).Text = ds.Tables[i].Rows[0]["Total"].ToString();
-        //}
+            FR1.Text = ds.Tables[12].Rows[0]["Total"].ToString();
+            FR2.Text = ds.Tables[13].Rows[0]["Total"].ToString();
+            FR3.Text = ds.Tables[14].Rows[0]["Total"].ToString();
+            FR4.Text = ds.Tables[15].Rows[0]["Total"].ToString();
 
-        //YAN0.Text = ds.Tables[0].Rows[0]["Total"].ToString();
-        //YAN1.Text = ds.Tables[1].Rows[0]["Total"].ToString();
-        //YAN2.Text = ds.Tables[2].Rows[0]["Total"].ToString();
-        //YAN3.Text = ds.Tables[3].Rows[0]["Total"].ToString();
-        //YAN4.Text = ds.Tables[4].Rows[0]["Total"].ToString();
-        //YAN5.Text = ds.Tables[5].Rows[0]["Total"].ToString();
-        //YAN6.Text = ds.Tables[6].Rows[0]["Total"].ToString();
-        //YAN7.Text = ds.Tables[7].Rows[0]["Total"].ToString();
-        //YAN8.Text = ds.Tables[8].Rows[0]["Total"].ToString();
-        //YAN9.Text = ds.Tables[9].Rows[0]["Total"].ToString();
-
-
-
-
-
-
-
-
-    }
-
+            FG1.Text = ds.Tables[16].Rows[0]["Total"].ToString();
+            FG2.Text = ds.Tables[17].Rows[0]["Total"].ToString();
+            FG3.Text = ds.Tables[18].Rows[0]["Total"].ToString();
+            FG4.Text = ds.Tables[19].Rows[0]["Total"].ToString();
+        }
     }
 }
