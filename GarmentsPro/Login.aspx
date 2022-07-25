@@ -14,7 +14,7 @@
     <script src="../Assets/SweetAlert/sweetalert.min.js"></script>
     <style>
         body{
-            background-color:antiquewhite;
+            background-color:cornflowerblue;
         }
         .MyCon {
             position: absolute;

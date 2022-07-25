@@ -16,7 +16,7 @@
     <script src="../Assets/Bootstrap/bootstrap.bundle.min5.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 
 
@@ -30,7 +30,7 @@
         }
 
         nav {
-            height: 50px;
+            height: 40px;
         }
 
 
@@ -108,6 +108,14 @@
             </button>
             <div class="collapse navbar-collapse " id="collapsibleNavbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- Notification Bell Icon -->
+                    <li class="nav-item " >
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-bell " style="font-size:larger"></i>
+                        </a>
+                       
+                    </li>
+                      <!-- Profile Dp -->
                     <li class="nav-item dropdown slideIn">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                             <img src="../Assets/Images/3.png" alt="Avatar Logo" role="button" style="width: 30px; height: 30px"
