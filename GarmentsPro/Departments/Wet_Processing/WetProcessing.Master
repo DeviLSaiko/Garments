@@ -65,12 +65,12 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <%--<div class="p-1  bg-primary bg-opacity-75 text-white ">
+    <div class="p-1   bg-opacity-75 text-white " style="background-color:darkslateblue;  " >
         <div class="ps-4">
-            <h1>Yarn Formation</h1>
+            <h3>Wet Processing</h3>
             <p>Department</p>
         </div>
-    </div>--%>
+    </div>
     <!-- Header -->
        <!-- Header -->
     <nav class="navbar navbar-expand-sm bg-white s  text-black  navbar-light border shadow-sm  ">
@@ -78,7 +78,7 @@
 
             <a style="font-family: 'Open Sans'S'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
      sans-serif'"
-                class="navbar-brand" href="/Dashboard.aspx">Wet Processing</a>
+                class="navbar-brand" href="/Dashboard.aspx">GarmentsPro</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>

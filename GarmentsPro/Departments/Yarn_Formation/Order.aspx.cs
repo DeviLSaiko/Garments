@@ -76,6 +76,11 @@ namespace Garments_Pro.Yarn_Formation
                     btnupdate.CssClass = "text-danger btn disabled fw-bold  ";
                     btnDel.Visible = false;
                 }
+                else if (Col_Status == "1")
+                {
+                    btnupdate.Visible = false;
+                    btnDel.Visible = false;
+                }
                 else
                 {
                     e.Row.Cells[7].FindControl("btnfinish").Visible = false;

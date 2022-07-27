@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="CreateAccount.aspx.cs" Inherits="GarmentsPro.Admin.Users.CreateAccount" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="CreateAccount.aspx.cs" Inherits="GarmentsPro.Admin.CreateAccount" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 

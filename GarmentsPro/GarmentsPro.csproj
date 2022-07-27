@@ -68,13 +68,13 @@
   <ItemGroup>
     <Content Include="Admin\AddProducts.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
-    <Content Include="Admin\Orders\OrderStatus.aspx" />
-    <Content Include="Admin\Orders\CreateOrder.aspx" />
-    <Content Include="Admin\Orders\EditOrder.aspx" />
-    <Content Include="Admin\Orders\Orders.aspx" />
-    <Content Include="Admin\Users\Accounts.aspx" />
-    <Content Include="Admin\Users\CreateAccount.aspx" />
-    <Content Include="Admin\Users\EditAccount.aspx" />
+    <Content Include="Admin\OrderStatus.aspx" />
+    <Content Include="Admin\CreateOrder.aspx" />
+    <Content Include="Admin\EditOrder.aspx" />
+    <Content Include="Admin\Orders.aspx" />
+    <Content Include="Admin\Accounts.aspx" />
+    <Content Include="Admin\CreateAccount.aspx" />
+    <Content Include="Admin\EditAccount.aspx" />
     <Content Include="Assets\Images\2.jpg" />
     <Content Include="Assets\Images\3.png" />
     <Content Include="Assets\Images\Admin.svg" />
@@ -149,53 +149,53 @@
     <Compile Include="Admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Orders\OrderStatus.aspx.cs">
+    <Compile Include="Admin\OrderStatus.aspx.cs">
       <DependentUpon>OrderStatus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Orders\OrderStatus.aspx.designer.cs">
+    <Compile Include="Admin\OrderStatus.aspx.designer.cs">
       <DependentUpon>OrderStatus.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Orders\CreateOrder.aspx.cs">
+    <Compile Include="Admin\CreateOrder.aspx.cs">
       <DependentUpon>CreateOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Orders\CreateOrder.aspx.designer.cs">
+    <Compile Include="Admin\CreateOrder.aspx.designer.cs">
       <DependentUpon>CreateOrder.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Orders\EditOrder.aspx.cs">
+    <Compile Include="Admin\EditOrder.aspx.cs">
       <DependentUpon>EditOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Orders\EditOrder.aspx.designer.cs">
+    <Compile Include="Admin\EditOrder.aspx.designer.cs">
       <DependentUpon>EditOrder.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Orders\Orders.aspx.cs">
+    <Compile Include="Admin\Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Orders\Orders.aspx.designer.cs">
+    <Compile Include="Admin\Orders.aspx.designer.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Users\Accounts.aspx.cs">
+    <Compile Include="Admin\Accounts.aspx.cs">
       <DependentUpon>Accounts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Users\Accounts.aspx.designer.cs">
+    <Compile Include="Admin\Accounts.aspx.designer.cs">
       <DependentUpon>Accounts.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Users\CreateAccount.aspx.cs">
+    <Compile Include="Admin\CreateAccount.aspx.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Users\CreateAccount.aspx.designer.cs">
+    <Compile Include="Admin\CreateAccount.aspx.designer.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Users\EditAccount.aspx.cs">
+    <Compile Include="Admin\EditAccount.aspx.cs">
       <DependentUpon>EditAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Users\EditAccount.aspx.designer.cs">
+    <Compile Include="Admin\EditAccount.aspx.designer.cs">
       <DependentUpon>EditAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="Departments\Fabrication\Dashboard.aspx.cs">

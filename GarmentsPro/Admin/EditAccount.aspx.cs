@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
-namespace GarmentsPro.Admin.Users
+namespace GarmentsPro.Admin
 {
     public partial class EditAccount : System.Web.UI.Page
     {

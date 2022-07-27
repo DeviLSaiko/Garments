@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GarmentsPro.Admin.Orders {
+namespace GarmentsPro.Admin {
     
     
     public partial class EditOrder {

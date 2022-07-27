@@ -36,7 +36,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Put on Hold"   HeaderStyle-BackColor="White">
                             <ItemTemplate>
-                                <asp:Button ID="btnhold"  CommandName="Hold" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"    Width="100px" runat="server"  Text="Hold" />
+                                <asp:Button ID="btnhold"  CommandName="Hold" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-warning btn-sm "   Width="100px" runat="server"  Text="Hold" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Completed" HeaderStyle-BackColor="White">

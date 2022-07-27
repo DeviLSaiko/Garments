@@ -1,4 +1,4 @@
-﻿.Sec-2 {
+﻿/*.Sec-2 {
     height: 110px;
     width: 215px;
     margin: 40px;
@@ -28,11 +28,10 @@
     border-radius: 0px 5px 5px 0px;
 }
 
-.Div-1 {
-    display: inline-flex;
-    align-content: space-between;
-}
+ 
 
 .Sec-2 label {
     margin-left: 20px;
-}
+}*/
+
+

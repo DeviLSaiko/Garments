@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="EditOrder.aspx.cs" Inherits="GarmentsPro.Admin.Orders.EditOrder" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="EditOrder.aspx.cs" Inherits="GarmentsPro.Admin.EditOrder" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Assets/font-awesome.min.css" rel="stylesheet" />
     <script src="../Assets/Bootstrap/bootstrap.bundle.min5.js"></script>
@@ -32,7 +32,7 @@
         </asp:ScriptManager>
         <asp:UpdatePanel ID="updatepnl" runat="server">
             <ContentTemplate>
-                <div class="container mt-3">
+                <div class="container mt-3 shadow-sm mt-4">
                     <h2>Update</h2>
                     <div class="row">
 
@@ -123,7 +123,8 @@
                                   </div> 
                 </div>
                 <br />
-                 <div class="container mt-3 ">
+                    </div>
+                 <div class="container mt-3 shadow-sm">
                     <div class="row">
                         <div class="col-md-10">
                             <h2>Order Info</h2>

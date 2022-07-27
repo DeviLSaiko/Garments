@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace GarmentsPro.Admin.Orders
+namespace GarmentsPro.Admin
 {
     public partial class EditOrder : System.Web.UI.Page
     {
@@ -47,7 +47,7 @@ namespace GarmentsPro.Admin.Orders
             }
             else
             {
-                Response.Redirect("~/Admin/CreateDashboard.aspx");
+                Response.Redirect("~/Dashboard.aspx");
             }
         }
 
@@ -84,7 +84,7 @@ namespace GarmentsPro.Admin.Orders
                 MyCmd.ExecuteNonQuery();
 
                 Sqlconnection.Close();
-                Response.Redirect("~/Admin/Orders/Orders.aspx");
+                Response.Redirect("~/Admin/Orders.aspx");
 
             }
             LoadUsers();

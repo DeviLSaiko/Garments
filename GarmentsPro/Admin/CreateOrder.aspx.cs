@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace GarmentsPro.Admin.Orders
+namespace GarmentsPro.Admin
 {
     public partial class CreateOrder : System.Web.UI.Page
     {

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="CreateOrder.aspx.cs" Inherits="GarmentsPro.Admin.Orders.CreateOrder" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="CreateOrder.aspx.cs" Inherits="GarmentsPro.Admin.CreateOrder" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
@@ -17,19 +17,13 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-
     <asp:ScriptManager ID="scriptmanager1" runat="server">
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-
-
-            <div class="container mt-3">
+            <div class="container mt-4  shadow-sm"  ">
                 <h2>Create New Order</h2>
                 <div class="row ">
-
-                     
                     <div class="col-md-4">
                         <label>Clinet Name</label>
                         <asp:TextBox ID="txtClinet" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
@@ -59,6 +53,7 @@
                         <br />
                     </div>
                       <div class="col-md-4">
+                          
                         <label>Quantity</label>
                         <asp:TextBox ID="txtQty" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
@@ -70,9 +65,7 @@
                         <br />
                     </div>
                 </div>
-
                 <div class="row">
-                  
                     <div class="col-md-4">
                         <label>Deadline Time</label>
                         <asp:TextBox ID="txtETA" TextMode="DateTimeLocal" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
@@ -102,16 +95,15 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click1" Text="Create New Order" CssClass="btn btn-dark  " Width="207px" Height="39px" />
+                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click1" Text="Create New Order" CssClass="btn btn-dark mb-4 " Width="207px" Height="39px" />
                     </div>
                 </div>
-                <center>
-        </center>
-                <div class="row mt-5">
+                 </div>
+             <div class="container shadow-sm">
+                  <div class="row mt-5">
                     <div class="col-sm-12">
                         <div style="text-align: right; font-size: smaller;">
-                            <asp:HyperLink ID="viewAll" NavigateUrl="~/Admin/Orders/Orders.aspx" runat="server">View All Orders</asp:HyperLink>
-
+                            <asp:HyperLink ID="viewAll" NavigateUrl="~/Admin/Orders/Orders.aspx" CssClass="btn-sm btn" runat="server">View All Orders</asp:HyperLink>
                         </div>
                         <asp:GridView ID="GridView1" CssClass=" table  " HeaderStyle-BackColor="#808080" HeaderStyle-ForeColor="White" AutoGenerateColumns="false" runat="server">
                             <Columns>
@@ -128,10 +120,9 @@
                         <asp:Label runat="server" ID="txtError" Text=""></asp:Label>
                     </div>
                 </div>
-            </div>
+             </div>
+               
+           
         </ContentTemplate>
     </asp:UpdatePanel>
-
-
-
 </asp:Content>

@@ -8,7 +8,7 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-            <div class="container mt-5">
+            <div class="container mt-3">
 
                 <div class="row">
                     <h6>Current Status</h6>

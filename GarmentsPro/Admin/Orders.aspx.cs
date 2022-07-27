@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace GarmentsPro.Admin.Orders
+namespace GarmentsPro.Admin
 {
     public partial class Orders : System.Web.UI.Page
     {
@@ -90,7 +90,7 @@ namespace GarmentsPro.Admin.Orders
                 case "OrderCancel":
 
                     btnCancel.Text = "Cancelled";
-                    btnCancel.CssClass = "text-danger btn";
+                    btnCancel.CssClass = "text-danger btn-sm btn";
                     
 
                     string MyQa = "Update Orders SET Status=@Status where OrderID=@ID ";
@@ -142,7 +142,7 @@ namespace GarmentsPro.Admin.Orders
 
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                Button btnCancel = e.Row.Cells[7].FindControl("btnCancel") as Button;
+                Button btnCancel = e.Row.Cells[5].FindControl("btnCancel") as Button;
                 
 
                 string Col_Status = e.Row.Cells[4].Text;
@@ -150,7 +150,7 @@ namespace GarmentsPro.Admin.Orders
                 if (Col_Status == "Cancelled")
                 {
                     btnCancel.Text = "Cancelled";
-                    btnCancel.CssClass = "text-danger btn";
+                    btnCancel.CssClass = "text-danger btn btn-sm";
 
                 }
                  
