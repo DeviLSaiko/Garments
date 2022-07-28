@@ -5,10 +5,19 @@
 
       <div class="container mt-3">
                 <h2>Add New Product</h2>
-                <div class="row ">
+            
+                    <div class="card   mb-3" style="max-width: 22rem;">
+
+
+
+  
+  <div class="card-body ">
+      <div class="card-title bg-transparent">Order Summary</div>
+   
+          <div class="row">
                     <div class="col-md-4">
                         <label>Product Name</label>
-                        <asp:TextBox ID="txtClinet" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
+                        <asp:TextBox ID="txtClinet" CssClass="form-control" runat="server"    ></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
                             ControlToValidate="txtClinet"
                             Text=" This Field Cannot be Empty"
@@ -16,10 +25,8 @@
                             Font-Size="Small"
                             runat="server"></asp:RequiredFieldValidator>
                         <br />
-                    
-                     
-                        <label>Product Category</label>
-                        <asp:DropDownList ID="ddType" CssClass="form-select" Height="35px" Width="288px" runat="server">
+                         <label>Product Category</label>
+                        <asp:DropDownList ID="ddType" CssClass="form-select"  runat="server">
                             <asp:ListItem Text="-- Select --"></asp:ListItem>
                             <asp:ListItem Text="Sweater" Value="Sweater"></asp:ListItem>
                             <asp:ListItem Text="T-shirt" Value="T-shirt"></asp:ListItem>
@@ -33,8 +40,14 @@
                             Font-Size="Small"
                             runat="server"></asp:RequiredFieldValidator>
                         <br />
-                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Create New Order" CssClass="btn btn-success " Width="50%" Height="39px" />
+                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Create New Order" CssClass="btn btn-success "   />
                     </div>
+
+  </div>
+  <div class="card-footer bg-transparent  ">Footer</div>
+</div>
+                     
+                       
                 <div class="row mt-5">
                     <div class="col-sm-12">
                         <div style="text-align: right; font-size: smaller;">

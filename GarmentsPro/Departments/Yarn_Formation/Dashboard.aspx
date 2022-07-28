@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Departments/Yarn_Formation/YarnFormation.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="GarmentsPro.Departments.Yarn_Formation.Dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        label{
+            color:black;
+            font-size:10px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
 
@@ -8,10 +14,10 @@
      <div class="row mt-4">
            
             <div class="col-md-1">
-                <label>Yarn Formation</label>
+                
             </div>
              <%--Yet To Start--%>
-            <div class="col-md-2 text-light   border shadow-sm  m-2 rounded" style="background-color: ghostwhite; height: 80px;">
+            <div class="col-md-2 text-light   border shadow-sm  m-2 rounded" style="background-color: #ffffff; height: 100px;">
 
                 <div class="row">
                     <div class="col-md-6">
@@ -28,7 +34,7 @@
 
             </div>
             <%-- In Progressing--%>
-            <div class="col-md-2 text-light border shadow-sm  m-2 rounded" style="background-color: ghostwhite; height: 80px;">
+            <div class="col-md-2 text-light border shadow-sm  m-2 rounded" style="background-color:#ffffff; height: 100px;">
 
                 <div class="row">
                     <div class="col-md-6">
@@ -45,7 +51,7 @@
 
             </div>
             <%--On Hold--%>
-            <div class="col-md-2 text-light border shadow-sm    m-2 rounded" style="background-color: ghostwhite; height: 80px;">
+            <div class="col-md-2 text-light border shadow-sm    m-2 rounded" style="background-color: #ffffff; height: 100px;">
 
                 <div class="row">
                     <div class="col-md-6">
@@ -62,7 +68,7 @@
 
             </div>
             <%-- Finished --%>
-            <div class="col-md-2 text-light border shadow-sm   m-2 rounded" style="background-color: ghostwhite; height: 80px;">
+            <div class="col-md-2 text-light border shadow-sm   m-2 rounded" style="background-color: #ffffff; height: 100px;">
 
    <div class="row">
                     <div class="col-md-6">
@@ -76,6 +82,9 @@
                         <i class="fa fa-flag   mt-4  " style="color: darkmagenta; font-size: 33px; padding-left: 24px;"></i>
                     </div>
                 </div>
+            </div>
+         <div class="col-md-1">
+                
             </div>
         </div>
         </div>

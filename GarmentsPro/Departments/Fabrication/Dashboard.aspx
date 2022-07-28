@@ -1,49 +1,90 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Departments/Fabrication/Fabrication.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="Garments_Pro.Departments.Fabrication.Dashboard" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        label{
+            color:black;
+            font-size:10px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container mt-4 mb-3">
-        <center>
-                 <label> Welcome : </label><asp:Label ID="lblWelcome" runat="server" Font-Size="Large"   Text=" Admin "></asp:Label>
-            </center>
 
-        <div class="row mt-5">
-             <div class="col-md-2 bg-black  ms-3 text-light" style="height: 100px">
-                <center>
-                        <label>Yet To Start</label>
-                        <br />
-                        <asp:Label ID="lblYS" runat="server" Font-Size="XX-Large"  Text=""></asp:Label>
-                                </center>
+    <div class="container mt-4 mb-3">
+     <div class="row mt-4">
+           
+            <div class="col-md-1">
+                
             </div>
-            <div class="col-md-2 bg-black  ms-3 text-light" style="height: 100px">
-                <center>
+             <%--Yet To Start--%>
+            <div class="col-md-2 text-light   border shadow-sm  m-2 rounded" style="background-color: #ffffff; height: 100px;">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Yet to Start</label>
+                        <br />
+
+                        <asp:Label ID="YAN1" runat="server" ForeColor="#996633" Font-Size="20px" CssClass="MyLable" Text="5"></asp:Label>
+                    </div>
+                    <div class="col-md-6">
+
+                        <i class="fa fa-hourglass-start   mt-4  " style="color: cadetblue; font-size: 33px; padding-left: 24px;"></i>
+                    </div>
+                </div>
+
+            </div>
+            <%-- In Progressing--%>
+            <div class="col-md-2 text-light border shadow-sm  m-2 rounded" style="background-color:#ffffff; height: 100px;">
+
+                <div class="row">
+                    <div class="col-md-6">
                         <label>In Progress</label>
                         <br />
-                        <asp:Label ID="lblInProgress" runat="server" Font-Size="XX-Large"  Text=""></asp:Label>
-                                </center>
-            </div>
-            <div class="col-md-2 bg-secondary  ms-3 text-light" style="height: 100px">
-                <label>On Hold</label>
-                <br />
-                <center>
 
-                         <asp:Label ID="lblHold" runat="server"   Font-Size="XX-Large"     Text=""></asp:Label>
-                    </center>
-                <br />
-            </div>
-            <div class="col-md-2 bg-info ms-3 text-light" style="height: 100px">
+                        <asp:Label ID="YAN2" runat="server" ForeColor="#996633" Font-Size="20px" CssClass="MyLable" Text="3"></asp:Label>
+                    </div>
+                    <div class="col-md-6">
 
-                <label>Finshed</label>
-                <br />
-                <center>
-                         <asp:Label ID="lblFinshedOrds" runat="server"  Font-Size="XX-Large"   Text=""></asp:Label>
-                    </center>
+                        <i class="fa fa-spinner   mt-4  " style="color:  brown; font-size: 33px; padding-left: 24px;"></i>
+                    </div>
+                </div>
+
+            </div>
+            <%--On Hold--%>
+            <div class="col-md-2 text-light border shadow-sm    m-2 rounded" style="background-color: #ffffff; height: 100px;">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>On Hold</label>
+                        <br />
+
+                        <asp:Label ID="YAN3" runat="server" ForeColor="#996633" Font-Size="20px" CssClass="MyLable" Text="4"></asp:Label>
+                    </div>
+                    <div class="col-md-6">
+
+                        <i class="fa fa-clock-o   mt-4  " style="color: indigo; font-size: 33px; padding-left: 24px;"></i>
+                    </div>
+                </div>
+
+            </div>
+            <%-- Finished --%>
+            <div class="col-md-2 text-light border shadow-sm   m-2 rounded" style="background-color: #ffffff; height: 100px;">
+
+   <div class="row">
+                    <div class="col-md-6">
+                        <label>Finished</label>
+                        <br />
+
+                        <asp:Label ID="YAN4" runat="server" ForeColor="#996633" Font-Size="20px" CssClass="MyLable" Text="12"></asp:Label>
+                    </div>
+                    <div class="col-md-6">
+
+                        <i class="fa fa-flag   mt-4  " style="color: darkmagenta; font-size: 33px; padding-left: 24px;"></i>
+                    </div>
+                </div>
+            </div>
+         <div class="col-md-1">
+                
             </div>
         </div>
-        <br />
-        <div class="row">
         </div>
-        <asp:GridView ID="GridView1" Visible="false" runat="server"></asp:GridView>
-    </div>
-
 </asp:Content>

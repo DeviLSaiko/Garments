@@ -9,13 +9,14 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-            <center>
-            <div class="container">
+
+            <div class="card-body bg-white  ">
+                <div class="card-title  ">Order Summary</div>
+                <div class="container  shadow-sm  ">
+                    <center>
                 <div class="row mt-3">
                     <div class="col-md-2">
-
-                        <asp:HyperLink ID="HyperLink1" class="btn btn-primary  btn-sm" NavigateUrl="CreateOrder.aspx"  runat="server">Create Order</asp:HyperLink>
-                               
+                        <asp:HyperLink ID="HyperLink1" class="btn btn-secondary   btn-sm" NavigateUrl="CreateOrder.aspx"  runat="server">Create Order</asp:HyperLink>
                     </div>
                     <div class="col-md-6">
                          <div>
@@ -30,7 +31,7 @@
                     </div>
                       <div class="col-md-4">
                           <div class="dropdown">
-  <button type="button" class="btn btn-primary dropdown-toggle btn-sm" data-bs-toggle="dropdown">
+  <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-bs-toggle="dropdown">
     Dropdown button
   </button>
   <ul class="dropdown-menu">
@@ -41,67 +42,61 @@
 </div>
                     </div>
                 </div>
-       <div class="row"  >
-           <div class="col-sm-12" >
-        
-        <div class="align-content-center" style="font-weight:400;">  
-            <div class="p-4   border-5 shadow-sm"   >
-            <div class="table-responsive border">
+                  </center>
+                    <div class="row">
+                        <div class="col-sm-12">
 
-                 <table class="table-hover     ">
-                            <asp:GridView ID="GridView1"  OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand"  AllowPaging="true"  PageSize="7"  CssClass=" table " HeaderStyle-ForeColor="White"  HeaderStyle-BackColor="#999999"  AutoGenerateColumns="false" runat="server">
-                                <Columns>
+                            <div class="align-content-center" style="font-weight: 400;">
+                                <div class="p-4   border-5 shadow-sm">
+                                    <div class="table-responsive border">
+                                        <table  ">
+                                            <asp:GridView ID="GridView1" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand" AllowPaging="true" PageSize="7" CssClass=" table " AutoGenerateColumns="false" runat="server">
+                                                <Columns>
 
-                                    <asp:TemplateField HeaderText=" ">   
-                                        <ItemTemplate> <%# Container.DataItemIndex + 1 %> </ItemTemplate>
-                                    </asp:TemplateField>
-                                    <asp:BoundField DataField="OrderID"   HeaderText="Order id" />
-                                     <asp:BoundField DataField="ClientName"   HeaderText="Customer" />
-                                    <asp:BoundField DataField="OrderType"   HeaderText="Product" />
-                                     <asp:BoundField DataField="Status" HeaderText="Status" />
-                                    <asp:BoundField DataField="Created_Date" HeaderText="Date" />
-             <asp:TemplateField HeaderText="Edit" ControlStyle-CssClass="btn btn-primary  btn-sm "   >
-     <ItemTemplate>
-                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/EditOrder.aspx?ID={0}",
+                                                    <asp:TemplateField HeaderText=" ">
+                                                        <ItemTemplate><%# Container.DataItemIndex + 1 %> </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:BoundField DataField="OrderID" HeaderText="Order id" />
+                                                    <asp:BoundField DataField="ClientName" HeaderText="Customer" />
+                                                    <asp:BoundField DataField="OrderType" HeaderText="Product" />
+                                                    <asp:BoundField DataField="Status" HeaderText="Status" />
+                                                    <asp:BoundField DataField="Created_Date" HeaderText="Date" />
+                                                    <asp:TemplateField HeaderText="Edit" ControlStyle-CssClass="btn btn-primary  btn-sm ">
+                                                        <ItemTemplate>
+                                                            <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/EditOrder.aspx?ID={0}",
                     HttpUtility.HtmlEncode (Eval("OrderID").ToString()))%>'><i class="fa fa-pencil-square-o" style="font-size:11px;" aria-hidden="true"></i></asp:HyperLink>
-     </ItemTemplate>
-      </asp:TemplateField>   
-                                    <asp:TemplateField HeaderText="View" ControlStyle-CssClass="btn text-light btn-secondary btn-sm"  >
-     <ItemTemplate>
-                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/OrderStatus.aspx?ID={0}",
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="View" ControlStyle-CssClass="btn text-light btn-secondary btn-sm">
+                                                        <ItemTemplate>
+                                                            <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/Admin/OrderStatus.aspx?ID={0}",
                     HttpUtility.HtmlEncode (Eval("OrderID").ToString()))%>'><i class="fa fa-history" style="font-size:11px;" ></i></asp:HyperLink>
-     </ItemTemplate>
-      </asp:TemplateField>  
-                                        <asp:TemplateField HeaderText="Cancel">
-     <ItemTemplate>
-         <asp:Button ID="btnCancel"  CssClass="btn btn-danger btn-sm"   runat="server" 
-              CommandName="OrderCancel" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="Cancel"></asp:Button>
-  </button>
-                 
-     </ItemTemplate>
-      </asp:TemplateField> 
-   <%--    <asp:TemplateField HeaderText="Remarks"   >
-     <ItemTemplate>
-         <asp:Button ID="btnRemarks"  CssClass=" dropdown-toggle" runat="server"   data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
-               CommandName="Remarks" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="-"></asp:Button>
-  </button>
-                 
-     </ItemTemplate>
-      </asp:TemplateField> --%>
-                                    
-     </Columns>
-     </asp:GridView>
-                </table>
-            </div>
-            </div>
-            
-            </div>
-             
-           </div>
-            </div>
-           </div>
-                 
-          </center>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Cancel">
+                                                        <ItemTemplate>
+                                                            <asp:Button ID="btnCancel" CssClass="btn btn-danger btn-sm" runat="server"
+                                                                CommandName="OrderCancel" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" Text="Cancel"></asp:Button>
+                                                            </button>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <%--    <asp:TemplateField HeaderText="Remarks"   >
+                                             <ItemTemplate>
+                                                 <asp:Button ID="btnRemarks"  CssClass=" dropdown-toggle" runat="server"   data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
+                                                       CommandName="Remarks" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  Text="-"></asp:Button>
+                                          </button>
+                                             </ItemTemplate>
+                                              </asp:TemplateField> --%>
+                                                </Columns>
+                                            </asp:GridView>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </center>
             <center>
         <div>
             <asp:Label ID="txtError" runat="server" Text=""></asp:Label>

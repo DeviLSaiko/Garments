@@ -41,7 +41,7 @@ namespace Garments_Pro.Departments.Fabrication
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
-            lblYS.Text = Convert.ToString(mYcMD.ExecuteScalar());
+            YAN1.Text = Convert.ToString(mYcMD.ExecuteScalar());
             Sqlconnection.Close();
         }
         private void LoadInP()
@@ -53,7 +53,7 @@ namespace Garments_Pro.Departments.Fabrication
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
-            lblInProgress.Text = Convert.ToString(mYcMD.ExecuteScalar());
+            YAN2.Text = Convert.ToString(mYcMD.ExecuteScalar());
             Sqlconnection.Close();
         }
         private void LoadOnHold()
@@ -67,7 +67,7 @@ namespace Garments_Pro.Departments.Fabrication
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
-            lblHold.Text = Convert.ToString(mYcMD.ExecuteScalar());
+            YAN3.Text = Convert.ToString(mYcMD.ExecuteScalar());
             Sqlconnection.Close();
         }
         private void LoadFinished()
@@ -79,7 +79,7 @@ namespace Garments_Pro.Departments.Fabrication
             SqlCommand mYcMD = new SqlCommand(MYQ, Sqlconnection);
 
             Sqlconnection.Open();
-            lblFinshedOrds.Text = Convert.ToString(mYcMD.ExecuteScalar());
+            YAN4.Text = Convert.ToString(mYcMD.ExecuteScalar());
             Sqlconnection.Close();
         }
     }

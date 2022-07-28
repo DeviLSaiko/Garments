@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
+    <title> Wet Processing</title>
+     
+
            <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Poppins:wght@200&display=swap" rel="stylesheet">
@@ -19,19 +22,20 @@
 
 
     
-     <style>
+      <style>
         #dp {
             width: 48px !important;
         }
 
         hr {
             width: 100%;
+            color: seashell;
         }
 
         nav {
             height: 40px;
+            font-size: small;
         }
-
 
         html {
             overflow-x: hidden;
@@ -46,18 +50,25 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: black;
-            color: white;
-            text-align: center;
-            height: 10px;
+            background-color: white;
+            height: 30px;
             font-size: 14px;
         }
+
         body {
+            background-color: #f4f4f4;
+            font-size: small;
         }
-        DD{
-            width:22px;
+
+        DD {
+            width: 22px;
+
         }
+     
+
+
     </style>
+
 
 
 
@@ -65,12 +76,12 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="p-1   bg-opacity-75 text-white " style="background-color:darkslateblue;  " >
+  <%--  <div class="p-1   bg-opacity-75 text-white " style="background-color:darkslateblue;  " >
         <div class="ps-4">
             <h3>Wet Processing</h3>
             <p>Department</p>
         </div>
-    </div>
+    </div>--%>
     <!-- Header -->
        <!-- Header -->
     <nav class="navbar navbar-expand-sm bg-white s  text-black  navbar-light border shadow-sm  ">
@@ -83,6 +94,22 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                   <ul class="navbar-nav ">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Dashboard.aspx">Dashboard</a>
+
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Orders.aspx">Orders
+                        </a>
+
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Clients
+                        </a>
+
+                    </li>
+                </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <!-- Notification Bell Icon -->
                     <li class="nav-item " >
@@ -94,7 +121,7 @@
                       <!-- Profile Dp -->
                     <li class="nav-item dropdown slideIn">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            <img src="../Assets/Images/3.png" alt="Avatar Logo" role="button" style="width: 30px; height: 30px"
+                           <img src="../../Assets/Images/3.png" alt="Avatar Logo" role="button" style="width: 30px; height: 30px"
                                 data-bs-toggle="dropdown" aria-expanded="false" class="rounded-pill dropdown-toggle nav-item dropdown" /></a>
                         <ul class="dropdown-menu" id="DD" style="font-size: smaller">
                             <li><a class="dropdown-item" href="#">
