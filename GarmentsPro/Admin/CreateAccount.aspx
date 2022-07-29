@@ -48,7 +48,8 @@
                             runat="server"></asp:RequiredFieldValidator>
                         <br />
                         <label>Password</label>
-                        <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server" Height="35px" Width="300px"></asp:TextBox>
+                        <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control"
+                             runat="server" Height="35px" Width="300px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
                             ControlToValidate="txtPassword"
                             Text=" This Field Cannot be Empty"
@@ -57,13 +58,15 @@
                             runat="server"></asp:RequiredFieldValidator>
                         <br />
                         <div class="d-grid">
-                            <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Create New Account" CssClass="btn btn-dark" Width="207px" Height="39px" />
+                            <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Create New Account" 
+                                CssClass="btn btn-dark" Width="207px" Height="39px" />
                         </div>
                     </div>
                     <div class="col-md-8">
 
                         <table class="table-hover     ">
-                            <asp:GridView ID="GridView1" HeaderStyle-BackColor="#808080" HeaderStyle-ForeColor="White" CssClass=" table  " AutoGenerateColumns="false" runat="server">
+                            <asp:GridView ID="GridView1" HeaderStyle-BackColor="#808080" HeaderStyle-ForeColor="White"
+                                 CssClass=" table  " AutoGenerateColumns="false" runat="server">
                                 <Columns>
                                     <asp:BoundField DataField="UID" HeaderText="ID" />
                                     <asp:BoundField DataField="Name" HeaderText="Name" />

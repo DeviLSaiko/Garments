@@ -33,7 +33,7 @@
         <div class="row mt-2">
             <header style="padding-left: 22px;">Order Status</header>
             <%-- Yarn Formation--%>
-            <div class="col-md-3 text-light border shadow-sm  m-2  rounded" style="background-color: #ffffff; width: 400px; height: 142px;">
+            <div class="col-md-3 text-light border shadow-sm  m-2   rounded" style="background-color: #ffffff; width: 400px; height: 142px;">
                 <div class="row mb-4  ">
                     <div class="col-md-4  ">
                         
@@ -113,7 +113,7 @@
                 </div>
             </div>
             <%-- Wet Processing--%>
-            <div class="col-md-3 text-light border    shadow-sm  m-2  rounded" style="background-color: #ffffff; width: 400px; height: 142px;">
+            <div class="col-md-3 text-light border shadow-sm  m-2  rounded" style="background-color: #ffffff; width: 400px; height: 142px;">
                 <div class="row mb-4  ">
                     <div class="col-md-4  ">
 
@@ -124,7 +124,7 @@
                     </div>
                     <div class="col-md-4  ">
                          
-                              <a href="../Departments/Yarn_Formation/Dashboard.aspx"><label class="shadow-sm" style="border-bottom: 1px solid  ;  color:darkslateblue;  cursor:pointer;" >Wet Processing</label> </a> 
+                              <a href="../Departments/Wet_Processing/Dashboard.aspx"><label class="shadow-sm" style="border-bottom: 1px solid  ;  color:darkslateblue;  cursor:pointer;" >Wet Processing</label> </a> 
 
                     </div>
                     <div class="col-md-4  ">
@@ -206,7 +206,7 @@
                     </div>
                     <div class="col-md-4  ">
                          
-                              <a href="../Departments/Yarn_Formation/Dashboard.aspx">
+                              <a href="../Departments/Finished_Goods/Dashboard.aspx">
                                   <label style="border-bottom: 1px solid black; color:  darkslateblue; cursor:pointer;" >Finished Goods</label> 
                               </a> 
                         

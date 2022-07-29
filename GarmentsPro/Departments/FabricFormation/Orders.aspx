@@ -21,17 +21,17 @@
                          <asp:BoundField   DataField="Status" HeaderText="Order Status" />
                         <asp:TemplateField HeaderText="Set Start"  >
                             <ItemTemplate>
-                                <asp:Button ID="btnstart" CommandName="Start"    CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-success btn-sm " Width="100px" runat="server" Text="Start" />
+                                <asp:Button ID="btnstart" CommandName="Start"   ControlStyle-Font-Size="Small"   CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-success btn-sm " Width="100px" runat="server" Text="Start" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Put on Hold"   >
                             <ItemTemplate>
-                                <asp:Button ID="btnhold"  CommandName="Hold" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-warning btn-sm" Width="100px" runat="server"  Text="Hold" />
+                                <asp:Button ID="btnhold"  CommandName="Hold"  ControlStyle-Font-Size="Small"  CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-warning btn-sm" Width="100px" runat="server"  Text="Hold" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Completed"  >
                             <ItemTemplate>
-                                <asp:Button ID="btnfinish"  CommandName="Finish"   CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-primary btn-sm" Width="100px" runat="server"  Text="Finish" />
+                                <asp:Button ID="btnfinish"  CommandName="Finish"   ControlStyle-Font-Size="Small"   CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-primary btn-sm" Width="100px" runat="server"  Text="Finish" />
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>

@@ -60,7 +60,10 @@
         DD {
             width: 22px;
         }
-
+         p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
 
     </style>
 
@@ -81,7 +84,7 @@
         <div class="container ">
 
             <a style="font-family: 'Open Sans'S'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif'"
-               class="navbar-brand" href="/Dashboard.aspx">GarmentsPro</a>
+               class="navbar-brand" href="Dashboard.aspx">GarmentsPro</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -121,7 +124,7 @@
                             <li><a class="dropdown-item" href="#">
                                 <asp:Label ID="lblWelcome" ForeColor="Black" runat="server" Text=""></asp:Label></a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="Settings.aspx">Settings</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -139,6 +142,7 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
+    
     <footer id="sticky-footer" class="footer   text-end shadow border-1">
         <div class="container  ">
             <p style="font-size: 10px" class="mt-2">Copyright © 2022 Syslogicsolution | All Rights Reserved.</p>

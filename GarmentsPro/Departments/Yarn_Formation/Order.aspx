@@ -17,7 +17,7 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-            <div class="container" style="padding-top: 50px">
+            <div class="container" style="padding-top: 50px; font-size: small;">
                 <div class="row">
                     <center >
             <div class="col-md-12 align-content-center">
@@ -31,15 +31,15 @@
                          <asp:BoundField   DataField="Status" HeaderText="Order Status" />
                         <asp:TemplateField HeaderText="Set Start" HeaderStyle-BackColor="White">
                             <ItemTemplate>
-                                <asp:Button ID="btnstart" CommandName="Start"    CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-success btn-sm " Width="100px" runat="server" Text="Start" />
+                                <asp:Button ID="btnstart" CommandName="Start"  ControlStyle-Font-Size="Small"   CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-primary mb-3 mb-lg-0 " Width="100px" runat="server" Text="Start" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Put on Hold"   HeaderStyle-BackColor="White">
                             <ItemTemplate>
-                                <asp:Button ID="btnhold"  CommandName="Hold" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-warning btn-sm "   Width="100px" runat="server"  Text="Hold" />
+                                <asp:Button ID="btnhold"  CommandName="Hold" ControlStyle-Font-Size="Small" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-warning btn-sm "   Width="100px" runat="server"  Text="Hold" />
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Completed" HeaderStyle-BackColor="White">
+                        <asp:TemplateField HeaderText="Completed" ControlStyle-Font-Size="Small" HeaderStyle-BackColor="White">
                             <ItemTemplate>
                                 <asp:Button ID="btnfinish"  CommandName="Finish"   CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-primary btn-sm" Width="100px" runat="server"  Text="Finish" />
                             </ItemTemplate>

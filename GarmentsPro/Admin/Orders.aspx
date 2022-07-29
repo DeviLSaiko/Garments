@@ -9,37 +9,37 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-
-            <div class="card-body bg-white  ">
-                <div class="card-title  ">Order Summary</div>
-                <div class="container  shadow-sm  ">
+           
+            <div class="card-body">
+                 <p style="margin-left:100px;" class="card-title  mt-3">Order Summary</p>
+                <div class="container rounded pt-3  shadow-sm bg-white p-2 ">
                     <center>
-                <div class="row mt-3">
+                <div class="row ">
                     <div class="col-md-2">
-                        <asp:HyperLink ID="HyperLink1" class="btn btn-secondary   btn-sm" NavigateUrl="CreateOrder.aspx"  runat="server">Create Order</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" class="btn btn-secondary text-sm  btn-sm" NavigateUrl="CreateOrder.aspx"  runat="server">Create Order</asp:HyperLink>
                     </div>
                     <div class="col-md-6">
                          <div>
-                 <asp:DropDownList ID="ddSearch" CssClass="form-select-sm" Font-Size="Small" runat="server">
-                      <asp:ListItem Text="Client Name" Value="1"></asp:ListItem>
+                 <asp:DropDownList ID="ddSearch" CssClass="form-select-sm"   font-size="10px "   Height="25px"   runat="server">
+                      <asp:ListItem  Text="Client Name" Value="1"></asp:ListItem>
                 <asp:ListItem Text="Status" Value="2"></asp:ListItem>
                 <asp:ListItem Text="OrderType" Value="3"></asp:ListItem>
                  </asp:DropDownList> 
-            <asp:TextBox ID="txtSearch"  Height="30px" runat="server"></asp:TextBox>
-            <asp:Button ID="Button1" CssClass="btn btn-secondary btn-sm mb-1" OnClick="Button1_Click" font-size="small"  runat="server" Text="Search"></asp:Button>
+            <asp:TextBox ID="txtSearch"  Height="25px" runat="server"></asp:TextBox>
+            <asp:Button ID="Button1" CssClass="btn btn-secondary btn-sm " OnClick="Button1_Click" font-size="small"  runat="server" Text="Search"></asp:Button>
             </div>
                     </div>
                       <div class="col-md-4">
                           <div class="dropdown">
-  <button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-bs-toggle="dropdown">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Link 1</a></li>
-    <li><a class="dropdown-item" href="#">Link 2</a></li>
-    <li><a class="dropdown-item" href="#">Link 3</a></li>
-  </ul>
-</div>
+                              <button type="button"    class="btn btn-secondary dropdown-toggle btn-sm  align-items-md-center -end " data-bs-toggle="dropdown">
+                                Dropdown button
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                              </ul>
+                            </div>
                     </div>
                 </div>
                   </center>
@@ -47,12 +47,12 @@
                         <div class="col-sm-12">
 
                             <div class="align-content-center" style="font-weight: 400;">
-                                <div class="p-4   border-5 shadow-sm">
-                                    <div class="table-responsive border">
-                                        <table  ">
-                                            <asp:GridView ID="GridView1" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand" AllowPaging="true" PageSize="7" CssClass=" table " AutoGenerateColumns="false" runat="server">
+                                <div class="p-4   border-5  ">
+                                    <div class=" ">
+                                        <table>
+                                            <asp:GridView ID="GridView1" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound"
+                                                 OnRowCommand="GridView1_RowCommand" AllowPaging="true" PageSize="7" CssClass="table   " AutoGenerateColumns="false" runat="server">
                                                 <Columns>
-
                                                     <asp:TemplateField HeaderText=" ">
                                                         <ItemTemplate><%# Container.DataItemIndex + 1 %> </ItemTemplate>
                                                     </asp:TemplateField>

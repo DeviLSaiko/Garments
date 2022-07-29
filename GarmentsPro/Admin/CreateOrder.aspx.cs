@@ -70,7 +70,7 @@ namespace GarmentsPro.Admin
 
             MyCon.Close();
 
-            Response.Redirect("/admin/Orders/Orders.aspx");
+            Response.Redirect("/admin/Orders.aspx");
 
 
             txtClinet.Text = "";

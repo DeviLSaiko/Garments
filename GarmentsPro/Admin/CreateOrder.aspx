@@ -21,8 +21,8 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-            <div class="container mt-5 bg-white p-3 rounded-3   shadow-sm"  style="font-size:small  ">
-                <h3>Create New Order</h3>
+            <div class="container mt-3 bg-white p-3 rounded-3   shadow-sm"  style="font-size:small  ">
+                <h6 >Create New Order</h6>
                 <div class="row ">
                     <div class="col-md-4">
                         <label>Clinet Name</label>
@@ -77,7 +77,7 @@
                             runat="server"></asp:RequiredFieldValidator>
                         <br />
                     </div>
-                    <div class="col-md-4  mb-2">
+                    <div class="col-md-4  mb-1">
                         <div>
                             <label>Status</label>
                             <asp:DropDownList ID="DdStatus" CssClass="form-select"  Font-Size="Small" Height="34px" Width="270px" runat="server">
@@ -103,9 +103,9 @@
                   <div class="row mt-3">
                     <div class="col-sm-12">
                         <div style="text-align: right; font-size: smaller;">
-                            <asp:HyperLink ID="viewAll" NavigateUrl="~/Admin/Orders/Orders.aspx" CssClass="btn-sm btn" runat="server">View All Orders</asp:HyperLink>
+                            <asp:HyperLink ID="viewAll" NavigateUrl="~/Admin/Orders.aspx" CssClass="btn-sm btn-secondary text-decoration-none text-s  " runat="server">View All Orders</asp:HyperLink>
                         </div>
-                        <asp:GridView ID="GridView1" CssClass=" table  " HeaderStyle-BackColor="#808080" HeaderStyle-ForeColor="White" AutoGenerateColumns="false" runat="server">
+                        <asp:GridView ID="GridView1" CssClass=" table mt-1" HeaderStyle-BackColor="#808080" HeaderStyle-ForeColor="White" AutoGenerateColumns="false" runat="server">
                             <Columns>
                                 <asp:BoundField DataField="OID" HeaderText="ID" />
                                 <asp:BoundField DataField="OrderID" HeaderText="OrderID" />

@@ -21,7 +21,10 @@
         vertical-align: middle;
         
     }
-
+     body {
+            background-color: #f4f4f4;
+            font-size: small;
+        }
     
 
     </style>
@@ -32,7 +35,7 @@
         </asp:ScriptManager>
         <asp:UpdatePanel ID="updatepnl" runat="server">
             <ContentTemplate>
-                <div class="container mt-3 shadow-sm mt-4">
+                <div class="container mt-3 bg-white shadow-sm border-5  mt-4">
                     <h2>Update</h2>
                     <div class="row">
 
@@ -115,8 +118,8 @@
                     </div>
 
                     <div class="row">
-                              <div style="margin-left:20px">  <asp:Button ID="Button1" runat="server" OnClick="BtnCreate_Click" Text="Update Details" CssClass="btn btn-sm btn-secondary " Width="140px" Height="39px" />
-                         <button type="button" class="btn btn-danger" runat="server" style="width:auto; height:39px; margin-left:20px" id="btnModal" data-bs-toggle="modal" data-bs-target="#myModal">
+                              <div style="margin-left:20px">  <asp:Button ID="Button1" runat="server" OnClick="BtnCreate_Click" Text="Update Details" CssClass="btn btn-sm btn-secondary "   />
+                         <button type="button" class="btn btn-danger btn-sm" runat="server"   id="btnModal" data-bs-toggle="modal" data-bs-target="#myModal">
                                                Delete  
                                    
                                             </button>
@@ -124,23 +127,23 @@
                 </div>
                 <br />
                     </div>
-                 <div class="container mt-3 shadow-sm">
-                    <div class="row">
+                 <div class="container bg-white mt-3 border-5 shadow-sm">
+                    <div class="row p-2">
                         <div class="col-md-10">
-                            <h2>Order Info</h2>
+                            <h5 style="border-bottom: 1px solid  ; width:110px; ">Order Info</h5>
                             <center>
 
                                 <div class="align-content-center">
                                 <table>
-                                    <asp:GridView ID="GridView1" CssClass="table"   AutoGenerateColumns="false" runat="server">
+                                    <asp:GridView ID="GridView1" CssClass="table ps-4 ms-5"   AutoGenerateColumns="false" runat="server">
                                         <Columns>
-                                            <asp:BoundField DataField="OrderID"  HeaderText="Order ID" HeaderStyle-BackColor="WhiteSmoke" />
-                                            <asp:BoundField DataField="ClientName"  HeaderText="Client Name" HeaderStyle-BackColor="WhiteSmoke" />
-                                            <asp:BoundField DataField="OrderType" HeaderText="Order Type" HeaderStyle-BackColor="WhiteSmoke" />
-                                            <asp:BoundField DataField="Qty" HeaderText="Qty" HeaderStyle-BackColor="WhiteSmoke" />
-                                            <asp:BoundField DataField="ETA_Time" HeaderText="Deadline" HeaderStyle-BackColor="WhiteSmoke" />
-                                            <asp:BoundField DataField="Status" HeaderText="Status" HeaderStyle-BackColor="WhiteSmoke" />
-                                            <asp:BoundField DataField="Created_Date" HeaderText="Created On" HeaderStyle-BackColor="WhiteSmoke" />
+                                            <asp:BoundField DataField="OrderID"  HeaderText="Order ID"  />
+                                            <asp:BoundField DataField="ClientName"  HeaderText="Client Name"  />
+                                            <asp:BoundField DataField="OrderType" HeaderText="Order Type"  />
+                                            <asp:BoundField DataField="Qty" HeaderText="Qty"  />
+                                            <asp:BoundField DataField="ETA_Time" HeaderText="Deadline"  />
+                                            <asp:BoundField DataField="Status" HeaderText="Status"  />
+                                            <asp:BoundField DataField="Created_Date" HeaderText="Created On"  />
                                             
                                         </Columns>
                                     </asp:GridView>

@@ -75,6 +75,7 @@
     <Content Include="Admin\Accounts.aspx" />
     <Content Include="Admin\CreateAccount.aspx" />
     <Content Include="Admin\EditAccount.aspx" />
+    <Content Include="Admin\Settings.aspx" />
     <Content Include="Assets\Images\2.jpg" />
     <Content Include="Assets\Images\3.png" />
     <Content Include="Assets\Images\Admin.svg" />
@@ -197,6 +198,13 @@
     </Compile>
     <Compile Include="Admin\EditAccount.aspx.designer.cs">
       <DependentUpon>EditAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
     </Compile>
     <Compile Include="Departments\Fabrication\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

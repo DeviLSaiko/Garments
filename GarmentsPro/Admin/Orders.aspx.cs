@@ -150,7 +150,7 @@ namespace GarmentsPro.Admin
                 if (Col_Status == "Cancelled")
                 {
                     btnCancel.Text = "Cancelled";
-                    btnCancel.CssClass = "text-danger btn btn-sm";
+                    btnCancel.CssClass = "text-danger btn btn-sm disabled";
 
                 }
                  
