@@ -54,7 +54,7 @@
         }
 
         body {
-            background-color: #f4f4f4;
+          
             font-size: small;
         }
 
@@ -73,15 +73,15 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-<%--    <div class="p-1 bg-opacity-75 text-white " style="background-color:cornflowerblue;  ">
+    <div class="p-1 bg-opacity-75 text-white " style="background-color:cornflowerblue;  ">
         <div class="ps-4">
             <h3>Finished Goods</h3>
             <p>Department</p>
         </div>
-    </div>--%>
+    </div>
     <!-- Header -->
        <!-- Header -->
-    <nav class="navbar navbar-expand-sm bg-white s  text-black  navbar-light border shadow-sm  ">
+     <nav class="navbar navbar-expand-sm bg-dark  s  text-black  navbar-dark   shadow-sm  " >
         <div class="container ">
 
             <a style="font-family: 'Open Sans'S'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
@@ -111,14 +111,14 @@
                     <!-- Notification Bell Icon -->
                     <li class="nav-item " >
                         <a class="nav-link" href="#">
-                            <i class="bi bi-bell " style="font-size:larger"></i>
+                            <i class="bi bi-bell " style="font-size:larger; color:white"></i>
                         </a>
                        
                     </li>
                       <!-- Profile Dp -->
                     <li class="nav-item dropdown slideIn">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            <img src="../Assets/Images/3.png" alt="Avatar Logo" role="button" style="width: 30px; height: 30px"
+                            <img src="../../Assets/Images/3.png" alt="Avatar Logo" role="button" style="width: 30px; height: 30px"
                                 data-bs-toggle="dropdown" aria-expanded="false" class="rounded-pill dropdown-toggle nav-item dropdown" /></a>
                         <ul class="dropdown-menu" id="DD" style="font-size: smaller">
                             <li><a class="dropdown-item" href="#">

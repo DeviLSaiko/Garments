@@ -31,7 +31,7 @@
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Completed" HeaderStyle-BackColor="White">
-                            <ItemTemplate>
+                            <ItemTemplate> <span class="badge bg-primary">Primary</span>
                                 <asp:Button ID="btnfinish"  CommandName="Finish"   ControlStyle-Font-Size="Small"   CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-primary btn-sm" Width="100px" runat="server"  Text="Finish" />
                             </ItemTemplate>
                         </asp:TemplateField>

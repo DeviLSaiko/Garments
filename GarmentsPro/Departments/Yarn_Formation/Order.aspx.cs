@@ -67,7 +67,7 @@ namespace Garments_Pro.Yarn_Formation
                 if (Col_Status == "2")
                 {
                     btnst.Text = "In Progress";
-                    btnst.CssClass = " text-success btn disabled fw-bold  ";
+                    btnst.CssClass = "text-success btn disabled fw-bold  ";
                     btnupdate.CssClass = "btn btn-warning btn-sm";
                 }
                 else if (Col_Status == "3")
@@ -78,8 +78,11 @@ namespace Garments_Pro.Yarn_Formation
                 }
                 else if (Col_Status == "1")
                 {
-                    btnupdate.Visible = false;
-                    btnDel.Visible = false;
+                    
+                    btnDel.CssClass = "text-dark   btn disabled fw-bold  ";
+
+                    btnupdate.Text = "on Hold";
+                    btnupdate.CssClass = "text-dark  btn disabled fw-bold  ";
                 }
                 else
                 {

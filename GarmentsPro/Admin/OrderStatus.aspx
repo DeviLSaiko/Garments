@@ -12,7 +12,7 @@
                 <div class="row ">
                     
                     <div class="col-md-4 bg-white shadow-sm p-2">
-                        <h6 style="border-bottom: 1px solid  ;   width:auto ">Current Status</h6>
+                        <h6  >Current Status</h6>
                         <div class="table-responsive">
 
                             <table class="table-hover     ">

@@ -52,7 +52,7 @@
         }
 
         body {
-            background-color: #f4f4f4;
+            
             font-size: small;
         }
 
@@ -72,20 +72,20 @@
     </article>
     <section>
     </section>
-    <%-- <div class="p-1 bg-opacity-75 text-white " style="background-color:darkgoldenrod">
+     <div class="p-1 bg-opacity-75 text-white " style="background-color:darkgoldenrod">
         <div class="ps-4">
             <h3>Fabrication</h3>
             <p>Department</p>
         </div>
-    </div>--%>
+    </div>
     <!-- Header -->
     <!-- Header -->
-    <nav class="navbar navbar-expand-sm bg-white s  text-black  navbar-light border shadow-sm  ">
+    <nav class="navbar navbar-expand-sm bg-dark  s  text-black  navbar-dark   shadow-sm  " >
         <div class="container ">
 
             <a style="font-family: 'Open Sans'S'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
      sans-serif'"
-                class="navbar-brand" href="/Dashboard.aspx">GarmentsPro</a>
+                class="navbar-brand" href="Dashboard.aspx">GarmentsPro</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -116,7 +116,7 @@
                     <!-- Profile Dp -->
                     <li class="nav-item dropdown slideIn">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            <img src="../Assets/Images/3.png" alt="Avatar Logo" role="button" style="width: 30px; height: 30px"
+                            <img src="../../Assets/Images/3.png"  alt="Avatar Logo" role="button" style="width: 30px; height: 30px"
                                 data-bs-toggle="dropdown" aria-expanded="false" class="rounded-pill dropdown-toggle nav-item dropdown" /></a>
                         <ul class="dropdown-menu" id="DD" style="font-size: smaller">
                             <li><a class="dropdown-item" href="#">

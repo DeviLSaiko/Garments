@@ -82,8 +82,14 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+         <div class="p-1 bg-opacity-75 text-white " style="background-color:  darkslategray">
+        <div class="ps-4">
+            <h3>Yarn Formation</h3>
+            <p>Department</p>
+        </div>
+    </div>
     <!-- Header -->
-    <nav class="navbar navbar-expand-sm bg-white s  text-black  navbar-light border shadow-sm  " >
+    <nav class="navbar navbar-expand-sm bg-dark  s  text-black  navbar-dark   shadow-sm  " >
         <div class="container ">
 
             <a style="font-family: 'Open Sans'S'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif'"
@@ -129,7 +135,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="/Admin/AdminLogin.aspx">Log out</a></li>
+                            <li><a class="dropdown-item" href="/Login.aspx">Log out</a></li>
                         </ul>
                     </li>
                 </ul>

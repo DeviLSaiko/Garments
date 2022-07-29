@@ -89,6 +89,14 @@
     <Content Include="DB\SQLQuery4.sql" />
     <Content Include="DB\SQLQuery6.sql" />
     <Content Include="DB\Status.sql" />
+    <Content Include="DB\Tables\2.sql" />
+    <Content Include="DB\Tables\3.sql" />
+    <Content Include="DB\Tables\4.sql" />
+    <Content Include="DB\Tables\5.sql" />
+    <Content Include="DB\Tables\6.sql" />
+    <Content Include="DB\Tables\7.sql" />
+    <Content Include="DB\Tables\a.sql" />
+    <Content Include="DB\Tables\sp.sql" />
     <Content Include="DB\Yarn_Formation.sql" />
     <Content Include="Departments\FabricFormation\Dashboard.aspx" />
     <Content Include="Departments\FabricFormation\Orders.aspx" />
