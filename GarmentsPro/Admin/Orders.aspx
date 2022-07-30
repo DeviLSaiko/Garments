@@ -22,7 +22,7 @@
                     <div class="col-md-6">
                      
                          <div>
-                 <asp:DropDownList ID="ddSearch" CssClass="form-select-sm"   font-size="14px "   Height="25px"   runat="server">
+                 <asp:DropDownList ID="ddSearch" CssClass="form-select-sm"   font-size="12px "   Height="25px"   runat="server">
                       <asp:ListItem  Text="Client Name" Value="1"></asp:ListItem>
                 <asp:ListItem Text="Status" Value="2"></asp:ListItem>
                 <asp:ListItem Text="OrderType" Value="3"></asp:ListItem>
@@ -34,7 +34,7 @@
                       <div class="col-md-4">
                           <div class="dropdown">
                               <button type="button"     class="btn btn-secondary dropdown-toggle btn-sm  align-items-md-center -end " data-bs-toggle="dropdown">
-                                Dropdown button
+                                Settings
                               </button>
                               <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Link 1</a></li>
