@@ -1,4 +1,4 @@
-# Garments
+# Garments Pro
 
 	Web based flow tracking application, real time production tracking and decision support system for leading Garment company. 
   Garment production is an organized activity consisting of sequential processes
