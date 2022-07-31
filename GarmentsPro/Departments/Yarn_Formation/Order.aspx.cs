@@ -74,7 +74,7 @@ namespace Garments_Pro.Yarn_Formation
                 {
                     btnupdate.Text = "on Hold";
                     btnupdate.CssClass = "text-danger btn disabled fw-bold  ";
-                    btnDel.Visible = false;
+                    btnDel.CssClass = "text-dark  btn disabled fw-bold  ";
                 }
                 else if (Col_Status == "1")
                 {

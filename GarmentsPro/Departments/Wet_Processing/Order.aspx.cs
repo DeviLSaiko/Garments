@@ -71,19 +71,27 @@ namespace GarmentsPro.Departments.Wet_Processing
                 if (Col_Status == "2")
                 {
                     btnst.Text = "In Progress";
-                    btnst.CssClass = "text-success btn";
+                    btnst.CssClass = "text-success btn disabled fw-bold  ";
+                    btnupdate.CssClass = "btn btn-warning btn-sm";
                 }
                 else if (Col_Status == "3")
                 {
                     btnupdate.Text = "on Hold";
-                    btnupdate.CssClass = "text-danger btn";
-                    btnDel.Visible = false;
+                    btnupdate.CssClass = "text-danger btn disabled fw-bold  ";
+                    btnDel.CssClass = "text-dark  btn disabled fw-bold  ";
+                }
+                else if (Col_Status == "1")
+                {
+
+                    btnDel.CssClass = "text-dark   btn disabled fw-bold  ";
+
+                    btnupdate.Text = "on Hold";
+                    btnupdate.CssClass = "text-dark  btn disabled fw-bold  ";
                 }
                 else
                 {
                     e.Row.Cells[7].FindControl("btnfinish").Visible = false;
                 }
-
             }
         }
 

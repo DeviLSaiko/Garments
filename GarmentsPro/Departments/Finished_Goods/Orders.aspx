@@ -27,14 +27,16 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Put on Hold"   HeaderStyle-BackColor="White">
                             <ItemTemplate>
+                                 
                                 <asp:Button ID="btnhold"  CommandName="Hold"  ControlStyle-Font-Size="Small"  CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-warning btn-sm" Width="100px" runat="server"  Text="Hold" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Completed" HeaderStyle-BackColor="White">
-                            <ItemTemplate> <span class="badge bg-primary">Primary</span>
+                            <ItemTemplate > 
                                 <asp:Button ID="btnfinish"  CommandName="Finish"   ControlStyle-Font-Size="Small"   CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-primary btn-sm" Width="100px" runat="server"  Text="Finish" />
                             </ItemTemplate>
                         </asp:TemplateField>
+                           
                     </Columns>
                 </asp:GridView>
                 <asp:Label runat="server" ID="txtError" Text=""></asp:Label>

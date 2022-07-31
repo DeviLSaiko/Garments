@@ -82,7 +82,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-         <div class="p-1 bg-opacity-75 text-white " style="background-color:  darkslategray">
+         <div class="p-1 bg-opacity-75 text-white " style="background-color:   darkturquoise">
         <div class="ps-4">
             <h3>Yarn Formation</h3>
             <p>Department</p>
