@@ -9,7 +9,6 @@ namespace GarmentsPro.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
                 LoadOrder();
@@ -24,7 +23,6 @@ namespace GarmentsPro.Admin
         private void LoadOrder()
         {
             DataTable MT = new DataTable();
-
             SqlConnection MyCon = new SqlConnection(MyConnection());
             SqlDataAdapter MA = new SqlDataAdapter("Select top (5) * from Orders ORDER BY OId DESC", MyCon);
             MA.Fill(MT);
@@ -32,14 +30,11 @@ namespace GarmentsPro.Admin
             GridView1.DataSource = MT;
             GridView1.DataBind();
 
-
             if (MT.Rows.Count == 0)
             {
                 txtError.Text = "No Record Found";
             }
-
         }
-
         protected void BtnCreate_Click1(object sender, EventArgs e)
         {
             SqlConnection MyCon = new SqlConnection(MyConnection());
@@ -47,6 +42,7 @@ namespace GarmentsPro.Admin
 
             SqlCommand MyCmd = new SqlCommand("InsertOrder", MyCon);
             MyCmd.CommandType = CommandType.StoredProcedure;
+
             MyCmd.Parameters.AddWithValue("@ClientName", txtClinet.Text);
             MyCmd.Parameters.AddWithValue("@OrderType", ddType.SelectedValue);
             MyCmd.Parameters.AddWithValue("@Qty", txtQty.Text);
@@ -54,13 +50,15 @@ namespace GarmentsPro.Admin
             MyCmd.Parameters.AddWithValue("@Status", DdStatus.SelectedValue);
             MyCmd.ExecuteNonQuery();
 
-            string MyQOS = "Insert into OrderStatus (OrderID,Current_Department, Status) values ( 'ORD' + (select replace(convert(varchar, getdate(), 103), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  ),@FF,@WP)";
+            string MyQOS = "Insert into OrderStatus (OrderID,Current_Department, Status) values ( 'ORD' + (select replace(convert(varchar, getdate(), 103), '/', '') " +
+                          " + replace(convert(varchar,getdate(), 108), ':', '')  ),@FF,@WP)";
             SqlCommand MyCmdOS = new SqlCommand(MyQOS, MyCon);
             MyCmdOS.Parameters.AddWithValue("@FF", "1");
             MyCmdOS.Parameters.AddWithValue("@WP", DdStatus.SelectedValue);
             MyCmdOS.ExecuteNonQuery();
 
-            string MyQH = "Insert into OrderHistory (OrderID,Current_Department, Status ,Remarks) values ( 'ORD' + (select replace(convert(varchar, getdate(), 103), '/', '') + replace(convert(varchar,getdate(), 108), ':', '')  ),@FF,@WP ,@Remarks)";
+            string MyQH = "Insert into OrderHistory (OrderID,Current_Department, Status ,Remarks) values ( 'ORD' + (select replace(convert(varchar, getdate(), 103), '/', '') " +
+                         " + replace(convert(varchar,getdate(), 108), ':', '')  ),@FF,@WP ,@Remarks)";
             SqlCommand MyCmd1 = new SqlCommand(MyQH, MyCon);
             MyCmd1.Parameters.AddWithValue("@FF", "1");
             MyCmd1.Parameters.AddWithValue("@WP", DdStatus.SelectedValue);

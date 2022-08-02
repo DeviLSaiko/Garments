@@ -138,7 +138,7 @@ namespace GarmentsPro.Admin
             SqlDataAdapter myada = new SqlDataAdapter(MyQ, Sqlconnection);
             myada.Fill(MyTable);
 
-            // e.Row.Cells[4].Visible = false;
+            // e.Row.Cells[4].Visible = false;  
 
             if (e.Row.RowType == DataControlRowType.DataRow)
             {

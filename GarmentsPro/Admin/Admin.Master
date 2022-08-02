@@ -69,7 +69,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="  bg-primary bg-opacity-75 text-white " style="height:89px;">
+    <div class="p-1 bg-opacity-75 text-white " style="background-color:   darkturquoise">
         <div class="ps-4">
             <h3>Production Engineer</h3>
             <p>Admin</p>
@@ -145,15 +145,6 @@
             <p style="font-size: 10px ; color:white" class="mt-2">Copyright © 2022 Syslogicsolution | All Rights Reserved.</p>
         </div>
     </footer>
-    <script>
-        //(function ($) {
-        //    var path = window.location.href;
-        //    $('ul li a').each(function () {
-        //        if (this.href === path) {
-        //            $(this).addClass('active');
-        //        }
-        //    });
-        //});
-    </script>
+ 
 </body>
 </html>

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+
 
 namespace GarmentsPro.Admin
 {
@@ -25,6 +21,7 @@ namespace GarmentsPro.Admin
         private void LoadUsers()
         {
             DataTable MyTable = new DataTable();
+
             string MYQ = "select  OrderID, ClientName, OrderType, Qty, ETA_Time, Created_Date, Status from Orders where OrderID=@ID";
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
@@ -36,7 +33,7 @@ namespace GarmentsPro.Admin
             GridView1.DataSource = MyTable;
             GridView1.DataBind();
 
-            if (MyTable.Rows.Count >0)
+            if (MyTable.Rows.Count > 0)
             {
                 txtOrderID.Text = MyTable.Rows[0]["OrderID"].ToString();
                 txtClinet.Text = MyTable.Rows[0]["ClientName"].ToString();
@@ -50,7 +47,6 @@ namespace GarmentsPro.Admin
                 Response.Redirect("~/Dashboard.aspx");
             }
         }
-
         protected void BtnCreate_Click(object sender, EventArgs e)
         {
             SqlConnection MyCon = new SqlConnection(MyConnection());
@@ -59,7 +55,7 @@ namespace GarmentsPro.Admin
 
             MyCon.Open();
             MyCmd.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
-           
+
             MyCmd.Parameters.AddWithValue("@CN", txtClinet.Text);
             MyCmd.Parameters.AddWithValue("@OType", ddType.SelectedValue);
             MyCmd.Parameters.AddWithValue("@Qty", txtQty.Text);
@@ -71,25 +67,19 @@ namespace GarmentsPro.Admin
             LoadUsers();
             MyCon.Close();
         }
-
         protected void BtnDel_Click1(object sender, EventArgs e)
         {
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
                 Sqlconnection.Open();
-
                 string MyQ = "Delete from Orders where OrderID=@ID";
                 SqlCommand MyCmd = new SqlCommand(MyQ, Sqlconnection);
                 MyCmd.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
                 MyCmd.ExecuteNonQuery();
-
                 Sqlconnection.Close();
                 Response.Redirect("~/Admin/Orders.aspx");
-
             }
             LoadUsers();
         }
-
-       
     }
 }

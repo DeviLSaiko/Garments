@@ -213,14 +213,13 @@ select * from Orders
 Select * from OrderStatus
 select * from OrderHistory
 
-SELECT 
-     Count(CASE WHEN Status='1'  and Current_Department='2' THEN 2 ELSE 3 END) AS  Table1 ,
-	 Count(CASE WHEN Status IS NOT NULL THEN 1 ELSE 0 END) AS B ,
+SELECT Count(CASE WHEN Status='1'  and Current_Department='2' THEN 2 ELSE 3 END) AS  Table1 , Count(CASE WHEN Status IS NOT NULL THEN 1 ELSE 0 END) AS B ,
 	 Count(CASE WHEN Status IS NOT NULL THEN 1 ELSE 0 END) AS C
 FROM OrderStatus  
 
 
 SELECT COUNT(Status),Status FROM OrderStatus GROUP BY  Status
+
 Select * from OrderStatus
 
 

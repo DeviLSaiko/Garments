@@ -29,9 +29,9 @@
 
 
     
-      <style>
+          <style>
         #dp {
-            width: 48px !important;
+            width:   !important;
         }
 
         hr {
@@ -57,7 +57,7 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: white;
+            background-color:  black;
             height: 30px;
             font-size: 14px;
         }
@@ -69,12 +69,11 @@
 
         DD {
             width: 22px;
-
         }
-     
-
+         
 
     </style>
+
 
 
 
@@ -152,9 +151,9 @@
         </div>
     </form>
 
-    <footer id="sticky-footer" class="footer   text-end shadow border-1">
+   <footer id="sticky-footer" class="footer   text-end shadow border-1">
         <div class="container  ">
-            <p style="font-size: 10px" class="mt-2">Copyright © 2022 Syslogicsolution | All Rights Reserved.</p>
+            <p style="font-size: 10px ; color:white" class="mt-2">Copyright © 2022 Syslogicsolution | All Rights Reserved.</p>
         </div>
     </footer>
 </body>

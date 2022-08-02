@@ -116,7 +116,6 @@ namespace Garments_Pro.Departments.Fabrication
                     btnhold.CssClass = "disabled ";
                     btnFinish.Visible = true;
 
-
                     string MyQa = "Update OrderStatus SET Status=@Status where OrderID=@ID ";
                     SqlCommand MyCmd = new SqlCommand(MyQa, Sqlconnection);
                     Sqlconnection.Open();
@@ -124,7 +123,6 @@ namespace Garments_Pro.Departments.Fabrication
                     MyCmd.Parameters.AddWithValue("@Status", "2");
                     MyCmd.ExecuteNonQuery();
                     Sqlconnection.Close();
-
 
                     string MyQIn = "insert into OrderHistory (OrderID,Current_Department,Status,Remarks) Values (@ID,@CurntDep,@Status,@Remarks)";
                     SqlCommand MyCmdda = new SqlCommand(MyQIn, Sqlconnection);
@@ -135,8 +133,6 @@ namespace Garments_Pro.Departments.Fabrication
                     MyCmdda.Parameters.AddWithValue("@Remarks", "-");
                     MyCmdda.ExecuteNonQuery();
                     Sqlconnection.Close();
-
-
 
                     break;
 
