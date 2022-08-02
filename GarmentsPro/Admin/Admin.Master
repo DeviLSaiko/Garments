@@ -37,7 +37,7 @@
     <nav class="navbar navbar-expand-sm bg-white  text-black  navbar-light shadow-sm  ">
         <div class="container ">
             <a style="font-family: 'Open Sans'S'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif'"
-                class="navbar-brand" href="Dashboard.aspx">Garments+</a>
+                class="navbar-brand" href="Dashboard.aspx">GarmentsPro</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>

@@ -11,7 +11,17 @@ namespace GarmentsPro.Departments.Wet_Processing
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string Txt = "";
 
+            if (Convert.ToString(Session["Department"]) == "Admin" || Convert.ToString(Session["Department"]) == "Wet Processing")
+            {
+                lblWelcome.Text = Txt + (Session["Name"].ToString());
+                Label1.Text = Txt + (Session["Department"].ToString());
+            }
+            else
+            {
+                Response.Redirect("/Login.aspx");
+            }
         }
     }
 }

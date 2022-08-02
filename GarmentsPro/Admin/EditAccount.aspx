@@ -1,81 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="EditAccount.aspx.cs" Inherits="GarmentsPro.Admin.EditAccount" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-     <asp:ScriptManager ID="scriptmanager1" runat="server">
-        </asp:ScriptManager>
-        <asp:UpdatePanel ID="updatepnl" runat="server">
-            <ContentTemplate>
-                <div class="container mt-5">
-                    <div class="row">
- 
-                        <div class="col-md-6">
-                            <h2>Delete</h2>
-                            <div class="align-content-center">
-                                <table>
-                                    <asp:GridView ID="GridView1" CssClass="table" AutoGenerateColumns="false" runat="server">
-                                        <Columns>
-                                            <asp:BoundField DataField="UID" HeaderText="ID" HeaderStyle-BackColor="WhiteSmoke" />
-                                            <asp:BoundField DataField="Name" HeaderText="Name" HeaderStyle-BackColor="WhiteSmoke" />
-                                            <asp:BoundField DataField="Username" HeaderText="Username" HeaderStyle-BackColor="WhiteSmoke" />
-                                            <asp:BoundField DataField="Password" HeaderText="Password" HeaderStyle-BackColor="WhiteSmoke" />
-                                            <asp:BoundField DataField="Department" HeaderText="Department" HeaderStyle-BackColor="WhiteSmoke" />
-                                        </Columns>
-                                    </asp:GridView>
-                                </table>
-                            </div>
-                            <span>
-                                <tr>
-                                    <td>
-                                        <td>&nbsp;</td>
-                                        <td>
-                                            <!-- The Modal -->
-                                            <button type="button" class="btn btn-danger" runat="server" id="btnModal" data-bs-toggle="modal" data-bs-target="#myModal">
-                                                Delete User
-  
-                                            </button>
+    <asp:ScriptManager ID="scriptmanager1" runat="server">
+    </asp:ScriptManager>
+    <asp:UpdatePanel ID="updatepnl" runat="server">
+        <ContentTemplate>
 
-                                            <div class="modal" id="myModal"> 
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <!-- Modal Header -->
+            <div class="container mt-4">
 
+                <div class="card-body bg-white">
 
-                                                        <div class="modal-header">
-                                                            <h4 class="modal-title">Confirm</h4>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                        </div>
-
-
-                                                        <!-- Modal body -->
-                                                        <div class="modal-body">
-                                                            <center>
-                         
-              <h6>Do You Want To Delete This User ?</h6>
-          </center>
-                                                        </div>
-                                                        <!-- Modal footer -->
-                                                        <div class="modal-footer">
-                                                            <asp:Button ID="BtnDel" CssClass="btn btn-danger" runat="server" Text="Delete" OnClick="BtnDel_Click1" Width="79px"></asp:Button>
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- The Modal -->
-                                        </td>
-                                        <td></td>
-                                </tr>
-                            </span>
-                        </div>
-
-                    </div>
-
-                </div>
-                <br />
-
-                <div class="container">
                     <h2>Update</h2>
                     <div class="row">
                         <div class="col-md-4">
@@ -126,18 +63,85 @@
                             <br />
                         </div>
                         <div class="col-md-4">
-                            <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Update Details" CssClass="btn btn-dark" Width="207px" Height="39px" />
                         </div>
                     </div>
-                    <div class="d-grid">
+
+
+                    <div class="row">
+                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Update Details" CssClass="btn btn-dark" Width="207px" Height="39px" />
+
+                        <button type="button" class="btn btn-danger ms-2 " style="width: auto;" runat="server" id="btnModal" data-bs-toggle="modal" data-bs-target="#myModal">
+                            Delete User
+  
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="container mt-5 bg-white">
+
+                    <div class="row">
+                        <div class="card-body ">
+
+                            <div class="col-md-10 ">
+                                <h2>User Info</h2>
+                                <div class="align-content-center">
+                                    <table>
+                                        <asp:GridView ID="GridView1" CssClass="table" AutoGenerateColumns="false" runat="server">
+                                            <Columns>
+                                                <asp:BoundField DataField="UID" HeaderText="ID" HeaderStyle-BackColor="WhiteSmoke" />
+                                                <asp:BoundField DataField="Name" HeaderText="Name" HeaderStyle-BackColor="WhiteSmoke" />
+                                                <asp:BoundField DataField="Username" HeaderText="Username" HeaderStyle-BackColor="WhiteSmoke" />
+                                                <asp:BoundField DataField="Password" HeaderText="Password" HeaderStyle-BackColor="WhiteSmoke" />
+                                                <asp:BoundField DataField="Department" HeaderText="Department" HeaderStyle-BackColor="WhiteSmoke" />
+                                            </Columns>
+                                        </asp:GridView>
+                                    </table>
+                                </div>
+
+
+
+                                <!-- The Modal -->
+
+
+                                <div class="modal" id="myModal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+
+
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Confirm</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+
+
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <center>
+                         
+              <h6>Do You Want To Delete This User ?</h6>
+          </center>
+                                            </div>
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer">
+                                                <asp:Button ID="BtnDel" CssClass="btn btn-danger" runat="server" Text="Delete" OnClick="BtnDel_Click1" Width="79px"></asp:Button>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- The Modal -->
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-        </div>
-            </ContentTemplate>
-        </asp:UpdatePanel>
-
-
-
-
+                <br />
+            </div>
+            </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
 </asp:Content>

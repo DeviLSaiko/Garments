@@ -16,7 +16,7 @@
     <link href="../../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../../Assets/SweetAlert/sweetalert.min.js"></script>
     <link href="../../Assets/font-awesome.min.css" rel="stylesheet" />
-
+    <link href="../../Admin/Admin.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
@@ -81,66 +81,55 @@
             <p>Department</p>
         </div>
     </div>
-    <!-- Header -->
        <!-- Header -->
-      <nav class="navbar navbar-expand-sm bg-dark  s  text-black  navbar-dark   shadow-sm  " >
+     <nav class="navbar navbar-expand-sm bg-white  text-black  navbar-light shadow-sm  ">
         <div class="container ">
-
-            <a style="font-family: 'Open Sans'S'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-     sans-serif'"
-                class="navbar-brand" href="Dashboard.aspx">GarmentsPro</a>
+            <a style="font-family: 'Open Sans'S'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif'"
+                class="navbar-brand" href="Dashboard.aspx">Garments+</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="collapsibleNavbar">
-                   <ul class="navbar-nav ">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="Dashboard.aspx">Dashboard</a>
-
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="Order.aspx">Orders
-                        </a>
-
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">Clients
-                        </a>
-
-                    </li>
-                </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <!-- Notification Bell Icon -->
-                    <li class="nav-item " >
-                        <a class="nav-link" href="#">
-                            <i class="bi bi-bell " style="font-size:larger"></i>
-                        </a>
-                       
-                    </li>
-                      <!-- Profile Dp -->
+                    <li class="nav-item "><a class="nav-link" href="#"><i class="bi bi-bell " style="font-size: larger"></i></a></li>
+                    <!-- Profile Dp -->
                     <li class="nav-item dropdown slideIn">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                           <img src="../../Assets/Images/3.png" alt="Avatar Logo" role="button" style="width: 30px; height: 30px"
+                            <img src="../../Assets/Images/3.png" alt="Avatar Logo" role="button" style="width: 30px; height: 30px"
                                 data-bs-toggle="dropdown" aria-expanded="false" class="rounded-pill dropdown-toggle nav-item dropdown" /></a>
-                        <ul class="dropdown-menu" id="DD" style="font-size: smaller">
-                            <li><a class="dropdown-item" href="#">
-                                <asp:Label ID="lblWelcome" ForeColor="Black" runat="server" Text=""></asp:Label></a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
+                        <ul class="dropdown-menu" id="DD" style="font-size: small">
+                            <li class="dropdown-header">
+                                <center>
+                                     <h6><asp:Label ID="lblWelcome" ForeColor="Black" runat="server" Text=""></asp:Label></h6>
+                                <span><asp:Label ID="Label1" ForeColor="Black" runat="server" Text="Admin"></asp:Label></span>
+                                </center>
+                               
                             </li>
-                            <li><a class="dropdown-item" href="/Admin/AdminLogin.aspx">Log out</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="Settings.aspx">Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/Login.aspx">Log out</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Header -->
 
+    <!-- SideBar -->
+       <aside id="side" class="sidebar">
+        <ul class="sidebar-nav" id="sidebar-nav">
+            <li class="nav-item"><a class="nav-link collapsed" href="Dashboard.aspx"><i class="bi bi-grid"></i><span>Dashboard</span> </a></li>
+            <li class="nav-item"><a class="nav-link collapsed" href="Order.aspx"><i class="bi bi-list-columns-reverse"></i><span>Orders</span> </a></li>
+            <li class="nav-item"><a class="nav-link collapsed" href="Accounts.aspx"><i class="bi bi-person"></i><span>Messages</span> </a></li>
+            
+        </ul>
+    </aside>
+
+     <!-- Main -->
     <form id="form1" runat="server">
-        <div>
+        <div id="con">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

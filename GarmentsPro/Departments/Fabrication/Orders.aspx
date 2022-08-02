@@ -8,8 +8,10 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-            <div class="container" style="padding-top: 50px">
-                <div class="row">
+            <div class="container" >
+                 <div class="card-body mt-4  rounded  shadow-sm bg-white p-3 " >
+
+                         <div class="row">
                     <center>
             <div class="col-md-12 align-content-center">
                 <asp:GridView ID="GridView1" CssClass=" table table-responsive "  HeaderStyle-CssClass="align-content-center" OnRowDataBound="GridView1_RowDataBound" OnRowCommand= "GridView1_RowCommand1" AutoGenerateColumns="False" runat="server">
@@ -40,6 +42,9 @@
                 <asp:Label runat="server" ID="txtError" Text=""></asp:Label>
             </div>
                 </div>
+
+                 </div>
+            
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>

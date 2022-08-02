@@ -3,8 +3,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    Truncate Tables
+    <div class="container">
+        Delete Tables Data
+        <asp:Button ID="Button1" runat="server" CssClass="btn btn-info " OnClick="Button1_Click" Text="Clean" />
+    </div>
+   
 
-    <asp:Button ID="Button1" runat="server" CssClass="btn btn-info " OnClick="Button1_Click" Text="Clean" />
+    
        
 </asp:Content>

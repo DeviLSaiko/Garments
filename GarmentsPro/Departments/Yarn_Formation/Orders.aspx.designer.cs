@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Garments_Pro.Yarn_Formation {
+namespace GarmentsPro.Departments.Yarn_Formation {
     
     
-    public partial class Order {
+    public partial class Orders {
         
         /// <summary>
         /// scriptmanager1 control.

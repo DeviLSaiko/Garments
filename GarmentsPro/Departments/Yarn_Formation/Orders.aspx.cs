@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Garments_Pro.Yarn_Formation
+namespace GarmentsPro.Departments.Yarn_Formation
 {
-    public partial class Order : Page
+    public partial class Orders : System.Web.UI.Page
     {
         string Con = @"Data Source=.;Initial Catalog=GarmentsPro;Integrated Security=SSPI";
 
@@ -47,7 +50,7 @@ namespace Garments_Pro.Yarn_Formation
 
             SqlConnection Sqlconnection = new SqlConnection(Con);
 
-            string MyQ = " Select a.OrderID , ClientName , OrderType , Qty ,Eta_Time as Deadline , b.Status as Status  , b.Current_Department from Orders a join "+
+            string MyQ = " Select a.OrderID , ClientName , OrderType , Qty ,Eta_Time as Deadline , b.Status as Status  , b.Current_Department from Orders a join " +
                 "OrderStatus b on a.OrderID = b.OrderID   where b.Status != '4' and b.Status != '5' and b.Current_Department = '1'";
 
             SqlDataAdapter myada = new SqlDataAdapter(MyQ, Sqlconnection);
@@ -78,7 +81,7 @@ namespace Garments_Pro.Yarn_Formation
                 }
                 else if (Col_Status == "1")
                 {
-                    
+
                     btnDel.CssClass = "text-dark   btn disabled fw-bold  ";
 
                     btnupdate.Text = "on Hold";
@@ -106,7 +109,7 @@ namespace Garments_Pro.Yarn_Formation
             {
                 case "Start":
 
-                    btnstart.Text = "In progress";   
+                    btnstart.Text = "In progress";
                     btnhold.Text = "Hold";
                     btnhold.CssClass = "btn btn-warning";
                     btnFinish.Visible = true;

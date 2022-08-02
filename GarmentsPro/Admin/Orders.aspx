@@ -9,9 +9,17 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
+            <div class="pagetitle mt-1">
+              <h4>Orders</h4
+            <nav>
+               <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a  style="text-decoration:none;"  href="Orders.aspx">Home</a></li>
+                  <li class="breadcrumb-item active">Orders</li>
+               </ol>
+            </nav>
+         </div>
            
-           
-                <div class="container mt-5">
+                <div class="container mt-1">
                    
                      <center>
 
@@ -50,7 +58,7 @@
 
                      <div class="card-body">
                          
-                <div class="container rounded pt-3  shadow-sm bg-white p-1 ">
+                <div class="container  rounded-3 pt-3  shadow-sm bg-white p-1 ">
                     <div class="row">
                         <div class="col-sm-12">
 

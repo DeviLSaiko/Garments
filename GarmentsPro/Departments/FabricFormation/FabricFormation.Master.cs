@@ -11,16 +11,17 @@ namespace GarmentsPro.Departments.FabricFormation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //string Txt = "Hello! ";
+            string Txt = "";
 
-            //if (Session["UserName"] != null)
-            //{
-            //    lblWelcome.Text = Txt + (Session["UserName"].ToString());
-            //}
-            //else
-            //{
-            //    Response.Redirect("/Login.aspx");
-            //}
+            if (Convert.ToString(Session["Department"]) == "Admin" || Convert.ToString(Session["Department"]) == "Fabric Formation")
+            {
+                lblWelcome.Text = Txt + (Session["Name"].ToString());
+                Label1.Text = Txt + (Session["Department"].ToString());
+            }
+            else
+            {
+                Response.Redirect("/Login.aspx");
+            }
         }
     }
 }

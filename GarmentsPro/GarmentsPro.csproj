@@ -104,6 +104,7 @@
     <Content Include="Departments\Wet_Processing\Dashboard.aspx" />
     <Content Include="Departments\Wet_Processing\Order.aspx" />
     <Content Include="Departments\Yarn_Formation\Dashboard.aspx" />
+    <Content Include="Departments\Yarn_Formation\Orders.aspx" />
     <Content Include="Html\Dashboard.css" />
     <Content Include="Html\Dashboard.html" />
     <Content Include="Login.aspx" />
@@ -131,7 +132,6 @@
     <Content Include="Departments\Fabrication\Orders.aspx" />
     <Content Include="Departments\Finished_Goods\Dashboard.aspx" />
     <Content Include="Departments\Finished_Goods\Orders.aspx" />
-    <Content Include="Departments\Yarn_Formation\Order.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -306,12 +306,12 @@
     <Compile Include="Departments\Yarn_Formation\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Departments\Yarn_Formation\Order.aspx.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
+    <Compile Include="Departments\Yarn_Formation\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Departments\Yarn_Formation\Order.aspx.designer.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
+    <Compile Include="Departments\Yarn_Formation\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Departments\Yarn_Formation\YarnFormation.Master.cs">
       <DependentUpon>YarnFormation.Master</DependentUpon>

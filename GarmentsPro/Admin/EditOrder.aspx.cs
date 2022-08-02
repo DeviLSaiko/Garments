@@ -9,6 +9,7 @@ namespace GarmentsPro.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
                 LoadUsers();
@@ -41,6 +42,7 @@ namespace GarmentsPro.Admin
                 txtQty.Text = MyTable.Rows[0]["Qty"].ToString();
                 txtETA.Text = MyTable.Rows[0]["ETA_Time"].ToString();
                 DdStatus.Text = MyTable.Rows[0]["Status"].ToString();
+                lblWelcome.Text = MyTable.Rows[0]["OrderID"].ToString();
             }
             else
             {

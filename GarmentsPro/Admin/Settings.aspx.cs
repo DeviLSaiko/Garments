@@ -26,7 +26,7 @@ namespace GarmentsPro.Admin
             
             string queryf = "TRUNCATE TABLE OrderHistory ";
             SqlCommand cmds = new SqlCommand(queryf, mYcON);
-            cmd.ExecuteNonQuery();
+            cmds.ExecuteNonQuery();
 
             string queryc = "TRUNCATE TABLE OrderStatus ";
             SqlCommand cmdd = new SqlCommand(queryc, mYcON);
