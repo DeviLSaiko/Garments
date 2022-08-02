@@ -18,7 +18,7 @@ namespace GarmentsPro.Admin
 
                 LoadDep();
             }
-            LoadGrid();
+            //LoadGrid();
         }
         private string MyConnection()
         {
@@ -36,7 +36,7 @@ namespace GarmentsPro.Admin
             MyCmd.Parameters.AddWithValue("@P", txtPassword.Text);
             MyCmd.Parameters.AddWithValue("@D", ddDepartments.Text);
             MyCmd.ExecuteNonQuery();
-            LoadGrid();
+            //LoadGrid();
             MyCon.Close();
          
             txtName.Text = "";
@@ -50,7 +50,7 @@ namespace GarmentsPro.Admin
             DataTable MyTable = new DataTable();
             SqlConnection MyCon = new SqlConnection(MyConnection());
 
-            SqlDataAdapter MyAda = new SqlDataAdapter("ShowDepartments", MyCon);
+            SqlDataAdapter MyAda = new SqlDataAdapter("Select * from Departments", MyCon);
             MyAda.Fill(MyTable);
 
             ddDepartments.DataTextField = "DepName";
@@ -58,19 +58,19 @@ namespace GarmentsPro.Admin
             ddDepartments.DataSource = MyTable;
             ddDepartments.DataBind();
         }
-        private void LoadGrid()
-        {
-            DataTable MyTable = new DataTable();
+        //private void LoadGrid()
+        //{
+        //    //DataTable MyTable = new DataTable();
 
-            using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
-            {
-                SqlDataAdapter myada = new SqlDataAdapter("select UID,Name,UserName,Password,Department from UserInfo", Sqlconnection);
-                myada.Fill(MyTable);
-            }
-            GridView1.DataSource = MyTable;
-            GridView1.DataBind();
+        //    //using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
+        //    //{
+        //    //    SqlDataAdapter myada = new SqlDataAdapter("select UID,Name,UserName,Password,Department from UserInfo", Sqlconnection);
+        //    //    myada.Fill(MyTable);
+        //    //}
+        //    //GridView1.DataSource = MyTable;
+        //    //GridView1.DataBind();
 
-        }
+        //}
     }
 }
 

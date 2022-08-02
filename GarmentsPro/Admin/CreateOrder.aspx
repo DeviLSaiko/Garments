@@ -22,7 +22,15 @@
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
             <div class="container mt-3 bg-white p-3 rounded-3   shadow-sm"  style="font-size:small  ">
-                <h6 >Create New Order</h6>
+                <div class="pagetitle">
+            <h4>Create New Order</h4>
+            <nav>
+               <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a  style="text-decoration:none;"  href="Orders.aspx">Orders</a></li>
+                  <li class="breadcrumb-item active">CreateOrder</li>
+               </ol>
+            </nav>
+         </div>
                 <div class="row ">
                     <div class="col-md-4">
                         <label>Clinet Name</label>
@@ -102,9 +110,7 @@
              <div class="container bg-white ps-4 pe-4 pb-3 rounded-3   shadow-sm">
                   <div class="row mt-3">
                     <div class="col-sm-12">
-                        <div style="text-align: right; font-size: smaller;">
-                            <asp:HyperLink ID="viewAll" NavigateUrl="~/Admin/Orders.aspx" CssClass="btn-sm btn-secondary text-decoration-none text-s  " runat="server">View All Orders</asp:HyperLink>
-                        </div>
+                        
                         <asp:GridView ID="GridView1" CssClass=" table mt-1" HeaderStyle-BackColor="#808080" HeaderStyle-ForeColor="White" AutoGenerateColumns="false" runat="server">
                             <Columns>
                                 <asp:BoundField DataField="OID" HeaderText="ID" />

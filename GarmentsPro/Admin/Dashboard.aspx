@@ -28,8 +28,16 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container mt-4">
-        <div class="row mt-2">
-            <header style="padding-left: 22px;">Order Status</header>
+        <div class="row">
+            <div class="pagetitle">
+            <h6>Dashboard</h6>
+            <nav>
+               <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a  style="text-decoration:none;"  href="Dashboard.aspx">Home</a></li>
+                  <li class="breadcrumb-item active">Dashboard</li>
+               </ol>
+            </nav>
+         </div>
             <%-- Yarn Formation--%>
             <div class="col-md-3 text-light border shadow-sm  m-2   rounded" style="background-color: #ffffff; width: 350px; height: 142px;">
                 <div class="row mb-4  ">

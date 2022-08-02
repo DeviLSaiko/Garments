@@ -15,12 +15,24 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-            <div class="mt-5">
+             <div class="mt-2">
+            </div>
+             <div class="pagetitle">
+            <h4>Create New Account</h4>
+            <nav>
+               <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a  style="text-decoration:none;"  href="index.html">Accounts</a></li>
+                  <li class="breadcrumb-item active">CreateAccount</li>
+               </ol>
+            </nav>
+         </div>
+            <div class="mt-2">
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <label>Name</label>
+                    <div class="col-md-4  ">
+                        <div class="card-body bg-white rounded pt-3 PS-5 shadow-sm ">
+                                      <label>Name</label>
                         <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="300px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
                             ControlToValidate="txtName"
@@ -61,8 +73,11 @@
                             <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Create New Account" 
                                 CssClass="btn btn-dark" Width="207px" Height="39px" />
                         </div>
+                        </div>
+              
                     </div>
-                    <div class="col-md-8">
+                     
+                  <%--  <div class="col-md-8 card-body bg-white rounded pt-3  shadow-sm   p-2  ">
 
                         <table class="table-hover     ">
                             <asp:GridView ID="GridView1" HeaderStyle-BackColor="#808080" HeaderStyle-ForeColor="White"
@@ -82,7 +97,8 @@
                                 </Columns>
                             </asp:GridView>
                         </table>
-                    </div>
+                    </div>--%>
+                         
                 </div>
             </div>
         </ContentTemplate>

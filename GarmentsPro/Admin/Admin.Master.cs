@@ -13,9 +13,10 @@ namespace GarmentsPro.Admin
         {
             string Txt = "";
 
-            if ( Convert.ToString(Session["Department"]) == "Admin")
+            if (Convert.ToString(Session["Department"]) == "Admin")
             {
                 lblWelcome.Text = Txt + (Session["Name"].ToString());
+                Label1.Text = Txt + (Session["Department"].ToString());
             }
             else
             {

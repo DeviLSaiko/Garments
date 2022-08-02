@@ -50,7 +50,7 @@
 
                      <div class="card-body">
                          
-                <div class="container rounded pt-3  shadow-sm bg-white p-2 ">
+                <div class="container rounded pt-3  shadow-sm bg-white p-1 ">
                     <div class="row">
                         <div class="col-sm-12">
 
