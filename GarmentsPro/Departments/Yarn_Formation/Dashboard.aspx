@@ -4,7 +4,7 @@
     <style>
         label {
             color: black;
-            font-size: 10px;
+            font-size: 12px;
         }
     </style>
 </asp:Content>
@@ -12,7 +12,7 @@
     <div class="container-fluid mt-4 ">
         <div class="row mt-4">
             <%--Yet To Start--%>
-            <div class="col-md-3 text-light m-3 border shadow-sm   rounded" style="background-color: #ffffff;  height:110px;">
+            <div class="col-md-3 text-light m-1 border shadow-sm   rounded" style="background-color: #ffffff;  height:110px;">
                 <div class="row">
                     <div class="col-md-6">
                         <label>Yet to Start</label>
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <%-- In Progressing--%>
-            <div class="col-md-3 text-light border shadow-sm  m-3 rounded" style="background-color: #ffffff;  height: 110px;">
+            <div class="col-md-3 text-light border shadow-sm  m-1 rounded" style="background-color: #ffffff;  height: 110px;">
 
                 <div class="row">
                     <div class="col-md-6">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <%--On Hold--%>
-            <div class="col-md-3 text-light border shadow-sm  m-3 rounded" style="background-color: #ffffff;   height: 110px;">
+            <div class="col-md-3 text-light border shadow-sm  m-1 rounded" style="background-color: #ffffff;   height: 110px;">
                 <div class="row">
                     <div class="col-md-6">
                         <label>On Hold</label>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <%-- Finished --%>
-            <div class="col-md-3 text-light border shadow-sm  m-3 rounded" style="background-color: #ffffff;   height: 110px;">
+            <div class="col-md-3 text-light border shadow-sm  m-1 rounded" style="background-color: #ffffff;   height: 110px;">
                 <div class="row">
                     <div class="col-md-6">
                         <label>Finished</label>
@@ -61,7 +61,7 @@
                         <asp:Label ID="YAN4" runat="server" ForeColor="#996633" Font-Size="20px" CssClass="MyLable" Text="12"></asp:Label>
                     </div>
                     <div class="col-md-6">
-                        <i class="fa fa-flag   mt-4  " style="color: darkmagenta; font-size: 33px; padding-left: 24px;"></i>
+                        <i class="bi bi-check2-square   mt-4  " style="color: darkmagenta; font-size: 33px; padding-left: 24px;"></i>
                     </div>
                 </div>
             </div>

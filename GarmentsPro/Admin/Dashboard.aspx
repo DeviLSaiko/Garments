@@ -4,7 +4,7 @@
     <title>Dashboard</title>
     <style>
         label {
-            font-size: 10px;
+            font-size: 11px;
             color: black;
         }
 
@@ -23,6 +23,11 @@
         hr {
             width: 1000px;
         }
+
+
+        
+           
+         
        
     </style>
 </asp:Content>

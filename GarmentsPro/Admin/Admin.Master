@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Poppins:wght@200&display=swap" rel="stylesheet">
 
+    <link rel="shortcut icon" type="image/x-icon" href="../Assets/Images/Admin.svg" />
     <link href="../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../Assets/SweetAlert/sweetalert.min.js"></script>
     <link href="../Assets/font-awesome.min.css" rel="stylesheet" />

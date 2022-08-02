@@ -3,9 +3,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="container">
-        Delete Tables Data
-        <asp:Button ID="Button1" runat="server" CssClass="btn btn-info " OnClick="Button1_Click" Text="Clean" />
+    <div class="container mt-5">
+        <div class="row">
+          <label>
+               
+          </label> 
+            <div class="col-3">
+                  <asp:Button ID="Button1" runat="server" CssClass="btn btn-danger btn-sm " OnClick="Button1_Click" Text=" Turncate Tables" />
+            </div>
+      
+        </div>
+       
     </div>
    
 
