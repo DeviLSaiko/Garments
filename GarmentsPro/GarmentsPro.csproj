@@ -81,6 +81,7 @@
     <Content Include="Assets\Images\3.png" />
     <Content Include="Assets\Images\Admin.svg" />
     <Content Include="Assets\Images\Bg1.jpg" />
+    <Content Include="Assets\Images\login.png" />
     <Content Include="DB\Departments.sql" />
     <Content Include="DB\History.sql" />
     <Content Include="DB\InsertOrder.sql" />

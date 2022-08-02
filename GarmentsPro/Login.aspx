@@ -15,7 +15,7 @@
     <style>
         body {
             background-color: cornflowerblue;
-            background-image: url(/Assets/Images/Bg1.jpg);
+            background-image: url(/Assets/Images/login.png);
         }
 
         .MyCon {
