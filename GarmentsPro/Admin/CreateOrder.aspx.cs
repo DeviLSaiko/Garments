@@ -24,7 +24,7 @@ namespace GarmentsPro.Admin
         {
             DataTable MT = new DataTable();
             SqlConnection MyCon = new SqlConnection(MyConnection());
-            SqlDataAdapter MA = new SqlDataAdapter("Select top (5) * from Orders ORDER BY OId DESC", MyCon);
+            SqlDataAdapter MA = new SqlDataAdapter("Select top (3) * from Orders ORDER BY OId DESC", MyCon);
             MA.Fill(MT);
 
             GridView1.DataSource = MT;

@@ -23,19 +23,13 @@
         hr {
             width: 1000px;
         }
-
-
-        
-           
-         
-       
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container mt-4">
         <div class="row">
             <div class="pagetitle">
-            <h6>Dashboard</h6>
+            <h4>Dashboard</h4>
             <nav>
                <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a  style="text-decoration:none;"  href="Dashboard.aspx">Home</a></li>

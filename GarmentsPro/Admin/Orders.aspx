@@ -45,9 +45,10 @@
                                 Settings
                               </button>
                               <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                                <li><a class="dropdown-item" href="#">Order History</a></li>
+                                <li><a class="dropdown-item" href="#">Orders Status</a></li>
+                                <li><a class="dropdown-item" href="#">Cancelled Orders</a></li>
+                                  <li><a class="dropdown-item" href="#">Completed Orders</a></li>
                               </ul>
                             </div>
                     </div>
@@ -67,7 +68,7 @@
                                     <div class=" ">
                                         <table>
                                             <asp:GridView ID="GridView1" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound"
-                                                 OnRowCommand="GridView1_RowCommand" AllowPaging="true" PageSize="7" CssClass="table   " AutoGenerateColumns="false" runat="server">
+                                                 OnRowCommand="GridView1_RowCommand" AllowPaging="true" PageSize="5" CssClass="table   " AutoGenerateColumns="false" runat="server">
                                                 <Columns>
                                                     <asp:TemplateField HeaderText=" ">
                                                         <ItemTemplate><%# Container.DataItemIndex + 1 %> </ItemTemplate>

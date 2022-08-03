@@ -22,7 +22,7 @@
                          <asp:BoundField   DataField="Status" HeaderText="Order Status" />
                         <asp:TemplateField HeaderText="Set Start"  >
                             <ItemTemplate>
-                                <asp:Button ID="btnstart" CommandName="Start"  ControlStyle-Font-Size="Small"   CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-primary mb-3 mb-lg-0 " Width="100px" runat="server" Text="Start" />
+                                <asp:Button ID="btnstart" CommandName="Start"  ControlStyle-Font-Size="Small"   CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"  CssClass="btn btn-success btn-sm mb-3 mb-lg-0 " Width="100px" runat="server" Text="Start" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Put on Hold"  >

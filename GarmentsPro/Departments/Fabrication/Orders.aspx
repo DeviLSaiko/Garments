@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Fabrication</title>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
 
    <asp:ScriptManager ID="scriptmanager1" runat="server">
     </asp:ScriptManager>

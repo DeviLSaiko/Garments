@@ -77,6 +77,7 @@
     <Content Include="Admin\CreateAccount.aspx" />
     <Content Include="Admin\EditAccount.aspx" />
     <Content Include="Admin\Settings.aspx" />
+    <Content Include="Assets\Images\1.jpg" />
     <Content Include="Assets\Images\2.jpg" />
     <Content Include="Assets\Images\3.png" />
     <Content Include="Assets\Images\Admin.svg" />
@@ -100,6 +101,7 @@
     <Content Include="DB\Tables\a.sql" />
     <Content Include="DB\Tables\sp.sql" />
     <Content Include="DB\Yarn_Formation.sql" />
+    <Content Include="Departments\Departments.css" />
     <Content Include="Departments\FabricFormation\Dashboard.aspx" />
     <Content Include="Departments\FabricFormation\Orders.aspx" />
     <Content Include="Departments\Wet_Processing\Dashboard.aspx" />

@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Fabric Formation</title>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
      <asp:ScriptManager ID="scriptmanager1" runat="server">
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
@@ -13,7 +13,7 @@
                                              <div class="row">
                     <center>
             <div class="col-md-12 align-content-center">
-                <asp:GridView ID="GridView1" CssClass=" table table-responsive "  HeaderStyle-BackColor="#808080" HeaderStyle-ForeColor="White" OnRowDataBound="GridView1_RowDataBound" OnRowCommand= "GridView1_RowCommand1" AutoGenerateColumns="False" runat="server">
+                <asp:GridView ID="GridView1" CssClass=" table table-responsive "   OnRowDataBound="GridView1_RowDataBound" OnRowCommand= "GridView1_RowCommand1" AutoGenerateColumns="False" runat="server">
                     <Columns>
                         
                         <asp:BoundField DataField="OrderID" HeaderText="Order ID" />

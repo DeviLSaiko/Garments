@@ -12,6 +12,7 @@
     <link href="../Assets/Bootstrap/bootstrap.min5.css" rel="stylesheet" />
     <link href="../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../Assets/SweetAlert/sweetalert.min.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="../Assets/Images/Admin.svg" />
     <style>
         body {
             background-color:   whitesmoke;

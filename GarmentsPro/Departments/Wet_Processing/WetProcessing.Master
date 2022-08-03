@@ -7,7 +7,7 @@
 
     <title> Wet Processing</title>
      
-
+    <link href="../Departments.css" rel="stylesheet" />
            <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Poppins:wght@200&display=swap" rel="stylesheet">
@@ -19,53 +19,10 @@
     <link href="../../Admin/Admin.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../Assets/Images/1.jpg"  />
 
-
-    
-         <style>
-        #dp {
-            width:   !important;
-        }
-
-        hr {
-            width: 100%;
-            color: seashell;
-        }
-
-        nav {
-            height: 40px;
-            font-size: small;
-        }
-
-        html {
-            overflow-x: hidden;
-        }
-
-        #sticky-footer {
-            position: fixed;
-        }
-
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color:  black;
-            height: 30px;
-            font-size: 14px;
-        }
-
-        body {
-            background-color: #f4f4f4;
-            font-size: small;
-        }
-
-        DD {
-            width: 22px;
-        }
+     <link href="../Departments.css" rel="stylesheet" />
          
-
-    </style>
 
 
 

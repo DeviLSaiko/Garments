@@ -1,0 +1,51 @@
+﻿ 
+          <style>
+        #dp {
+            width:   !important;
+        }
+
+        hr {
+            width: 100%;
+            color: seashell;
+        }
+
+        nav {
+            height: 40px;
+            font-size: small;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+              #side {
+                  text-align: center;
+                  float: left;
+                  width: 15%;
+                  min-height: 80vh;
+              }
+        #sticky-footer {
+            position: fixed;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color:  black;
+            height: 30px;
+            font-size: 14px;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            font-size: small;
+        }
+
+        DD {
+            width: 22px;
+        }
+         
+
+    </style>

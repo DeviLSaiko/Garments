@@ -11,11 +11,13 @@
             <div class="container mt-3">
                 <div class="row ">
                     
-                    <div class="col-md-4 bg-white shadow-sm p-2">
+                    <div class="col-md-8 bg-white shadow-sm p-4">
                         <h6  >Current Status</h6>
                         <div class="table-responsive">
-
-                            <table class="table-hover     ">
+                            <div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 27%;" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100">27%</div>
+</div>
+                     <%--       <table class="table-hover     ">
                                 <asp:GridView ID="GvCutDep" CssClass=" table " HeaderStyle-ForeColor="White" HeaderStyle-BackColor="#808080" AutoGenerateColumns="false" runat="server">
                                     <Columns>
                                         <asp:TemplateField HeaderText=" ">
@@ -26,7 +28,7 @@
                                         <asp:BoundField DataField="Status" HeaderText="Status" />
                                     </Columns>
                                 </asp:GridView>
-                            </table>
+                            </table>--%>
 
                         </div>
 
@@ -34,7 +36,7 @@
                 </div>
                 <div class="container mt-3">
                 <div class="row">
-                    <div class="col-md-12 bg-white shadow-sm p-2 mt-3">
+                    <div class="col-md-10 bg-white shadow-sm p-2 mt-3">
                         <h6>Order History</h6>
                         <div class="table">
                             <table class="table-hover     ">

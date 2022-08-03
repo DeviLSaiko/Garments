@@ -84,7 +84,7 @@ namespace GarmentsPro.Departments.Yarn_Formation
 
                     btnDel.CssClass = "text-dark   btn disabled fw-bold  ";
 
-                    btnupdate.Text = "on Hold";
+                    btnupdate.Text = "Hold";
                     btnupdate.CssClass = "text-dark  btn disabled fw-bold  ";
                 }
                 else

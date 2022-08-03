@@ -33,8 +33,8 @@ namespace GarmentsPro.Admin
                 myada.SelectCommand.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
                 myada.Fill(MyTable);
             }
-            GvCutDep.DataSource = MyTable;
-            GvCutDep.DataBind();
+            //GvCutDep.DataSource = MyTable;
+            //GvCutDep.DataBind();
 
 
             if (MyTable.Rows.Count < 0)

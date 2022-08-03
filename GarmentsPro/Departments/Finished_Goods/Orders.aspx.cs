@@ -84,7 +84,7 @@ namespace Garments_Pro.Departments.Finished_Goods
 
                     btnDel.CssClass = "text-dark   btn disabled fw-bold  ";
 
-                    btnupdate.Text = "on Hold";
+                    btnupdate.Text = "Hold";
                     btnupdate.CssClass = "text-dark  btn disabled fw-bold  ";
                 }
                 else

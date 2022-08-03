@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Poppins:wght@200&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="../Assets/Images/Admin.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="../Assets/Images/1.jpg"  />
     <link href="../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../Assets/SweetAlert/sweetalert.min.js"></script>
     <link href="../Assets/font-awesome.min.css" rel="stylesheet" />
@@ -27,7 +27,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <%--  <div class="p-1 bg-opacity-75 text-white " style="background-color: darkturquoise">
+ <%--     <div class="p-1 bg-opacity-75 text-white " style="background-color: darkturquoise">
         <div class="ps-4">
             <h3>Production Engineer</h3>
             <p>Admin</p>
@@ -51,7 +51,7 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                             <img src="../Assets/Images/3.png" alt="Avatar Logo" role="button" style="width: 30px; height: 30px"
                                 data-bs-toggle="dropdown" aria-expanded="false" class="rounded-pill dropdown-toggle nav-item dropdown" /></a>
-                        <ul class="dropdown-menu" id="DD" style="font-size: small">
+                        <ul class="dropdown-menu shadow-sm" id="DD" style="font-size: small">
                             <li class="dropdown-header">
                                 <center>
                                      <h6><asp:Label ID="lblWelcome" ForeColor="Black" runat="server" Text=""></asp:Label></h6>
@@ -74,6 +74,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
             <li class="nav-item"><a class="nav-link collapsed" href="Dashboard.aspx"><i class="bi bi-grid"></i><span>Dashboard</span> </a></li>
             <li class="nav-item"><a class="nav-link collapsed" href="Orders.aspx"><i class="bi bi-list-columns-reverse"></i><span>Orders</span> </a></li>
+             <li class="nav-item"><a class="nav-link collapsed" href="AddProducts.aspx"><i class="bi bi-list-task"></i><span>Products</span> </a></li>
             <li class="nav-item"><a class="nav-link collapsed" href="Accounts.aspx"><i class="bi bi-person"></i><span>Accounts</span> </a></li>
             <li class="nav-item"><a class="nav-link collapsed" href="Settings.aspx"><i class="bi bi-gear-fill"></i><span>Settings</span> </a></li>
         </ul>
