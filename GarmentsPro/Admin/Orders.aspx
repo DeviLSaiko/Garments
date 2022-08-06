@@ -9,7 +9,10 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-            <div class="pagetitle mt-1">
+       
+           
+                <div class="container mt-5">
+                        <div class="pagetitle mt-1">
               <h4>Orders</h4
             <nav>
                <ol class="breadcrumb">
@@ -18,17 +21,13 @@
                </ol>
             </nav>
          </div>
-           
-                <div class="container mt-1">
-                   
                      <center>
 
                 <div class="row ">
                     <div class="col-md-2">
-                        <asp:HyperLink ID="HyperLink1" class="btn btn-secondary   text-sm  btn-sm" NavigateUrl="CreateOrder.aspx"  runat="server">Create Order</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" class="btn btn-secondary   text-sm btn-sm" NavigateUrl="CreateOrder.aspx"  runat="server">Create New Order</asp:HyperLink>
                     </div>
                     <div class="col-md-6">
-                     
                          <div>
                  <asp:DropDownList ID="ddSearch" CssClass="form-select-sm"   font-size="12px "   Height="25px"   runat="server">
                       <asp:ListItem  Text="Client Name" Value="1"></asp:ListItem>
@@ -41,7 +40,7 @@
                     </div>
                       <div class="col-md-4">
                           <div class="dropdown">
-                              <button type="button"     class="btn btn-secondary dropdown-toggle btn-sm  align-items-md-center -end " data-bs-toggle="dropdown">
+                              <button type="button" class="btn btn-secondary dropdown-toggle btn-sm  align-items-md-center -end " data-bs-toggle="dropdown">
                                 Settings
                               </button>
                               <ul class="dropdown-menu">
@@ -56,19 +55,16 @@
                   </center>
                 </div>
                    
-
-                     <div class="card-body">
-                         
+               <div class="card-body">
                 <div class="container  rounded-3 pt-3  shadow-sm bg-white p-1 ">
                     <div class="row">
                         <div class="col-sm-12">
-
                             <div class="align-content-center" style="font-weight: 400;">
                                 <div class="p-4   border-5  ">
                                     <div class=" ">
                                         <table>
                                             <asp:GridView ID="GridView1" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="GridView1_RowDataBound"
-                                                 OnRowCommand="GridView1_RowCommand" AllowPaging="true" PageSize="5" CssClass="table   " AutoGenerateColumns="false" runat="server">
+                                                 OnRowCommand="GridView1_RowCommand" AllowPaging="true" PageSize="5" CssClass="table" AutoGenerateColumns="false" runat="server">
                                                 <Columns>
                                                     <asp:TemplateField HeaderText=" ">
                                                         <ItemTemplate><%# Container.DataItemIndex + 1 %> </ItemTemplate>

@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Settings.aspx.cs" Inherits="GarmentsPro.Admin.Settings" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>
+        Settings
+    </title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -13,7 +16,19 @@
             </div>
       
         </div>
-       
+
+        <div class="row">
+            Change Password 
+        </div>
+         <div>
+            Change Password 
+        </div>
+          <div>
+            Change Password 
+        </div>
+          <div>
+            Change Password 
+        </div>
     </div>
    
 

@@ -1,10 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Accounts.aspx.cs" Inherits="GarmentsPro.Admin.Users.Accounts" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>
+        Accounts
+    </title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-     <div class="pagetitle mt-1">
+   
+     <div class="container mt-4">
+                     <div class="pagetitle mt-1">
             <h4>Accounts</h4>
             <nav>
                <ol class="breadcrumb">
@@ -13,13 +18,11 @@
                </ol>
             </nav>
          </div>
-     <div class="container mt-1">
-                   
                      <center>
 
                 <div class="row ">
                     <div class="col-md-2">
-                     <asp:HyperLink ID="HyperLink1" class="btn btn-secondary   text-sm  btn-sm" NavigateUrl="CreateAccount.aspx"  runat="server">Create New Account</asp:HyperLink>
+                     <asp:HyperLink ID="HyperLink1" class="btn btn-primary    text-sm  btn-sm" NavigateUrl="CreateAccount.aspx"  runat="server">Create New Account</asp:HyperLink>
 
                     </div>
                     <div class="col-md-6">

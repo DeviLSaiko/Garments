@@ -5,80 +5,76 @@
     <title>Create New Account</title>
     <link href="../../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
     <script src="../../Assets/SweetAlert/sweetalert.min.js"></script>
-   
+
     <link href="../../Html/Dashboard.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
-
     <asp:ScriptManager ID="scriptmanager1" runat="server">
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
-             <div class="mt-2">
+            <div class="mt-2">
             </div>
-             <div class="pagetitle">
-            <h4>Create New Account</h4>
-            <nav>
-               <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a  style="text-decoration:none;"  href="Dashboard.aspx">Home</a></li>
-                   <li class="breadcrumb-item"><a  style="text-decoration:none;"  href="Accounts.aspx">Accounts</a></li>
-                  <li class="breadcrumb-item active">CreateAccount</li>
-               </ol>
-            </nav>
-         </div>
+            <div class="pagetitle">
+                <h4>Create New Account</h4>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a style="text-decoration: none;" href="Dashboard.aspx">Home</a></li>
+                        <li class="breadcrumb-item"><a style="text-decoration: none;" href="Accounts.aspx">Accounts</a></li>
+                        <li class="breadcrumb-item active">CreateAccount</li>
+                    </ol>
+                </nav>
+            </div>
             <div class="mt-2">
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-4  ">
                         <div class="card-body bg-white rounded pt-3 PS-5 shadow-sm ">
-                                      <label>Name</label>
-                        <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="300px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
-                            ControlToValidate="txtName"
-                            Text=" This Field Cannot be Empty"
-                            ForeColor="red"
-                            Font-Size="Small"
-                            runat="server"></asp:RequiredFieldValidator>
-                        <br />
-                        <label>UserName</label>
-                        <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" Height="35px" Width="300px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
-                            ControlToValidate="txtUserName"
-                            Text=" This Field Cannot be Empty"
-                            ForeColor="red"
-                            Font-Size="Small"
-                            runat="server"></asp:RequiredFieldValidator>
-                        <br />
-                        <label>Department</label>
-                        <asp:DropDownList ID="ddDepartments" CssClass="form-select" Height="35px" Width="300px" runat="server"></asp:DropDownList>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3"
-                            ControlToValidate="ddDepartments"
-                            Text=" This Field Cannot be Empty"
-                            ForeColor="red"
-                            Font-Size="Small"
-                            runat="server"></asp:RequiredFieldValidator>
-                        <br />
-                        <label>Password</label>
-                        <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control"
-                             runat="server" Height="35px" Width="300px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
-                            ControlToValidate="txtPassword"
-                            Text=" This Field Cannot be Empty"
-                            ForeColor="red"
-                            Font-Size="Small"
-                            runat="server"></asp:RequiredFieldValidator>
-                        <br />
-                        <div class="d-grid">
-                            <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Create New Account" 
-                                CssClass="btn btn-dark" Width="207px" Height="39px" />
+                            <label>Name</label>
+                            <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="300px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
+                                ControlToValidate="txtName"
+                                Text=" This Field Cannot be Empty"
+                                ForeColor="red"
+                                Font-Size="Small"
+                                runat="server"></asp:RequiredFieldValidator>
+                            <br />
+                            <label>UserName</label>
+                            <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" Height="35px" Width="300px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
+                                ControlToValidate="txtUserName"
+                                Text=" This Field Cannot be Empty"
+                                ForeColor="red"
+                                Font-Size="Small"
+                                runat="server"></asp:RequiredFieldValidator>
+                            <br />
+                            <label>Department</label>
+                            <asp:DropDownList ID="ddDepartments" CssClass="form-select" Height="35px" Width="300px" runat="server"></asp:DropDownList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3"
+                                ControlToValidate="ddDepartments"
+                                Text=" This Field Cannot be Empty"
+                                ForeColor="red"
+                                Font-Size="Small"
+                                runat="server"></asp:RequiredFieldValidator>
+                            <br />
+                            <label>Password</label>
+                            <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control"
+                                runat="server" Height="35px" Width="300px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
+                                ControlToValidate="txtPassword"
+                                Text=" This Field Cannot be Empty"
+                                ForeColor="red"
+                                Font-Size="Small"
+                                runat="server"></asp:RequiredFieldValidator>
+                            <br />
+                            <div class="d-grid">
+                                <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Create New Account"
+                                    CssClass="btn btn-dark" Width="207px" Height="39px" />
+                            </div>
                         </div>
-                        </div>
-              
                     </div>
-                     
-                  <%--  <div class="col-md-8 card-body bg-white rounded pt-3  shadow-sm   p-2  ">
+                    <%--  <div class="col-md-8 card-body bg-white rounded pt-3  shadow-sm   p-2  ">
 
                         <table class="table-hover     ">
                             <asp:GridView ID="GridView1" HeaderStyle-BackColor="#808080" HeaderStyle-ForeColor="White"
@@ -99,11 +95,8 @@
                             </asp:GridView>
                         </table>
                     </div>--%>
-                         
                 </div>
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>
-
-
 </asp:Content>

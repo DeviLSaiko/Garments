@@ -33,6 +33,7 @@
     </asp:ScriptManager>
     <asp:UpdatePanel ID="updatepnl" runat="server">
         <ContentTemplate>
+            <div class="container mt-4">
              <div class="pagetitle mt-1">
               <h4>Edit Order</h4
             <nav>
@@ -44,6 +45,7 @@
                </ol>
             </nav>
          </div>
+                </div>
             <div class="container mt-3 bg-white card-body shadow-sm border-5">
                 <h2>Update</h2>
                 <div class="row mt-2">
@@ -139,7 +141,7 @@
 
                                 <div class="align-content-center">
                                 <table>
-                                    <asp:GridView ID="GridView1" CssClass="table ps-4 ms-5"   AutoGenerateColumns="false" runat="server">
+                                    <asp:GridView ID="GridView1" CssClass="table table-borderless ps-4 ms-5"   AutoGenerateColumns="false" runat="server">
                                         <Columns>
                                             <asp:BoundField DataField="OrderID"  HeaderText="Order ID"  />
                                             <asp:BoundField DataField="ClientName"  HeaderText="Client Name"  />
